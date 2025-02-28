@@ -8,6 +8,11 @@ import Collection from "../pages/Collection";
 import CustomerCare from "../pages/CustomerCare";
 import More from "../pages/More";
 import SingleProduct from "../pages/SingleProduct"
+import WhereToBuy from "../pages/WhereToBuy"
+// import Career from "../pages/More/Career";
+// import Resources from "../pages/More/Resources";
+// import WhatsNew from "../pages/More/WhatsNew";
+
 
 const App = () => {
   return (
@@ -16,12 +21,13 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/collection" element={<Collection />} />
         <Route path="/catalogue" element={<Catalogue />} />
-        <Route path="/where_to_buy" element={<Contact />} />
+        <Route path="/where-to-buy" element={<WhereToBuy />} />
         <Route path="/customer" element={<CustomerCare />} />
         <Route path="/more" element={<More />} />
         <Route path="/single_product" element={<SingleProduct />} />
-
-
+        {/* <Route path="/whats-new" element={<WhatsNew />} />
+        <Route path="/resources" element={<Resources />} />
+        <Route path="/career" element={<Career />} /> */}
       </Routes>
     </Router>
   );

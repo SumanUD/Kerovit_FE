@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const WhereToBuy = () => {
+const WhatsNew = () => {
   return (
     <>
       <Navbar />
@@ -16,4 +16,4 @@ const WhereToBuy = () => {
   );
 };
 
-export default WhereToBuy;
+export default WhatsNew;

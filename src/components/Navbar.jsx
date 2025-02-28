@@ -63,11 +63,26 @@ const Navbar = () => {
           </li>
 
           {/* Other Menu Items */}
-          <li><Link to="/collection">Collection</Link></li>
           <li><Link to="/catalogue">E-Catalogue</Link></li>
           <li><Link to="/where-to-buy">Where to Buy</Link></li>
-          <li><Link to="/customer">Customer Care</Link></li>
-          <li><Link to="/more">More</Link></li>
+          
+          {/* More Dropdown */}
+          <li className={`submenu ${activeIndex === 1 ? "active openSub" : ""}`} onClick={(e) => toggleSubmenu(1, e)}>
+            <Link to="#">
+              More <span className="submenu-button"></span>
+            </Link>
+            <ul style={{ display: activeIndex === 1 ? "block" : "none" }}>
+              <li onClick={(e) => e.stopPropagation()}>
+                <Link to="/whats-new">What's New</Link>
+              </li>
+              <li onClick={(e) => e.stopPropagation()}>
+                <Link to="/career">Career</Link>
+              </li>
+              <li onClick={(e) => e.stopPropagation()}>
+                <Link to="/resources">Resources</Link>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </div>
