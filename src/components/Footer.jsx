@@ -1,10 +1,7 @@
-import React from "react";
-import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
-import "../styles/footer.scss";
-import { FaGooglePlay, FaApple } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin, FaGooglePlay, FaApple, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useState } from 'react';
-
+import "../styles/footer.scss";
 
 const Footer = () => {
     const [openAccordion, setOpenAccordion] = useState(null);
@@ -12,7 +9,6 @@ const Footer = () => {
     const toggleAccordion = (index) => {
         setOpenAccordion(openAccordion === index ? null : index);
     };
-
 
     return (
         <div className="above-accordian">
@@ -29,45 +25,49 @@ const Footer = () => {
                 <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
                     <FaLinkedin className="icon linkedin" />
                 </a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                    <FaTwitter className="icon twitter" />
+                </a>
             </div>
 
             <div className="accordion" id="accordionExample">
                 <div className="accordion-item">
                     <h2 className="accordion-header">
-                    <button
-                        className="accordion-button custom-accordion-btn"
-                        type="button"
-                        onClick={() => toggleAccordion(1)}
-                    >
-                        Collection <span className="accordion-icon">{openAccordion === 1 ? '-' : '+'}</span>
-                    </button>
+                        <button
+                            className="accordion-button custom-accordion-btn"
+                            type="button"
+                            onClick={() => toggleAccordion(1)}
+                        >
+                            Collection <span className="accordion-icon">{openAccordion === 1 ? '-' : '+'}</span>
+                        </button>
                     </h2>
                     {openAccordion === 1 && (
                         <div className="accordion-collapse">
                             <div className="accordion-body">
-                                <strong>This is the first item's accordion body.</strong>
+                                <p>This is the first item's accordion body.</p>
                             </div>
                         </div>
                     )}
                 </div>
 
-                <div className="p-3">Customer Care</div>
-                <div className="p-3">Warranty</div>
+                <div className="p-3 non-accordian">Customer Care</div>
+                <div className="p-3 non-accordian">Warranty</div>
 
                 <div className="accordion-item">
                     <h2 className="accordion-header">
-                    <button
-                        className="accordion-button custom-accordion-btn"
-                        type="button"
-                        onClick={() => toggleAccordion(2)}
-                    >
-                        More <span className="accordion-icon">{openAccordion === 1 ? '-' : '+'}</span>
-                    </button>
+                        <button
+                            className="accordion-button custom-accordion-btn"
+                            type="button"
+                            onClick={() => toggleAccordion(2)}
+                        >
+                            More <span className="accordion-icon">{openAccordion === 2 ? '-' : '+'}</span>
+                        </button>
                     </h2>
                     {openAccordion === 2 && (
                         <div className="accordion-collapse">
                             <div className="accordion-body">
-                                <strong>This is the third item's accordion body.</strong>
+                            <p>This is the second item's accordion body.</p>
+
                             </div>
                         </div>
                     )}

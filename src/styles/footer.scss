@@ -27,9 +27,9 @@
 
     .social-icons {
         display: flex;
-        justify-content: center;
+        justify-content: left;
         gap: 15px;
-        padding: 20px 0;
+        padding: 20px 10px;
 
         a {
             text-decoration: none;
@@ -50,6 +50,9 @@
     .accordion {
         max-width: 600px;
         margin: 0 auto;
+        .non-accordian {
+            font-size: 1.3rem;
+        }
 
         .accordion-item {
             background-color: #212121;
@@ -59,8 +62,8 @@
                 button {
                     background-color: #212121;
                     color: #fff;
-                    font-size: 1rem;
-                    font-weight: bold;
+                    font-size: 1.3rem;
+                    // font-weight: bold;
                     width: 100%;
                     text-align: left;
                     padding: 15px;
@@ -72,7 +75,7 @@
             .accordion-body {
                 color: #fff;
                 padding: 15px;
-                font-size: 0.9rem;
+                font-size: 1.3rem;
             }
         }
         div {
@@ -107,9 +110,9 @@
     font-family: Arial, sans-serif;
 
     .complaint-text {
-        font-size: 10px;
+        font-size: 1rem;
         margin-bottom: 10px;
-        text-align: left;
+        text-align: center;
     }
 
     .app-buttons {

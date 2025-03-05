@@ -27,9 +27,9 @@ const Navbar = () => {
           />
         </div>
 
-        {/* Navigation Menu */}
+  
         <ul className={isOpen ? "open" : ""}>
-          {/* Products Dropdown */}
+  
           <li className={`submenu ${activeIndex === 0 ? "active openSub" : ""}`} onClick={(e) => toggleSubmenu(0, e)}>
             <Link to="#">
               Products <span className="submenu-button"></span>
@@ -62,11 +62,11 @@ const Navbar = () => {
             </ul>
           </li>
 
-          {/* Other Menu Items */}
+
           <li><Link to="/catalogue">E-Catalogue</Link></li>
           <li><Link to="/where-to-buy">Where to Buy</Link></li>
           
-          {/* More Dropdown */}
+
           <li className={`submenu ${activeIndex === 1 ? "active openSub" : ""}`} onClick={(e) => toggleSubmenu(1, e)}>
             <Link to="#">
               More <span className="submenu-button"></span>
