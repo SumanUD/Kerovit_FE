@@ -1,12 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
-body {
+body{
   background-color: gray;
   padding: 0;
   margin: 0;
 }
 
-/*======== COLOR PRESETS =========*/
+/*========COLOR PRESETS=========*/
 $text-color: #757575;
 $text-hover-color: #000;
 $background-color: transparent;
@@ -15,8 +14,9 @@ $background-color-active: lighten($background-color-active-base, 10%);
 $border-top-color: lighten($background-color-active-base, 15%);
 $border-bottom-color: lighten($background-color-active-base, 15%);
 
-/*============ NAVBAR ============*/
+/*============NAVBAR============*/
 nav {
+  
   font-family: 'Open Sans', sans-serif;
   line-height: 1;
   text-transform: uppercase;
@@ -29,7 +29,6 @@ nav {
     content: " ";
     display: table;
   }
-  
   :after {
     clear: both;
   }
@@ -50,7 +49,7 @@ nav {
     transition: opacity 0.3s ease;
   }
 
-  ul.open ~ &::before {
+  ul.open ~ ::before {
     opacity: 1;
     pointer-events: all;
   }
@@ -59,22 +58,11 @@ nav {
     background: $background-color;
     list-style: none;
     position: relative;
-    display: none;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
   }
-
-  ul.open {
-    display: block;
-    opacity: 1;
-    background-color: #fff;
-    z-index: 9999;
-  }
-
+  
   > ul {
     padding: 0;
-    margin-top: 0;
-    border-top: 1px solid rgba(120, 120, 120, 0.15);
+    margin-top: 0px;
   }
 
   ul:after {
@@ -131,8 +119,8 @@ nav {
     display: block;
     width: 1px;
     height: 9px;
-    background: $text-color;
     transition: all 0.3s;
+    background: $text-color;
     z-index: 99;
   }
 
@@ -148,15 +136,18 @@ nav {
   color: $text-color;
 }
 
-/*============== CLOSE SYMBOL ==========*/
-.openSub .submenu-button::before,
+/*==============MINUS SYMBOL==========*/
 .openSub .submenu-button::after {
+}
+
+/*==============CLOSE SYMBOL==========*/
+.openSub .submenu-button::after, .openSub .submenu-button::before {
   transform: rotate(135deg);
 }
 
-/*============ TOGGLE MENU ============*/
 .toggleMenu {
-  opacity: 0;
+  // display: none;
+  list-style: none;
   position: relative;
   line-height: 1;
   font-size: 12px;
@@ -166,10 +157,10 @@ nav {
   margin: 0;
   border: 0;
   box-sizing: border-box;
+  // background-color: $background-color;
   background-color: #fff;
   color: $text-color;
   cursor: pointer;
-  transition: opacity 0.3s ease-in-out;
 
   &::after {
     content: '';
@@ -191,15 +182,11 @@ nav {
     width: 15px;
     height: 3px;
     border-top: 2px solid #ffffff;
+    // border-bottom: 2px solid #ffffff;
   }
 }
 
-/* Show toggleMenu when ul is open */
-nav ul.open ~ .toggleMenu {
-  opacity: 1;
-}
-
-/*============ SECOND LEVEL ============*/
+/*============SECOND LEVEL============*/
 .submenu ul {
   display: none;
   background: $background-color-active;
@@ -224,14 +211,17 @@ nav ul.open ~ .toggleMenu {
   color: $text-color;
 }
 
-/*============ RESPONSIVE ============*/
+/*============MAKING RESPONSIVE============*/
 @media screen and (max-width: 600px) {
   .toggleMenu {
+    opacity: 0;
     display: block;
     cursor: pointer;
-    background-color: #fff;
-    margin-top: -8px;
-    margin-bottom: -7px;
+  background-color: #fff;
+  margin-top: -8px;
+  /* padding-top: 0; */
+  margin-bottom: -7px;
+
   }
 
   .submenu ul {
@@ -249,11 +239,12 @@ nav ul.open ~ .toggleMenu {
     padding-right: 10px;
   }
 
-  nav ul.open ~ .toggleMenu {
+  nav ul.open + .toggleMenu {
     opacity: 1;
   }
 
   nav {
+
     ul {
       display: none;
     }
