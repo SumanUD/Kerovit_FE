@@ -2,8 +2,51 @@ import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/home.scss";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { useRef } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 const Home = () => {
+
+  const products = [
+    { id: 1, img: "/random_product.png", name: "Product 1" },
+    { id: 2, img: "/random_product.png", name: "Product 2" },
+    { id: 3, img: "/random_product.png", name: "Product 3" },
+    { id: 4, img: "/random_product.png", name: "Product 4" },
+    { id: 5, img: "/random_product.png", name: "Product 5" },
+    { id: 6, img: "/random_product.png", name: "Product 6" },
+  ];
+  const swiperRef = useRef(null);
+
+  const handleNextSlide = () => {
+    if (swiperRef.current) {
+      swiperRef.current.slideNext(); // Move to the next slide
+    }
+  };
+
+  const blogPosts = [
+    { id: 1, img: "/random_product.png", title: "Blog 1", desc: "Lorem ipsum, dolor sit" },
+    { id: 2, img: "/random_product.png", title: "Blog 2", desc: "Lorem ipsum, dolor sit" },
+    { id: 3, img: "/random_product.png", title: "Blog 3", desc: "Lorem ipsum, dolor sit" },
+    { id: 4, img: "/random_product.png", title: "Blog 4", desc: "Lorem ipsum, dolor sit" },
+    { id: 5, img: "/random_product.png", title: "Blog 5", desc: "Lorem ipsum, dolor sit" },
+  ];
+
+
+  const swiperRefBlog = useRef(null);
+  const handleNextBlogSlide = () => {
+    if (swiperRefBlog.current) {
+      swiperRefBlog.current.slideNext();
+    }
+  };
+
+
   return (
     <>
       {/* <Navbar /> */}
@@ -15,23 +58,34 @@ const Home = () => {
 
         <div className="home_categories">
           <h2>Categories</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, placeat aperiam exercitationem autem error eos soluta dolor cupiditate numquam</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
+            placeat aperiam exercitationem autem error eos soluta dolor cupiditate
+            numquam
+          </p>
 
-          <div className="product_with_name">
-            <div className="inside text-center">
-              <img src="/random_product.png" alt="" />
-              <p>Product Name</p>
-            </div>
+          <Swiper
+            modules={[Pagination]}
+            spaceBetween={10}
+            slidesPerView={2}
+            pagination={{ clickable: true }}
+            breakpoints={{
+              640: { slidesPerView: 3 },
+              1024: { slidesPerView: 4 },
+            }}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
+          >
+            {products.map((product) => (
+              <SwiperSlide key={product.id}>
+                <div className="inside text-center">
+                  <img src={product.img} alt={product.name} />
+                  <p>{product.name}</p>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-            <div className="inside text-center">
-              <img src="/random_product.png" alt="" />
-              <p>Product Name</p>
-            </div>
-
-          </div>
-
-          <button type="button">Swipe</button>
-
+          <button type="button" onClick={handleNextSlide}>Swipe</button>
         </div>
 
         <div className="home_collections">
@@ -47,7 +101,10 @@ const Home = () => {
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus</p>
 
           <img src="/single_product.png" alt="Single Product image" />
-          <button type="button">Show more</button>
+          <button type="button" >
+          <Link to="/product_listing" className="showMoreBtn">Show More</Link>
+
+          </button>
         </div>
 
         <div className="home_klassic">
@@ -59,7 +116,9 @@ const Home = () => {
           </p>
 
           <img src="/single_product.png" alt="Single Product image" />
-          <button type="button">Show more</button>
+          <button type="button">
+            <Link to="/product_listing" className="showMoreBtn">Show More</Link>
+          </button>
 
         </div>
 
@@ -93,27 +152,35 @@ const Home = () => {
         </div>
 
         <div className="home_blog">
-          <h2>Blog</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, placeat aperiam exercitationem autem error eos soluta dolor cupiditate numquam</p>
+      <h2>Blog</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, placeat aperiam exercitationem autem error eos soluta dolor cupiditate numquam</p>
 
-          <div className="product_with_name">
-            <div className="inside">
-              <img src="/random_product.png" alt="" />
-              <h3>blog 1</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident sed placeat enim eligendi non obcaecati</p>
+      {/* Swiper for Blog Section */}
+      <Swiper
+        modules={[Pagination]}
+        spaceBetween={10}
+        slidesPerView={2}
+        pagination={{ clickable: true }}
+        breakpoints={{
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        onSwiper={(swiper) => (swiperRefBlog.current = swiper)} // Assign Swiper instance
+      >
+        {blogPosts.map((blog) => (
+          <SwiperSlide key={blog.id}>
+            <div className="inside text-left">
+              <img src={blog.img} alt={blog.title} />
+              <h3>{blog.title}</h3>
+              <p>{blog.desc}</p>
             </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
-            <div className="inside">
-              <img src="/random_product.png" alt="" />
-              <h3>blog 2</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident sed placeat enim eligendi non obcaecati</p>
-            </div>
+      <button type="button" onClick={handleNextBlogSlide}>Swipe</button>
+    </div>
 
-          </div>
-
-          <button type="button">Swipe</button>
-
-        </div>
         <div className="home_contact">
           <div className="inside_banner_content">
             <form className="contact_form">

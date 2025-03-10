@@ -11,79 +11,86 @@
     .home_categories {
         margin: 80px 25px 0 25px;
         position: relative;
-
+      
         h2 {
-            text-transform: uppercase;
-            text-decoration: underline;
-            font-weight: 500;
-            font-size: 20px;
-            margin-bottom: 20px;
-
+          text-transform: uppercase;
+          text-decoration: underline;
+          font-weight: 500;
+          font-size: 20px;
+          margin-bottom: 20px;
         }
-
+      
         p {
-            font-size: 14px;
-            line-height: 1.6;
-            color: #333;
+          font-size: 14px;
+          line-height: 1.6;
+          color: #333;
         }
-
-        .product_with_name {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-
-            .inside {
-                text-align: center;
-            }
-
-            p {
-                font-size: 13px;
-                text-transform: uppercase;
-                font-weight: bold;
-                margin-top: 5px;
-            }
-
-            img {
-                width: 160px;
-                margin: 16px 0;
-                border-radius: 8px;
-                /* Optional: Rounded corners for a polished look */
-            }
+      
+        /* Swiper Styling */
+        .swiper {
+          margin-top: 20px;
         }
-
+      
+        .swiper-slide {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      
+        .inside {
+          text-align: center;
+      
+          img {
+            width: 160px;
+            margin: 16px 0;
+            border-radius: 8px; // Rounded corners
+          }
+      
+          p {
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: 5px;
+          }
+        }
+      
+        /* Hide Swiper arrows */
+        .swiper-button-next,
+        .swiper-button-prev {
+          display: none !important;
+        }
+      
+        /* Swipe Button */
         button {
-            background-color: transparent;
-            border: 0.5px solid gray;
-            width: 118px;
-            padding: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-            // font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-
-            position: absolute;
-            right: 15px;
-            bottom: -50px;
-
-            &:hover {
-                background-color: #f4f4f4;
-                border-color: black;
-            }
-
-            &::after {
-                content: "➜";
-                /* Unicode right arrow */
-                font-size: 14px;
-                margin-left: 5px;
-                /* Space between text and arrow */
-            }
+          background-color: transparent;
+          border: 0.5px solid gray;
+          width: 118px;
+          padding: 6px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+      
+          position: absolute;
+          right: 15px;
+          bottom: -50px;
+      
+          &:hover {
+            background-color: #f4f4f4;
+            border-color: black;
+          }
+      
+          &::after {
+            content: "➜"; // Unicode right arrow
+            font-size: 14px;
+            margin-left: 5px; // Space between text and arrow
+          }
         }
-    }
+      }
+      
+      
 
     .home_collections {
         margin: 80px 25px 0 25px;
@@ -106,6 +113,10 @@
     .home_aurum {
         margin: 80px 25px 0 25px;
         position: relative;
+        .showMoreBtn {
+            text-decoration: none;
+            color: #000;
+        }
 
         h2 {
             text-transform: uppercase;
@@ -160,6 +171,10 @@
     .home_klassic {
         margin: 80px 25px 0 25px;
         position: relative;
+        .showMoreBtn {
+            text-decoration: none;
+            color: #000;
+        }
 
 
         .klassic_heading {
@@ -397,79 +412,70 @@
     .home_blog {
         margin: 80px 25px 0 25px;
         position: relative;
-
+      
         h2 {
-            text-transform: uppercase;
-            text-decoration: underline;
-            font-weight: 500;
-            font-size: 20px;
-            margin-bottom: 20px;
-
+          text-transform: uppercase;
+          text-decoration: underline;
+          font-weight: 500;
+          font-size: 20px;
+          margin-bottom: 20px;
         }
-
+      
         p {
-            font-size: 14px;
-            line-height: 1.6;
-            color: #333;
+          font-size: 14px;
+          line-height: 1.6;
+          color: #333;
         }
-
-        .product_with_name {
-            display: flex;
-            gap: 10px;
-            justify-content: left;
-            align-items: left;
-            margin-top: 20px;
-
-            .inside {
-                text-align: left;
-            }
-
-            h3 {
-                font-size: 13px;
-                text-transform: uppercase;
-                font-weight: bold;
-                margin-top: 5px;
-            }
-
-            img {
-                width: 160px;
-                margin: 16px 0;
-                border-radius: 8px;
-                /* Optional: Rounded corners for a polished look */
-            }
+      
+        .swiper {
+          margin-top: 20px;
         }
-
+      
+        .swiper-slide {
+          display: flex;
+          justify-content: left;
+          align-items: left;
+        }
+      
+        .inside {
+          text-align: left;
+        }
+      
+        h3 {
+          font-size: 13px;
+          text-transform: uppercase;
+          font-weight: bold;
+          margin-top: 5px;
+        }
+      
+        img {
+          width: 160px;
+          margin: 16px 0;
+          border-radius: 8px;
+        }
+      
         button {
-            background-color: transparent;
-            border: 0.5px solid gray;
-            width: 118px;
-            padding: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-            // font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-
-            position: absolute;
-            right: 15px;
-            bottom: -50px;
-
-            &:hover {
-                background-color: #f4f4f4;
-                border-color: black;
-            }
-
-            &::after {
-                content: "➜";
-                /* Unicode right arrow */
-                font-size: 14px;
-                margin-left: 5px;
-                /* Space between text and arrow */
-            }
+          background-color: transparent;
+          border: 0.5px solid gray;
+          width: 118px;
+          padding: 6px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+          position: absolute;
+          right: 15px;
+          bottom: -50px;
+      
+          &:hover {
+            background-color: #f4f4f4;
+            border-color: black;
+          }
         }
-    }
+      }
+      
 
     .home_contact {
         margin-top: 80px;

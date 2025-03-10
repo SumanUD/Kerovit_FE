@@ -9,6 +9,7 @@ import CustomerCare from "../pages/CustomerCare";
 import More from "../pages/More";
 import SingleProduct from "../pages/SingleProduct"
 import WhereToBuy from "../pages/WhereToBuy"
+import AllProduct from "../pages/product/allProducts";
 // import Career from "../pages/More/Career";
 // import Resources from "../pages/More/Resources";
 // import WhatsNew from "../pages/More/WhatsNew";
@@ -25,6 +26,8 @@ const App = () => {
         <Route path="/customer" element={<CustomerCare />} />
         <Route path="/more" element={<More />} />
         <Route path="/single_product" element={<SingleProduct />} />
+        <Route path="/product_listing" element={<AllProduct />} />
+
         {/* <Route path="/whats-new" element={<WhatsNew />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/career" element={<Career />} /> */}
