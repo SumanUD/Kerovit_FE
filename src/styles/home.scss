@@ -1,7 +1,13 @@
 .home {
+    
+    margin-top: -67px;
+
+    .swiper-pagination-bullets {
+        display: none;
+    }
     .homebanner {
         background-image: url("/hb1.png");
-        background-size: cover;
+        background-size: 100% 100%;
         background-position: center;
         background-repeat: no-repeat;
         height: 70vh;
@@ -256,7 +262,7 @@
     }
 
     .first_banner {
-        margin-top: 80px;
+        margin-top: 120px;
         background-image: url("/public/home_banner1.png");
         background-size: 100% 100%;
         width: 100%;
@@ -339,12 +345,13 @@
             text-align: center;
 
             a {
+                background-color: #fff;
                 display: inline-block;
                 text-transform: uppercase;
-                color: #fff;
+                color: #000;
                 border: 0.5px solid #fff;
-                font-size: 15px;
-                padding: 10px 12px;
+                font-size: 12px;
+                padding: 3px 8px;
                 margin: 10px 10px;
                 text-decoration: none;
                 white-space: nowrap;
@@ -357,9 +364,9 @@
                 }
             }
 
-            a:hover {
-                background-color: rgba(255, 255, 255, 0.2);
-            }
+            // a:hover {
+            //     background-color: rgba(255, 255, 255, 0.2);
+            // }
         }
 
     }
@@ -382,7 +389,7 @@
             width: 80%;
 
             h2 {
-                text-transform: uppercase;
+                text-transform: capitalize;
                 color: #fff;
                 font-size: 24px;
                 margin-bottom: 22px;
@@ -449,7 +456,7 @@
         }
       
         img {
-          width: 160px;
+          width: 150px;
           margin: 16px 0;
           border-radius: 8px;
         }
@@ -477,11 +484,10 @@
       }
       
 
-    .home_contact {
+      .home_contact {
         margin-top: 80px;
-
         background-image: url("/public/home_contact.png");
-        background-size: 100% 100%;
+        background-size: cover;
         background-position: center;
         width: 100%;
         height: 70vh;
@@ -490,74 +496,69 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
-        .inside_banner_content {
-            background: rgba(0, 0, 0, 0.6); // Dark transparent background
-            padding: 40px;
-            width: 90%;
-            max-width: 500px;
-            border-radius: 8px;
-            text-align: center;
-
-            h2 {
-                text-transform: uppercase;
-                color: #fff;
-                font-size: 26px;
-                margin-bottom: 15px;
-            }
-
-            p {
-                color: #ccc;
-                font-size: 16px;
-                line-height: 1.6;
-                margin-bottom: 20px;
-            }
-
-            .contact_form {
-                display: flex;
-                flex-direction: column;
-                gap: 12px;
-
-                input,
-                textarea {
-                    background: transparent;
-                    border: none;
-                    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-                    color: #fff;
-                    padding: 10px;
-                    font-size: 14px;
-                    outline: none;
-                    width: 100%;
-
-                    &::placeholder {
-                        color: rgba(255, 255, 255, 0.7);
-                    }
-                }
-
-                textarea {
-                    resize: none;
-                    height: 80px;
-                }
-
-                button {
-                    text-transform: uppercase;
-                    background: #2c3e50;
-                    color: #fff;
-                    border: none;
-                    width: 100%;
-                    font-size: 16px;
-                    padding: 12px;
-                    cursor: pointer;
-                    border-radius: 4px;
-                    transition: background 0.3s;
-
-                    &:hover {
-                        background: #1a252f;
-                    }
-                }
-            }
-        }
     }
+    
+    .inside_banner_content {
+        // background: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+        padding: 30px;
+        width: 90%;
+        max-width: 400px;
+        border-radius: 5px;
+        text-align: center;
+        backdrop-filter: blur(5px); /* Blur effect */
+    }
+    
+    .contact_form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .contact_form input,
+    .contact_form textarea {
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: #fff;
+        padding: 12px;
+        font-size: 14px;
+        outline: none;
+        width: 100%;
+        border-radius: 3px;
+        transition: all 0.3s;
+    }
+    
+    .contact_form input::placeholder,
+    .contact_form textarea::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .contact_form input:focus,
+    .contact_form textarea:focus {
+        border-color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .contact_form textarea {
+        resize: none;
+        height: 80px;
+    }
+    
+    .contact_form button {
+        background: #2c3e50;
+        color: #fff;
+        border: none;
+        width: 100%;
+        font-size: 16px;
+        padding: 14px;
+        cursor: pointer;
+        border-radius: 3px;
+        transition: background 0.3s;
+        font-weight: bold;
+    }
+    
+    .contact_form button:hover {
+        background: #1a252f;
+    }
+    
 
 
 }

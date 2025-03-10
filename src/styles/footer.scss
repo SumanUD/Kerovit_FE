@@ -150,20 +150,22 @@
 
     .footer-links {
         display: flex;
-        justify-content: center;
-        gap: 15px;
+        flex-direction: column; // Stack items vertically
+        align-items: flex-start; // Align items to the left
+        gap: 10px; // Reduce gap between links
         margin-top: 10px;
-
+    
         .footer-link {
             color: #fff;
             text-decoration: none;
             font-size: 14px;
             transition: color 0.3s ease;
-
+    
             &:hover {
                 text-decoration: underline;
                 color: #f5a623;
             }
         }
     }
+    
 }

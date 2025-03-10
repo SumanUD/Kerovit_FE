@@ -11,12 +11,11 @@ import { useRef } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-
 const Home = () => {
 
   const products = [
-    { id: 1, img: "/random_product.png", name: "Product 1" },
-    { id: 2, img: "/random_product.png", name: "Product 2" },
+    { id: 1, img: "/random_product.png", name: "Faucets" },
+    { id: 2, img: "/random_product.png", name: "Showers" },
     { id: 3, img: "/random_product.png", name: "Product 3" },
     { id: 4, img: "/random_product.png", name: "Product 4" },
     { id: 5, img: "/random_product.png", name: "Product 5" },
@@ -49,10 +48,12 @@ const Home = () => {
 
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />  
       {/* <Header /> */}
       <main className="home">
         <div className="homebanner">
+
+        <i class="fa-brands fa-whatsapp"></i>
 
         </div>
 
@@ -184,11 +185,13 @@ const Home = () => {
         <div className="home_contact">
           <div className="inside_banner_content">
             <form className="contact_form">
-              <input type="text" placeholder="Name" />
-              <input type="email" placeholder="Email" />
-              <input type="tel" placeholder="Phone" />
-              <input type="text" placeholder="City/State" />
-              <textarea placeholder="Message"></textarea>
+              <input type="text" placeholder="Name  |" />
+              <input type="email" placeholder="Email  |" />
+              <input type="tel" placeholder="Phone  |" />
+              <input type="text" placeholder="City/State  |" />
+              <input type="text" placeholder="Message  |" />
+
+              {/* <textarea placeholder="Message"></textarea> */}
               <button type="submit">Submit</button>
             </form>
           </div>

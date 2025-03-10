@@ -4,10 +4,10 @@ import "../../styles/allProducts.scss";
 
 const AllProduct = () => {
   const initialProducts = [
-    { id: 1, img: "/random_product.png", name: "Product 1" },
-    { id: 2, img: "/random_product.png", name: "Product 2" },
-    { id: 3, img: "/random_product.png", name: "Product 3" },
-    { id: 4, img: "/random_product.png", name: "Product 4" },
+    { id: 1, img: "/random_product.png", name: "Aenon" },
+    { id: 2, img: "/random_product.png", name: "Agalia" },
+    { id: 3, img: "/random_product.png", name: "Alana" },
+    { id: 4, img: "/random_product.png", name: "Amelia" },
     { id: 5, img: "/random_product.png", name: "Product 5" },
     { id: 6, img: "/random_product.png", name: "Product 6" },
   ];

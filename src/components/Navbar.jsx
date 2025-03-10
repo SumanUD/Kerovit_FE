@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"; 
 import "../styles/navbar.scss";
+import { FaSearch, FaMapMarkerAlt } from "react-icons/fa"; // Import icons
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="container">
+
       <nav id="navbarMenu">
         {/* Hamburger Menu */}
         <div className="toggleMenu" onClick={toggleMenu}>
@@ -85,7 +87,7 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-    </div>
+
   );
 };
 
