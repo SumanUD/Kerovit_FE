@@ -134,6 +134,29 @@ nav {
   .active .submenu-button::after {
     background: $text-hover-color;
   }
+
+  /* Navbar Right - Icons */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  right: 0;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.nav-icon {
+  font-size: 20px;
+  color: $text-color;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $text-hover-color;
+  }
+}
+
 }
 
 .submenu.openSub a {
@@ -316,9 +339,9 @@ nav {
   
   // Responsive Styles
   @media screen and (max-width: 600px) {
-    nav {
-      position: fixed;
-    }
+    // nav {
+    //   position: fixed;
+    // }
     .submenu ul.dropdown {
       position: static;
       width: 100%;

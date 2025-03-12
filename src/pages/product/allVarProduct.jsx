@@ -2,6 +2,8 @@ import { useState } from "react";
 import Footer from "../../components/Footer";
 import "../../styles/allProducts.scss";
 import { Link } from "react-router-dom";
+import Navbar from "../../components/Navbar";
+// import Header from "../components/Header";
 
 
 const AllVarProduct = () => {

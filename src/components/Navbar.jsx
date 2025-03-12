@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import "../styles/navbar.scss";
 import { FaSearch, FaMapMarkerAlt } from "react-icons/fa"; // Import icons
 
@@ -24,7 +24,6 @@ const Navbar = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -32,18 +31,33 @@ const Navbar = () => {
   return (
     <>
       {/* Background Blur Overlay */}
-      <div className={`nav-overlay ${isOpen ? "active" : ""}`} onClick={toggleMenu}></div>
+      {isOpen && <div className="nav-overlay active" onClick={toggleMenu}></div>}
 
       <nav id="navbarMenu" className={scrolled ? "scrolled" : ""}>
-        {/* Hamburger Menu */}
-        <div className="toggleMenu" onClick={toggleMenu}>
-          <img src="https://www.kerovit.com/images/new-logo-blue.png" alt="Logo" height="32px" />
+        {/* Left Side - Logo */}
+        <div className="nav-left">
+          <div className="toggleMenu" onClick={toggleMenu}>
+            <img
+              src="https://www.kerovit.com/images/new-logo-blue.png"
+              alt="Logo"
+              height="32px"
+            />
+          </div>
         </div>
 
+        {/* Right Side - Search & Location Icons */}
+        <div className="nav-right">
+          <FaSearch className="nav-icon" />
+          <FaMapMarkerAlt className="nav-icon" />
+        </div>
+
+        {/* Menu Items */}
         <ul className={isOpen ? "open" : ""}>
           {/* Products Submenu */}
           <li className={`submenu ${activeIndex === 0 ? "active openSub" : ""}`} onClick={(e) => toggleSubmenu(0, e)}>
-            <Link to="#">Products <span className="submenu-button"></span></Link>
+            <Link to="#">
+              Products <span className="submenu-button"></span>
+            </Link>
             <ul className="dropdown" style={{ display: activeIndex === 0 ? "block" : "none" }}>
               {[
                 { img: "https://www.kerovit.com/images/faucet-icons.png", name: "Faucet" },
@@ -66,7 +80,9 @@ const Navbar = () => {
 
           {/* More Submenu */}
           <li className={`submenu ${activeIndex === 1 ? "active openSub" : ""}`} onClick={(e) => toggleSubmenu(1, e)}>
-            <Link to="#">More <span className="submenu-button"></span></Link>
+            <Link to="#">
+              More <span className="submenu-button"></span>
+            </Link>
             <ul className="dropdown" style={{ display: activeIndex === 1 ? "block" : "none" }}>
               {["What's New", "Career", "Resources"].map((item, index) => (
                 <li key={index} onClick={(e) => e.stopPropagation()}>

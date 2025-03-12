@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import Header from "../components/Header";
+// import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/home.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
