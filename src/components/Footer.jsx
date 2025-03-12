@@ -12,23 +12,25 @@ const Footer = () => {
 
     return (
         <div className="above-accordian">
-            <div className="social-icons">
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                    <FaFacebook className="icon facebook" />
-                </a>
-                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                    <FaInstagram className="icon instagram" />
-                </a>
-                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-                    <FaYoutube className="icon youtube" />
-                </a>
-                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                    <FaLinkedin className="icon linkedin" />
-                </a>
-                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                    <FaTwitter className="icon twitter" />
-                </a>
-            </div>
+<div className="social-icons">
+    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+        <img src="/facebook.png" alt="Facebook" className="icon facebook" />
+    </a>
+    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+        <img src="/instagram.png" alt="Instagram" className="icon instagram" />
+    </a>
+    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+        <img src="/twitter.png" alt="Twitter" className="icon twitter" />
+    </a>
+    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+        <img src="/youtube.png" alt="YouTube" className="icon youtube" />
+    </a>
+    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+        <img src="/linkedin.png" alt="LinkedIn" className="icon linkedin" />
+    </a>
+
+</div>
+
 
             <div className="accordion" id="accordionExample">
                 <div className="accordion-item">
@@ -81,14 +83,15 @@ const Footer = () => {
 
                 <div className="app-buttons">
                     <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" className="app-button">
-                        <FaGooglePlay className="icon playstore" />
-                        Get it on <br /> <strong>Google Play</strong>
+                        <img src="/google_play.png" alt="Google Play" className="icon playstore" />
+                        {/* Get it on <br /> <strong>Google Play</strong> */}
                     </a>
                     <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer" className="app-button">
-                        <FaApple className="icon appstore" />
-                        Download on the <br /> <strong>App Store</strong>
+                        <img src="/app_store.png" alt="App Store" className="icon appstore" />
+                        {/* Download on the <br /> <strong>App Store</strong> */}
                     </a>
                 </div>
+
 
                 <div className="footer-links">
                     <Link to="/privacy-policy" className="footer-link">Privacy Policy</Link>

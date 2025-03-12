@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Footer from "../../components/Footer";
 import "../../styles/allProducts.scss";
+import { Link } from "react-router-dom";
 
 const AllProduct = () => {
   const initialProducts = [
@@ -42,7 +43,10 @@ const AllProduct = () => {
         <div className="product_grid">
           {products.map((product) => (
             <div key={product.id} className="product_card">
-              <img src={product.img} alt={product.name} />
+              <Link to="/product_var_listing">
+                  <img src={product.img} alt={product.name} />
+              </Link>
+
               <p>{product.name}</p>
             </div>
           ))}

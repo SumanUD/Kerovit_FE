@@ -10,14 +10,16 @@ import "swiper/css/pagination";
 import { useRef } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
+
 
 const Home = () => {
 
   const products = [
     { id: 1, img: "/random_product.png", name: "Faucets" },
-    { id: 2, img: "/random_product.png", name: "Showers" },
-    { id: 3, img: "/random_product.png", name: "Product 3" },
-    { id: 4, img: "/random_product.png", name: "Product 4" },
+    { id: 2, img: "/shower.png", name: "Showers" },
+    { id: 3, img: "/basin.png", name: "Basin" },
+    { id: 4, img: "/toilet.png", name: "Toilet" },
     { id: 5, img: "/random_product.png", name: "Product 5" },
     { id: 6, img: "/random_product.png", name: "Product 6" },
   ];
@@ -25,7 +27,7 @@ const Home = () => {
 
   const handleNextSlide = () => {
     if (swiperRef.current) {
-      swiperRef.current.slideNext(); // Move to the next slide
+      swiperRef.current.slideNext();
     }
   };
 
@@ -48,12 +50,12 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />  
+      <Navbar />
       {/* <Header /> */}
       <main className="home">
         <div className="homebanner">
 
-        <i class="fa-brands fa-whatsapp"></i>
+          <FaWhatsapp className="whatsapp-icon" />
 
         </div>
 
@@ -95,32 +97,31 @@ const Home = () => {
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, placeat aperiam exercitationem autem error eos soluta dolor cupiditate numquam</p>
 
         </div>
-
         <div className="home_aurum">
-
-          <h2>aurum</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus</p>
-
+          <div className="title-container">
+            <h2>aurum</h2>
+            <img src="/aurum_A.png" alt="A icon" className="aurum-icon" />
+          </div>
+          <p>Discover luxury with Aurum<br /> Our most premium collection that blends elegance with nature’s hues.</p>
           <img src="/single_product.png" alt="Single Product image" />
-          <button type="button" >
-          <Link to="/product_listing" className="showMoreBtn">Show More</Link>
-
+          <button type="button">
+            <Link to="/aurum" className="showMoreBtn">Show More</Link>
           </button>
         </div>
 
         <div className="home_klassic">
-          <h2 className="klassic_heading">KLASSIC</h2>
+          <div className="title-container">
+            <h2 className="klassic_heading">KLASSIC</h2>
+            <img src="/klassic_K.png" alt="K icon" className="klassic-icon" />
+          </div>
           <div className="underline"></div>
-
           <p className="klassic_desc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+            Discover luxury with Aurum<br /> Our most premium collection that blends elegance with nature’s hues.
           </p>
-
-          <img src="/single_product.png" alt="Single Product image" />
+          <img src="/klassic.png" alt="Single Product image" />
           <button type="button">
-            <Link to="/product_listing" className="showMoreBtn">Show More</Link>
+            <Link to="/aurum" className="showMoreBtn">Show More</Link>
           </button>
-
         </div>
 
         <div className="first_banner">
@@ -153,34 +154,34 @@ const Home = () => {
         </div>
 
         <div className="home_blog">
-      <h2>Blog</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, placeat aperiam exercitationem autem error eos soluta dolor cupiditate numquam</p>
+          <h2>Blog</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, placeat aperiam exercitationem autem error eos soluta dolor cupiditate numquam</p>
 
-      {/* Swiper for Blog Section */}
-      <Swiper
-        modules={[Pagination]}
-        spaceBetween={10}
-        slidesPerView={2}
-        pagination={{ clickable: true }}
-        breakpoints={{
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        }}
-        onSwiper={(swiper) => (swiperRefBlog.current = swiper)} // Assign Swiper instance
-      >
-        {blogPosts.map((blog) => (
-          <SwiperSlide key={blog.id}>
-            <div className="inside text-left">
-              <img src={blog.img} alt={blog.title} />
-              <h3>{blog.title}</h3>
-              <p>{blog.desc}</p>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+          {/* Swiper for Blog Section */}
+          <Swiper
+            modules={[Pagination]}
+            spaceBetween={10}
+            slidesPerView={2}
+            pagination={{ clickable: true }}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            onSwiper={(swiper) => (swiperRefBlog.current = swiper)} // Assign Swiper instance
+          >
+            {blogPosts.map((blog) => (
+              <SwiperSlide key={blog.id}>
+                <div className="inside text-left">
+                  <img src={blog.img} alt={blog.title} />
+                  <h3>{blog.title}</h3>
+                  <p>{blog.desc}</p>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-      <button type="button" onClick={handleNextBlogSlide}>Swipe</button>
-    </div>
+          <button type="button" onClick={handleNextBlogSlide}>Swipe</button>
+        </div>
 
         <div className="home_contact">
           <div className="inside_banner_content">
