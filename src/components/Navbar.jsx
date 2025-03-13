@@ -47,8 +47,8 @@ const Navbar = () => {
 
         {/* Right Side - Search & Location Icons */}
         <div className="nav-right">
-          <FaSearch className="nav-icon" />
           <FaMapMarkerAlt className="nav-icon" />
+          <FaSearch className="nav-icon" />
         </div>
 
         {/* Menu Items */}
