@@ -142,8 +142,21 @@ nav {
   gap: 20px;
   position: absolute;
   right: 0;
-  top: 40%;
+  top: 29%;
   transform: translateY(-50%);
+  .menu_search {
+    width: 19px;
+  }
+  .menu_location {
+    width: 15px;
+  }
+}
+.nav-left {
+  .kerovit_logo{
+    width: 70px;
+    float: left;
+    margin-left: 40px;
+  }
 }
 
 .nav-icon {
@@ -210,7 +223,8 @@ nav {
     width: 15px;
     height: 3px;
     border-top: 2px solid #ffffff;
-    // border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding: 1.5px;
   }
 }
 

@@ -38,17 +38,20 @@ const Navbar = () => {
         <div className="nav-left">
           <div className="toggleMenu" onClick={toggleMenu}>
             <img
-              src="https://www.kerovit.com/images/new-logo-blue.png"
+              src="/kerovit_logo.png"
               alt="Logo"
-              height="32px"
+              className="kerovit_logo"
             />
           </div>
         </div>
 
         {/* Right Side - Search & Location Icons */}
         <div className="nav-right">
-          <FaMapMarkerAlt className="nav-icon" />
-          <FaSearch className="nav-icon" />
+          {/* <FaMapMarkerAlt className="nav-icon" /> */}
+          {/* <FaSearch className="nav-icon" /> */}
+          <img src="menu_location.png" alt="" className="menu_location"/>
+          <img src="menu_search.png" alt="" className="menu_search"/>
+
         </div>
 
         {/* Menu Items */}

@@ -17,7 +17,7 @@ const Home = () => {
 
   const products = [
     { id: 1, img: "/random_product.png", name: "Faucets" },
-    { id: 2, img: "/shower.png", name: "Showers" },
+    { id: 2, img: "/shower2.png", name: "Showers" },
     { id: 3, img: "/basin.png", name: "Basin" },
     { id: 4, img: "/toilet.png", name: "Toilet" },
     { id: 5, img: "/random_product.png", name: "Product 5" },
@@ -60,7 +60,8 @@ const Home = () => {
         </div>
 
         <div className="home_categories">
-          <h2>Categories</h2>
+          {/* <h2>Categories</h2> */}
+          <img src="categories_heading.png" alt="" className="categories_heading"/>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
             placeat aperiam exercitationem autem error eos soluta dolor cupiditate
@@ -99,7 +100,8 @@ const Home = () => {
         </div>
         <div className="home_aurum">
           <div className="title-container">
-            <h2>aurum</h2>
+            {/* <h2>aurum</h2> */}
+            <img src="aurum_heading.png" alt="" className="aurum_heading"/>
             <img src="/aurum_A.png" alt="A icon" className="aurum-icon" />
           </div>
           <p>Discover luxury with Aurum<br /> Our most premium collection that blends elegance with nature’s hues.</p>
@@ -111,10 +113,11 @@ const Home = () => {
 
         <div className="home_klassic">
           <div className="title-container">
-            <h2 className="klassic_heading">KLASSIC</h2>
+            {/* <h2 className="klassic_heading">KLASSIC</h2> */}
+            <img src="klassic_heading.png" alt="" className="klassic_heading"/>
             <img src="/klassic_K.png" alt="K icon" className="klassic-icon" />
           </div>
-          <div className="underline"></div>
+        
           <p className="klassic_desc">
             Discover luxury with Aurum<br /> Our most premium collection that blends elegance with nature’s hues.
           </p>
@@ -147,14 +150,16 @@ const Home = () => {
 
         <div className="home_aboutus">
           <div className="inside_banner_content">
-            <h2>about us</h2>
+            {/* <h2>about us</h2> */}
+            <img src="aboutus_heading.png" alt="" className="aboutus_heading"/>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia voluptas eveniet molestiae repudiandae sapiente accusamus</p>
             <button className="read_more">read more</button>
           </div>
         </div>
 
         <div className="home_blog">
-          <h2>Blog</h2>
+          {/* <h2>Blog</h2> */}
+          <img src="home_blog_heading.png" alt="" className="home_blog_heading"/>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, placeat aperiam exercitationem autem error eos soluta dolor cupiditate numquam</p>
 
           {/* Swiper for Blog Section */}
