@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import "../styles/singleProduct.scss";
 
 const SingleProduct = () => {
-  // Define variants array with SKU and images
+
   const variants = [
     { sku: "KSR001-WH", image: "/product/1.jpg", alt: "White Variant" },
     { sku: "KSR001-BE", image: "/product/2.jpg", alt: "Beige Variant" },
@@ -13,12 +13,10 @@ const SingleProduct = () => {
     { sku: "KSR001-AS", image: "/product/5.jpg", alt: "Red Variant" },
   ];
 
-  // State to track the selected variant image
+
   const [selectedImage, setSelectedImage] = useState(variants[0].image);
-  // State to track which section is open in the accordion
   const [openSection, setOpenSection] = useState(null);
 
-  // Function to toggle dropdown sections
   const toggleSection = (sectionIndex) => {
     setOpenSection(openSection === sectionIndex ? null : sectionIndex);
   };
@@ -28,7 +26,7 @@ const SingleProduct = () => {
       <Navbar />
 
       <div className="singlePro">
-        {/* Main Product Image */}
+
         <img src={selectedImage} alt="Selected Product" className="main-image" />
 
         <div className="description">
@@ -55,7 +53,7 @@ const SingleProduct = () => {
           <button className="nearest-showroom-btn">NEAREST SHOWROOM</button>
         </div>
 
-        {/* Accordion Section */}
+
         <div className="dropdown-section">
           {["Features", "Installation & Service Parts", "Design Files", "Additional Information"].map((section, index) => (
             <div key={index} className="dropdown-item">

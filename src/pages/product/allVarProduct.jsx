@@ -3,8 +3,6 @@ import Footer from "../../components/Footer";
 import "../../styles/allProducts.scss";
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar";
-// import Header from "../components/Header";
-
 
 const AllVarProduct = () => {
   const initialProducts = [
@@ -26,11 +24,11 @@ const AllVarProduct = () => {
   ];
 
   const [products, setProducts] = useState(initialProducts);
-  const [visibleCount, setVisibleCount] = useState(6); // Show 6 initially
+  const [visibleCount, setVisibleCount] = useState(6);
 
   const loadMoreProducts = () => {
-    const newProducts = moreProducts.slice(0, 6); // Load 6 at a time
-    setProducts((prev) => [...prev, ...newProducts]); // Append to existing products
+    const newProducts = moreProducts.slice(0, 6);
+    setProducts((prev) => [...prev, ...newProducts]);
     setVisibleCount((prev) => prev + newProducts.length);
   };
 
@@ -42,17 +40,15 @@ const AllVarProduct = () => {
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </div>
 
-        {/* Product Grid */}
         <div className="product_grid">
           {products.map((product) => (
-            <div key={product.id} className="product_card">
+            <Link to={`/single_product`} key={product.id} className="product_card">
               <img src={product.img} alt={product.name} />
               <p>{product.name}</p>
-            </div>
+            </Link>
           ))}
         </div>
 
-        {/* Load More Button (Visible Only If More Products Exist) */}
         {products.length < initialProducts.length + moreProducts.length && (
           <button className="load-more" onClick={loadMoreProducts}>
             Load More
