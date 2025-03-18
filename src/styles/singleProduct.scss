@@ -1,0 +1,113 @@
+$black: #000;
+$grey: #858282;
+$white: #fff;
+$primary-bg: #818080;
+$secondary-bg: #3f3d3d;
+$tertiary-bg: #212020;
+$active-color: yellow;
+
+.singlePro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, $primary-bg 10%, $secondary-bg 50%, $tertiary-bg 100%);
+  color: $white;
+  padding: 20px;
+  min-height: 100vh;
+
+  .main-image {
+    width: 90%;
+    max-width: 400px;
+    display: block;
+    margin: 40px 0 20px;
+  }
+
+  .description {
+    text-align: left;
+    width: 90%;
+    max-width: 500px;
+
+    h2 {
+      font-size: 22px;
+      color: $black;
+    }
+
+    p {
+      font-size: 14px;
+      opacity: 0.8;
+      color: $grey;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin-top: 10px;
+      color: $black;
+    }
+
+    .variants {
+      display: flex;
+      justify-content: left;
+      gap: 8px;
+      margin-top: 10px;
+
+      .variant-image {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 5px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: 0.3s;
+
+        &:hover {
+          border: 2px solid $white;
+        }
+
+        &.active {
+          border: 2px solid $active-color;
+        }
+      }
+    }
+  }
+
+  .nearest-showroom-btn {
+    background: $white;
+    color: $black;
+    padding: 10px 80px;
+    border: none;
+    font-size: 14px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  .dropdown-section {
+    width: 90%;
+    max-width: 500px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    .dropdown-item {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+      button {
+        width: 100%;
+        background: none;
+        color: $black;
+        font-size: 14px;
+        text-align: left;
+        border: none;
+        padding: 12px 0;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+      }
+
+      .dropdown-content {
+        padding: 10px;
+        font-size: 14px;
+        background: #222;
+        color: #ccc;
+      }
+    }
+  }
+}

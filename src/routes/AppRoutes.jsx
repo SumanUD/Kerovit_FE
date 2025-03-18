@@ -13,6 +13,7 @@ import AllProduct from "../pages/product/allProducts";
 import Aurum from "../pages/product/Aurum";
 import AllVarProduct from "../pages/product/allVarProduct";
 
+
 // import Career from "../pages/More/Career";
 // import Resources from "../pages/More/Resources";
 // import WhatsNew from "../pages/More/WhatsNew";
@@ -32,6 +33,8 @@ const App = () => {
         <Route path="/product_listing" element={<AllProduct />} />
         <Route path="/aurum" element={<Aurum />} />
         <Route path="/product_var_listing" element={<AllVarProduct />} />
+        {/* <Route path="/single_product" element={<SingleProduct />} /> */}
+
 
         {/* <Route path="/whats-new" element={<WhatsNew />} />
         <Route path="/resources" element={<Resources />} />
