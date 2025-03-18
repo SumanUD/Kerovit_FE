@@ -6,7 +6,7 @@
         display: none;
     }
     .homebanner {
-        background-image: url("/hb1.png");
+        background-image: url("/home page-02.png");
         background-size: 100% 100%;
         background-position: center;
         background-repeat: no-repeat;
@@ -19,12 +19,67 @@
         position: relative;
 
         .whatsapp-icon {
-            position: absolute;
-            bottom: 45px;
-            right: 14px;
-            font-size: 2.5rem;
-            color: white;
+          position: fixed;
+          bottom: 45px;
+          right: 14px;
+          font-size: 3rem;
+          color: #505050;
+
+
+          z-index: 99999;
+          bottom: 8% !important;
+          right: 6% !important;
+      
         }
+
+        h2,span {
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-size: 23.9733px;
+          color: #c7c3c3;
+
+        }
+        .bannerText{
+          position: absolute;
+          top: 62%;
+          left: 24%;
+          font-family: 'Sinkin Sans 500 Medium', sans-serif;
+          .h2_second{
+            position: relative;
+            left: 30%;
+            display: ruby-text;
+            margin-top: -4px;
+            color: #505050;
+            font-size: 11.3774px;
+            // font-family: 'Sinkin Sans 300 Medium', sans-serif;
+          }
+
+          p{
+            text-align: center;
+            position: relative;
+            left: -15%;
+            top: -27px;
+            font-family: 'Sinkin Sans 300 Light', sans-serif;
+            font-size: 9.854px;
+          color: #c7c3c3;
+          margin-left: 14px;
+
+
+          }
+          .bannerdescp{
+            width: 253px;
+            margin-top: 24px;
+          }
+          .line_image{
+            position: relative;
+            left: 41%;
+            height: 18px;
+            width: 2px;
+            top: -39px;
+          }
+        }
+
+
       }
       
 

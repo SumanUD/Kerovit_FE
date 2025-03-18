@@ -54,6 +54,16 @@ const Home = () => {
       {/* <Header /> */}
       <main className="home">
         <div className="homebanner">
+          <div className="bannerText">
+            <h2>bathrooms</h2>
+
+            <span className="h2_second">you <h2>desire</h2></span>
+            <div className="bannerdescp">
+              <img src="home page-08.png" alt="" className="line_image"/>
+              <p>Let your desires come alive with the perfect fusion of form, function and usability with Kerovit. Featuring an eclectic blend of exquisite design, environment-friendly technology and unparalleled quality, Kerovit enhances your bathroom décor and experience.</p>
+
+            </div>
+          </div>
 
           <FaWhatsapp className="whatsapp-icon" />
 

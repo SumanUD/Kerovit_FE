@@ -63,12 +63,12 @@ const Navbar = () => {
             </Link>
             <ul className="dropdown" style={{ display: activeIndex === 0 ? "block" : "none" }}>
               {[
-                { img: "https://www.kerovit.com/images/faucet-icons.png", name: "Faucet" },
-                { img: "https://www.kerovit.com/images/bathroom-icons.png", name: "Shower" },
-                { img: "https://www.kerovit.com/images/basin-icons.png", name: "Basin" },
-                { img: "https://www.kerovit.com/images/sanitaryware-icons.png", name: "Toilet" },
-                { img: "https://www.kerovit.com/images/bathroom-icons.png", name: "Bathroom Furniture" },
-                { img: "https://www.kerovit.com/images/accessories-icons.png", name: "Accessories" }
+                { img: "/icons/faucet.png", name: "Faucet" },
+                { img: "/icons/shower.png", name: "Shower" },
+                { img: "/icons/basin.png", name: "Basin" },
+                { img: "/icons/toilet.png", name: "Toilet" },
+                { img: "/icons/bathroom_furniture.png", name: "Bathroom Furniture" },
+                { img: "/icons/accessories.png", name: "Accessories" }
               ].map((item, index) => (
                 <li key={index} onClick={(e) => e.stopPropagation()}>
                   <img src={item.img} alt={item.name} />

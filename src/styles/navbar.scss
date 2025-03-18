@@ -22,7 +22,8 @@ nav {
   text-transform: uppercase;
   width: 100%;
   height: 75px;
-  font-size: 12px;
+  font-size: 12.301px;
+  font-family: "Sinkin Sans 300 Light", sans-serif;
   position: absolute;
   top: 0;
   left: 0;
@@ -156,6 +157,7 @@ nav {
     width: 70px;
     float: left;
     margin-left: 40px;
+    margin-top: -3px;
   }
 }
 
@@ -237,14 +239,14 @@ nav {
   top: 100%;
 
   img {
-    height: 40px;
+    height: 25px;
     float: inline-start;
   }
 }
 
 .submenu li {
   float: none;
-  border-bottom: 1px solid $border-bottom-color;
+  // border-bottom: 1px solid $border-bottom-color;
   position: relative;
 }
 
@@ -260,9 +262,10 @@ nav {
     display: block;
     cursor: pointer;
   background-color: #fff;
-  margin-top: -8px;
+  margin-top: -4px;
   /* padding-top: 0; */
-  margin-bottom: -7px;
+  margin-bottom: 3px;
+
 
   }
 
@@ -289,6 +292,7 @@ nav {
 
     ul {
       display: none;
+      margin-top: 10px;
     }
 
     ul.open {
@@ -302,7 +306,7 @@ nav {
 
     ul li {
       float: none;
-      border-top: 1px solid rgba(120, 120, 120, 0.15);
+      // border-top: 1px solid rgba(120, 120, 120, 0.15);
     }
   }
   nav.scrolled {
