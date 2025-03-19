@@ -1,15 +1,25 @@
 .allProductMain {
     background-color: #404041;
     padding-bottom: 40px; // Ensures spacing around content
-    padding-top: 50px;
+    padding-top: 80px;
     
   }
   
   .prod_details {
     padding: 20px 40px;
     border-radius: 10px;
+
+    h2 {
+      font-family: 'Sinkin Sans 500 Medium', sans-serif;
+      font-size: 15.232px;
+    }
+    p{
+      font-family: 'Sinkin Sans 300 Light', sans-serif;
+      font-size: 9.825px;
+      color: #a4a4a4;
+    }
   
-    h2, p {
+    h2{
       color: #fff; // Changed to black for better readability
     }
   }
@@ -32,11 +42,7 @@
       border-color: black;
     }
   
-    &::after {
-      content: "➜";
-      font-size: 14px;
-      margin-left: 5px;
-    }
+
   }
   
   
@@ -68,7 +74,9 @@
         font-size: 14px;
         font-weight: bold;
         text-transform: uppercase;
-        color: #fff;
+        color: #a4a4a4;
+        font-family: 'Sinkin Sans 300 Light', sans-serif;
+        font-size: 7.825px;
       }
     }
   }

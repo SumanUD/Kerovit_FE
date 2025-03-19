@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 const Aurum = () => {
 
   const products = [
-    { id: 1, img: "/single_product.png", name: "Faucets" },
+    { id: 1, img: "/product/single_product.png", name: "Faucets" },
     { id: 2, img: "/single_product.png", name: "Showers" },
     { id: 3, img: "/single_product.png", name: "Basin" },
     { id: 4, img: "/single_product.png", name: "Toilet" },
@@ -38,12 +38,8 @@ const Aurum = () => {
       <main className="aurum">
 
         <div className="aurum_slider">
-          <h2>Aurum</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
-            placeat aperiam exercitationem autem error eos soluta dolor cupiditate
-            numquam
-          </p>
+          <h2>faucet</h2>
+          <p>Designed with skillfull unification of creativity and engineering. Kerovit has combined un-matched functional expertise with a promise of excellence giving the customers an alluring experience they desire!</p>
 
           <Swiper
             modules={[Pagination]}
@@ -63,7 +59,7 @@ const Aurum = () => {
                     <img src={product.img} alt={product.name} />
                 </Link>
 
-                  <p>{product.name}</p>
+                  {/* <p>{product.name}</p> */}
                 </div>
               </SwiperSlide>
             ))}

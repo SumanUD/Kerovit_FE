@@ -15,24 +15,24 @@ const Footer = () => {
 
     return (
         <div className="above-accordian">
-<div className="social-icons">
-    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-        <img src="/facebook.png" alt="Facebook" className="icon facebook" />
-    </a>
-    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-        <img src="/instagram.png" alt="Instagram" className="icon instagram" />
-    </a>
-    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-        <img src="/twitter.png" alt="Twitter" className="icon twitter" />
-    </a>
-    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-        <img src="/youtube.png" alt="YouTube" className="icon youtube" />
-    </a>
-    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-        <img src="/linkedin.png" alt="LinkedIn" className="icon linkedin" />
-    </a>
+            <div className="social-icons">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                    <img src="/facebook.png" alt="Facebook" className="icon facebook" />
+                </a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                    <img src="/instagram.png" alt="Instagram" className="icon instagram" />
+                </a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                    <img src="/twitter.png" alt="Twitter" className="icon twitter" />
+                </a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                    <img src="/youtube.png" alt="YouTube" className="icon youtube" />
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <img src="/linkedin.png" alt="LinkedIn" className="icon linkedin" />
+                </a>
 
-</div>
+            </div>
 
 
             <div className="accordion" id="accordionExample">
@@ -44,13 +44,13 @@ const Footer = () => {
                             onClick={() => toggleAccordion(1)}
                         >
                             Collection   <span className="accordion-icon">
-                            <img 
-  src={openAccordion === 1 ? minusIcon : plusIcon} 
-  alt={openAccordion === 1 ? "Collapse" : "Expand"} 
-  width="16" 
-  height="16"
-/>
-  </span>
+                                <img
+                                    src={openAccordion === 1 ? minusIcon : plusIcon}
+                                    alt={openAccordion === 1 ? "Collapse" : "Expand"}
+                                    width="16"
+                                    height="16"
+                                />
+                            </span>
                         </button>
                     </h2>
                     {openAccordion === 1 && (
@@ -73,19 +73,19 @@ const Footer = () => {
                             onClick={() => toggleAccordion(2)}
                         >
                             More  <span className="accordion-icon">
-                            <img 
-  src={openAccordion === 2 ? minusIcon : plusIcon} 
-  alt={openAccordion === 2 ? "Collapse" : "Expand"} 
-  width="16" 
-  height="16"
-/>
-  </span>
+                                <img
+                                    src={openAccordion === 2 ? minusIcon : plusIcon}
+                                    alt={openAccordion === 2 ? "Collapse" : "Expand"}
+                                    width="16"
+                                    height="16"
+                                />
+                            </span>
                         </button>
                     </h2>
                     {openAccordion === 2 && (
                         <div className="accordion-collapse">
                             <div className="accordion-body">
-                            <p>This is the second item's accordion body.</p>
+                                <p>This is the second item's accordion body.</p>
 
                             </div>
                         </div>

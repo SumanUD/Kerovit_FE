@@ -1,0 +1,84 @@
+.allProductMain {
+    background-color: #404041;
+    padding-bottom: 40px; // Ensures spacing around content
+    padding-top: 80px;
+    
+  }
+  
+  .prod_details {
+    padding: 20px 40px;
+    border-radius: 10px;
+
+    h2 {
+      font-family: 'Sinkin Sans 500 Medium', sans-serif;
+      font-size: 15.232px;
+    }
+    p{
+      font-family: 'Sinkin Sans 300 Light', sans-serif;
+      font-size: 9.825px;
+      color: #a4a4a4;
+    }
+  
+    h2{
+      color: #fff; // Changed to black for better readability
+    }
+  }
+
+  .load-more {
+    background-color: f4f4f4;
+    border: 0.5px solid gray;
+    width: 118px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin: auto;
+    
+    &:hover {
+      background-color: #f4f4f4;
+      border-color: black;
+    }
+  
+
+  }
+  
+  
+  .product_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // 2 columns for mobile
+    gap: 16px;
+    padding: 20px;
+  
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(3, 1fr); // 3 columns for tablets
+    }
+  
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr); // 4 columns for desktops
+    }
+  
+    .product_card {
+      text-align: center;
+    //   padding: 10px;
+      
+      img {
+        width: 100%;
+        max-width: 180px;
+      }
+  
+      p {
+        margin-top: 8px;
+        font-size: 14px;
+        // font-weight: bold;
+        text-transform: uppercase;
+        color: #a4a4a4;
+        font-family: 'Sinkin Sans 300 Light', sans-serif;
+        font-size: 7.825px;
+        text-decoration: none;
+      }
+    }
+  }
+  

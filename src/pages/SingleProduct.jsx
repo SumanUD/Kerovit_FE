@@ -2,6 +2,8 @@ import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/singleProduct.scss";
+import plusIcon from "../../public/icons/plus.png";
+import minusIcon from "../../public/icons/minus.png";
 
 const SingleProduct = () => {
 
@@ -30,12 +32,12 @@ const SingleProduct = () => {
         <img src={selectedImage} alt="Selected Product" className="main-image" />
 
         <div className="description">
-          <h2>HYDRUS PLUS</h2>
-          <p>MODEL NO.: KSR001</p>
-          <p>SERIES: 1</p>
+          <h2>Amelia</h2>
+          <p>MODEL NO.: KB2911010-ND-MBK</p>
+          <p>SERIES: Amelia</p>
 
           <h3>Description</h3>
-          <p>Single Lever Tall Basin Mixer</p>
+          <p>Single Lever Basin Mixer Without Pop-Up</p>
 
           <h3>Variants</h3>
           <div className="variants">
@@ -56,16 +58,25 @@ const SingleProduct = () => {
 
         <div className="dropdown-section">
           {["Features", "Installation & Service Parts", "Design Files", "Additional Information"].map((section, index) => (
-            <div key={index} className="dropdown-item">
-              <button onClick={() => toggleSection(index)}>
-                {section} <span>{openSection === index ? "−" : "+"}</span>
-              </button>
-              {openSection === index && (
-                <div className="dropdown-content">
-                  <p>Content for {section} goes here...</p>
-                </div>
-              )}
+          <div key={index} className="dropdown-item">
+          <button onClick={() => toggleSection(index)}>
+            {section}
+            <span className="dropdown-icon">
+              <img
+                src={openSection === index ? minusIcon : plusIcon}
+                alt={openSection === index ? "Collapse" : "Expand"}
+                width="16"
+                height="16"
+              />
+            </span>
+          </button>
+          {openSection === index && (
+            <div className="dropdown-content">
+              <p>Content for {section} goes here...</p>
             </div>
+          )}
+        </div>
+        
           ))}
         </div>
       </div>

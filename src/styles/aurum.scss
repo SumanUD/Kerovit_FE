@@ -1,5 +1,8 @@
+@import url('https://fonts.cdnfonts.com/css/sinkin-sans-400-regular');
+
+
 .main-content {
-  background-color: #333; // Ensures the background color covers everything
+  background-color: #404041; // Ensures the background color covers everything
   position: relative; // Ensures absolutely positioned elements are contained
   padding-bottom: 1px; // Creates space for the button at the bottom
   padding-top: 70px;
@@ -10,25 +13,26 @@
     }
 
     .aurum_slider {
-      margin: 0 25px 50px 25px;
+      margin: 30px 25px 50px 25px;
       position: relative;
       display: flex;
       flex-direction: column;
       // align-items: center; // Ensures elements are centered
 
       h2 {
-        text-transform: uppercase;
-        text-decoration: underline;
-        font-weight: 500;
-        font-size: 20px;
+        text-transform:uppercase;
+        // text-decoration: underline;
         margin-bottom: 20px;
         color: white;
+        font-family: 'Sinkin Sans 500 Medium', sans-serif;
+        font-size: 15.232px;
       }
 
       p {
-        font-size: 14px;
+        font-family: 'Sinkin Sans 300 Light', sans-serif;
+        font-size: 9.825px;
         line-height: 1.6;
-        color: #fff;
+        color: #a4a4a4;
         // text-align: center;
         max-width: 600px;
       }
@@ -50,10 +54,12 @@
 
         img {
           margin: 16px 0;
-          border-radius: 8px;
+          // border-radius: 8px;
+          width: 100%;
         }
 
         p {
+          
           font-size: 13px;
           text-transform: uppercase;
           font-weight: bold;
@@ -69,17 +75,17 @@
 
       /* Updated Button Styling */
       button {
-        background-color: transparent;
+        background-color: #fff;
         border: 1px solid gray;
         width: 120px;
-        padding: 8px;
+        padding: 4px;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 5px;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
-        color: #fff;
+        color: #000;
 
         margin-top: 20px; // Pushes button below content
         align-self: flex-end; // Ensures button stays centered

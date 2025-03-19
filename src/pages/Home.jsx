@@ -32,8 +32,8 @@ const Home = () => {
   };
 
   const blogPosts = [
-    { id: 1, img: "/blog1.png", title: "Blog 1", desc: "Lorem ipsum, dolor sit" },
-    { id: 2, img: "/blog2.png", title: "Blog 2", desc: "Lorem ipsum, dolor sit" },
+    { id: 1, img: "/blog3.png", title: "Traditional vs. Wall-Mounted Bathroom Faucets: A Comparative Guide", desc: "Lorem ipsum, dolor sit" },
+    { id: 2, img: "/blog2.png", title: "Choosing the Right Faucet Finish for Your Bathroom – A Guide to Chrome, Gold, and Matte Black", desc: "Lorem ipsum, dolor sit" },
     { id: 3, img: "/blog1.png", title: "Blog 3", desc: "Lorem ipsum, dolor sit" },
     { id: 4, img: "/blog2.png", title: "Blog 4", desc: "Lorem ipsum, dolor sit" },
     { id: 5, img: "/blog1.png", title: "Blog 5", desc: "Lorem ipsum, dolor sit" },
@@ -185,7 +185,7 @@ const Home = () => {
             {blogPosts.map((blog) => (
               <SwiperSlide key={blog.id}>
                 <div className="inside text-left">
-                  <img src={blog.img} alt={blog.title} />
+                  <img src={blog.img} alt={blog.title} className="swiperImg" />
                   <h3>{blog.title}</h3>
                   <p>{blog.desc}</p>
                 </div>
