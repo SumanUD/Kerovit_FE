@@ -12,7 +12,7 @@ const SingleProduct = () => {
     { sku: "KSR001-BE", image: "/product/2.jpg", alt: "Beige Variant" },
     { sku: "KSR001-BR", image: "/product/3.jpg", alt: "Brown Variant" },
     { sku: "KSR001-BK", image: "/product/4.jpg", alt: "Black Variant" },
-    { sku: "KSR001-AS", image: "/product/5.jpg", alt: "Red Variant" },
+    // { sku: "KSR001-AS", image: "/product/5.jpg", alt: "Red Variant" },
   ];
 
 
@@ -32,12 +32,12 @@ const SingleProduct = () => {
         <img src={selectedImage} alt="Selected Product" className="main-image" />
 
         <div className="description">
-          <h2>Amelia</h2>
-          <p>MODEL NO.: KB2911010-ND-MBK</p>
+          <h2>AENON</h2>
+          <p>MODEL NO.: KB2611010-ND-CP</p>
           <p>SERIES: Amelia</p>
 
           <h3>Description</h3>
-          <p>Single Lever Basin Mixer Without Pop-Up</p>
+          <p>SINGLE LEVER BASIN MIXER WITHOUT POP-UP</p>
 
           <h3>Variants</h3>
           <div className="variants">

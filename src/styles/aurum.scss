@@ -96,9 +96,15 @@
         // }
 
         &::after {
-          content: "➜";
-          font-size: 14px;
-          margin-left: 5px;
+          content: ""; 
+          display: inline-block;
+          width: 20px; // Adjust width as needed
+          height: 10px; // Adjust height as needed
+          background-image: url('/icons/right_arrow.png'); // Replace with actual image path
+          background-size: contain;
+          background-repeat: no-repeat;
+          margin-left: 5px; // Space between text and image
+          vertical-align: middle;
         }
       }
     }

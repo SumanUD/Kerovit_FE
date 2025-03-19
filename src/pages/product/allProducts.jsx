@@ -6,10 +6,10 @@ import Navbar from "../../components/Navbar";
 
 const AllProduct = () => {
   const initialProducts = [
-    { id: 1, img: "/product/Collection  & Product pages-27.png", name: "Aenon" },
-    { id: 2, img: "/product/Collection  & Product pages-28.png", name: "Agalia" },
-    { id: 3, img: "/product/Collection  & Product pages-29.png", name: "Alana" },
-    { id: 4, img: "/product/Collection  & Product pages-30.png", name: "Amelia" },
+    { id: 1, img: "/product/Collection  & Product pages-28.png", name: "Aenon" },
+    { id: 2, img: "/product/Collection  & Product pages-27.png", name: "Agalia" },
+    { id: 3, img: "/product/Collection  & Product pages-30.png", name: "Alana" },
+    { id: 4, img: "/product/Collection  & Product pages-29.png", name: "Amelia" },
     { id: 5, img: "/random_product.png", name: "Product 5" },
     { id: 6, img: "/random_product.png", name: "Product 6" },
   ];

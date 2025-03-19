@@ -6,7 +6,7 @@ import Navbar from "../../components/Navbar";
 
 const AllVarProduct = () => {
   const initialProducts = [
-    { id: 1, img: "/product/single_var.png", name: "MODEL NO: ABCD1234" },
+    { id: 1, img: "/product/single_var1.png", name: "MODEL NO: ABCD1234" },
     { id: 2, img: "/product/single_var.png", name: "MODEL NO: ABCD1234" },
     { id: 3, img: "/product/single_var.png", name: "MODEL NO: ABCD1234" },
     { id: 4, img: "/product/single_var.png", name: "MODEL NO: ABCD1234" },

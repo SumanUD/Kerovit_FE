@@ -198,6 +198,7 @@ const Home = () => {
 
         <div className="home_contact">
           <div className="inside_banner_content">
+            <h2><span>submit</span> your query</h2>
             <form className="contact_form">
               <input type="text" placeholder="Name  |" />
               <input type="email" placeholder="Email  |" />
