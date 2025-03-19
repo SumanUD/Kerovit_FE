@@ -32,11 +32,11 @@ const Home = () => {
   };
 
   const blogPosts = [
-    { id: 1, img: "/random_product.png", title: "Blog 1", desc: "Lorem ipsum, dolor sit" },
-    { id: 2, img: "/random_product.png", title: "Blog 2", desc: "Lorem ipsum, dolor sit" },
-    { id: 3, img: "/random_product.png", title: "Blog 3", desc: "Lorem ipsum, dolor sit" },
-    { id: 4, img: "/random_product.png", title: "Blog 4", desc: "Lorem ipsum, dolor sit" },
-    { id: 5, img: "/random_product.png", title: "Blog 5", desc: "Lorem ipsum, dolor sit" },
+    { id: 1, img: "/blog1.png", title: "Blog 1", desc: "Lorem ipsum, dolor sit" },
+    { id: 2, img: "/blog2.png", title: "Blog 2", desc: "Lorem ipsum, dolor sit" },
+    { id: 3, img: "/blog1.png", title: "Blog 3", desc: "Lorem ipsum, dolor sit" },
+    { id: 4, img: "/blog2.png", title: "Blog 4", desc: "Lorem ipsum, dolor sit" },
+    { id: 5, img: "/blog1.png", title: "Blog 5", desc: "Lorem ipsum, dolor sit" },
   ];
 
 
@@ -73,9 +73,7 @@ const Home = () => {
           {/* <h2>Categories</h2> */}
           <img src="categories_heading.png" alt="" className="categories_heading"/>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
-            placeat aperiam exercitationem autem error eos soluta dolor cupiditate
-            numquam
+          Designed by skillfully unifying creativity and engineering, Kerovit has combined unmatched functional expertise with a promise of excellence, giving customers an exceptional experience that fulfils their heart's desires!
           </p>
 
           <Swiper
@@ -105,7 +103,7 @@ const Home = () => {
         <div className="home_collections">
 
           <h2>Collections</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, placeat aperiam exercitationem autem error eos soluta dolor cupiditate numquam</p>
+          <p>Offering an impeccable blend of cutting-edge technology and contemporary design, Kerovit brings a diverse collection of faucets, sanitaryware, showers, bathroom furniture, and accessories with top-notch quality standards.</p>
 
         </div>
         <div className="home_aurum">
@@ -114,7 +112,7 @@ const Home = () => {
             <img src="aurum_heading.png" alt="" className="aurum_heading"/>
             <img src="/aurum_A.png" alt="A icon" className="aurum-icon" />
           </div>
-          <p>Discover luxury with Aurum<br /> Our most premium collection that blends elegance with nature’s hues.</p>
+          <p>Indulge in the luxury of Aurum, our exquisite collection that seamlessly blends elegance with nature's palette of perfection.</p>
           <img src="/single_product.png" alt="Single Product image" />
           <button type="button">
             <Link to="/aurum" className="showMoreBtn">Show More</Link>
@@ -129,7 +127,7 @@ const Home = () => {
           </div>
         
           <p className="klassic_desc">
-            Discover luxury with Aurum<br /> Our most premium collection that blends elegance with nature’s hues.
+          Bring home the true definition of timeless luxury with our Klassic collection, which maintains sophistication at its peak with elegant, minimal aesthetics.
           </p>
           <img src="/klassic.png" alt="Single Product image" />
           <button type="button">
@@ -140,7 +138,7 @@ const Home = () => {
         <div className="first_banner">
           <div className="inside_banner_content">
             <h2>world of kerovit</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia voluptas eveniet molestiae repudiandae sapiente accusamus</p>
+            <p>Featuring great strength, durability, and a higher-quality finish, Kerovit today stands as a definitive expression of modern lifestyles, exquisitely designed to match the desires of the new India.</p>
             <button className="locate">locate a store</button>
           </div>
         </div>
@@ -149,7 +147,7 @@ const Home = () => {
         <div className="second_banner">
           <div className="inside_banner_content">
             <h2>the catalogue</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia voluptas eveniet molestiae repudiandae sapiente accusamus</p>
+            <p>Browse our latest catalogue and discover the perfect bathroom solutions for your home.</p>
             {/* <button className="locate">locate a store</button> */}
           </div>
           <div className="catalogue">
@@ -162,7 +160,7 @@ const Home = () => {
           <div className="inside_banner_content">
             {/* <h2>about us</h2> */}
             <img src="aboutus_heading.png" alt="" className="aboutus_heading"/>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia voluptas eveniet molestiae repudiandae sapiente accusamus</p>
+            <p>Kerovit, a distinguished brand from the house of Kajaria, was introduced to transform modern bathroom spaces by creating value that exceeds customers' expectations.</p>
             <button className="read_more">read more</button>
           </div>
         </div>
@@ -170,13 +168,13 @@ const Home = () => {
         <div className="home_blog">
           {/* <h2>Blog</h2> */}
           <img src="home_blog_heading.png" alt="" className="home_blog_heading"/>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, placeat aperiam exercitationem autem error eos soluta dolor cupiditate numquam</p>
+          <p>Explore our Blog and witness a world where desires take shape.</p>
 
           {/* Swiper for Blog Section */}
           <Swiper
             modules={[Pagination]}
             spaceBetween={10}
-            slidesPerView={2}
+            slidesPerView={1}
             pagination={{ clickable: true }}
             breakpoints={{
               640: { slidesPerView: 2 },

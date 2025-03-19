@@ -34,6 +34,7 @@ const AllVarProduct = () => {
 
   return (
     <>
+    <Navbar />
       <main className="allProductMain">
         <div className="prod_details">
           <h2>CATEGORY NAME</h2>

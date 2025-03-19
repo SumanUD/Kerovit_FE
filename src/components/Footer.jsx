@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin, FaGooglePlay, FaApple, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../styles/footer.scss";
+import plusIcon from "../../public/icons/plus.png";
+import minusIcon from "../../public/icons/minus.png";
+
 
 const Footer = () => {
     const [openAccordion, setOpenAccordion] = useState(null);
@@ -40,7 +43,14 @@ const Footer = () => {
                             type="button"
                             onClick={() => toggleAccordion(1)}
                         >
-                            Collection <span className="accordion-icon">{openAccordion === 1 ? '-' : '+'}</span>
+                            Collection   <span className="accordion-icon">
+                            <img 
+  src={openAccordion === 1 ? minusIcon : plusIcon} 
+  alt={openAccordion === 1 ? "Collapse" : "Expand"} 
+  width="16" 
+  height="16"
+/>
+  </span>
                         </button>
                     </h2>
                     {openAccordion === 1 && (
@@ -62,7 +72,14 @@ const Footer = () => {
                             type="button"
                             onClick={() => toggleAccordion(2)}
                         >
-                            More <span className="accordion-icon">{openAccordion === 2 ? '-' : '+'}</span>
+                            More  <span className="accordion-icon">
+                            <img 
+  src={openAccordion === 2 ? minusIcon : plusIcon} 
+  alt={openAccordion === 2 ? "Collapse" : "Expand"} 
+  width="16" 
+  height="16"
+/>
+  </span>
                         </button>
                     </h2>
                     {openAccordion === 2 && (

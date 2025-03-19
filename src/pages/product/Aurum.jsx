@@ -33,7 +33,8 @@ const Aurum = () => {
   return (
     <>
       <Navbar />
-      {/* <Header /> */}
+      <div className="main-content">
+
       <main className="aurum">
 
         <div className="aurum_slider">
@@ -74,6 +75,8 @@ const Aurum = () => {
         
 
       </main>
+      </div>
+
       <Footer />
     </>
   );

@@ -2,6 +2,8 @@ import { useState } from "react";
 import Footer from "../../components/Footer";
 import "../../styles/allProducts.scss";
 import { Link } from "react-router-dom";
+import Navbar from "../../components/Navbar";
+
 
 const AllProduct = () => {
   const initialProducts = [
@@ -33,6 +35,7 @@ const AllProduct = () => {
 
   return (
     <>
+    <Navbar />
       <main className="allProductMain">
         <div className="prod_details">
           <h2>FAUCET</h2>

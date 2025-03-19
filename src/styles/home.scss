@@ -1,6 +1,17 @@
+@import url('https://fonts.cdnfonts.com/css/sinkin-sans-400-regular');
+
+
 .home {
     
     margin-top: -67px;
+
+    button {
+      font-family: 'Sinkin Sans 300 Light', sans-serif;
+      font-size: 10.129px;
+      width: 100px;
+      padding: 4px;
+    }
+
 
     .swiper-pagination-bullets {
         display: none;
@@ -86,6 +97,8 @@
     .home_categories {
         margin: 80px 25px 0 25px;
         position: relative;
+        font-family: 'Sinkin Sans 300 Light', sans-serif;
+
         .categories_heading{
           margin-bottom: 15px;
           width: 140px;
@@ -95,7 +108,7 @@
           text-transform: uppercase;
           text-decoration: underline;
           font-weight: 500;
-          font-size: 20px;
+          font-size: 9.854px;
           margin-bottom: 20px;
         }
       
@@ -103,6 +116,7 @@
           font-size: 14px;
           line-height: 1.6;
           color: #a4a4a4;
+          font-size: 8.2809px;
         }
       
         /* Swiper Styling */
@@ -131,6 +145,7 @@
             text-transform: uppercase;
             // font-weight: bold;
             margin-top: 5px;
+            font-size: 8.2809px;
           }
         }
       
@@ -142,10 +157,11 @@
       
         /* Swipe Button */
         button {
+
           background-color: transparent;
           border: 0.5px solid gray;
-          width: 118px;
-          padding: 6px;
+          // width: 118px;
+          // padding: 6px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -165,10 +181,17 @@
           }
       
           &::after {
-            content: "➜"; // Unicode right arrow
-            font-size: 14px;
-            margin-left: 5px; // Space between text and arrow
+            content: ""; 
+            display: inline-block;
+            width: 20px; // Adjust width as needed
+            height: 10px; // Adjust height as needed
+            background-image: url('/icons/right_arrow.png'); // Replace with actual image path
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-left: 5px; // Space between text and image
+            vertical-align: middle;
           }
+          
         }
       }
       
@@ -183,12 +206,17 @@
             font-weight: 500;
             font-size: 20px;
             margin-bottom: 20px;
+            font-size: 15.232px;
+            font-family: 'Sinkin Sans 500 Medium', sans-serif;
         }
 
         p {
             font-size: 14px;
             line-height: 1.6;
-            color: #333;
+            color: #a4a4a4;
+            font-family: 'Sinkin Sans 300 Light', sans-serif;
+            font-size: 9.854px;
+
         }
     }
 
@@ -206,20 +234,20 @@
           }
         }
       
-        h2 {
-          text-transform: uppercase;
-          font-weight: 500;
-          font-size: 20px;
-          margin: 0;
-          text-decoration: underline;
-        }
+        // h2 {
+        //   text-transform: uppercase;
+        //   font-weight: 500;
+        //   font-size: 20px;
+        //   margin: 0;
+        //   text-decoration: underline;
+        // }
       
         .aurum-icon {
           width: 50px; // Adjust size as needed
           height: auto;
           position: absolute;
           right: 30px; // Ensures it stays on the right
-          top: 50%;
+          top: 21%;
           transform: translateY(-50%);
         //   opacity: 0.2; // Light fade effect like in the image
         }
@@ -227,8 +255,11 @@
         p {
           font-size: 14px;
           line-height: 1.6;
-          color: #333;
+          color: #a4a4a4;
+
           margin-top: 15px;
+          font-family: 'Sinkin Sans 300 Light', sans-serif;
+          font-size: 9.854px;
         }
       
         img {
@@ -238,8 +269,8 @@
         button {
             background-color: transparent;
             border: 0.5px solid gray;
-            width: 125px;
-            padding: 6px;
+            // width: 125px;
+            // padding: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -256,10 +287,15 @@
             }
           
             &::after {
-              content: "➜"; // Unicode right arrow
-              font-size: 14px;
-              margin-left: 8px; // Space between text and arrow
-              transition: margin-left 0.3s ease-in-out;
+              content: ""; 
+              display: inline-block;
+              width: 20px; // Adjust width as needed
+              height: 10px; // Adjust height as needed
+              background-image: url('/icons/right_arrow.png'); // Replace with actual image path
+              background-size: contain;
+              background-repeat: no-repeat;
+              margin-left: 5px; // Space between text and image
+              vertical-align: middle;
               
             }
           
@@ -308,7 +344,7 @@
           height: auto;
           position: absolute;
           right: 30px; // Align to the right
-          top: 73%;
+          top: 44%;
           transform: translateY(-50%);
         //   opacity: 0.2; // Light fade effect like in the image
         }
@@ -317,7 +353,10 @@
         p {
           font-size: 14px;
           line-height: 1.6;
-          color: #333;
+          color: #a4a4a4;
+
+          font-family: 'Sinkin Sans 300 Light', sans-serif;
+          font-size: 9.854px;
         }
       
         img {
@@ -327,8 +366,8 @@
         button {
             background-color: transparent;
             border: 0.5px solid gray;
-            width: 125px;
-            padding: 6px;
+            // width: 125px;
+            // padding: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -346,11 +385,17 @@
             }
           
             &::after {
-              content: "➜"; // Unicode right arrow
-              font-size: 14px;
-              margin-left: 8px; // Space between text and arrow
-              transition: margin-left 0.3s ease-in-out;
+              content: ""; 
+              display: inline-block;
+              width: 20px; // Adjust width as needed
+              height: 10px; // Adjust height as needed
+              background-image: url('/icons/right_arrow.png'); // Replace with actual image path
+              background-size: contain;
+              background-repeat: no-repeat;
+              margin-left: 5px; // Space between text and image
+              vertical-align: middle;
             }
+            
           
             &:hover::after {
               margin-left: 12px; // Slight movement to the right on hover for a smooth effect
@@ -386,6 +431,8 @@
                 color: #fff;
                 font-size: 24px;
                 margin-bottom: 22px;
+                font-family: 'Sinkin Sans 500 Medium', sans-serif;
+                font-size: 19.925px;
             }
 
             p {
@@ -393,6 +440,8 @@
                 font-size: 16px;
                 line-height: 1.6;
                 margin-bottom: 24px;
+                font-family: 'Sinkin Sans 300 Light', sans-serif;
+                font-size: 9.854px;
             }
 
             .locate {
@@ -400,11 +449,13 @@
                 background-color: transparent;
                 color: #fff;
                 border: 0.5px solid #fff;
-                width: 140px;
-                font-size: 15px;
-                padding: 8px 0;
+                width: 120px;
+                padding: 6px 0;
                 cursor: pointer;
                 height: 36px;
+                font-family: 'Sinkin Sans 300 Light', sans-serif;
+                font-size: 9.854px;
+
             }
         }
     }
@@ -428,8 +479,10 @@
             h2 {
                 text-transform: uppercase;
                 color: #fff;
-                font-size: 24px;
+                // font-size: 24px;
                 margin-bottom: 22px;
+                font-family: 'Sinkin Sans 500 Medium', sans-serif;
+                font-size: 19.925px;
             }
 
             p {
@@ -437,6 +490,8 @@
                 font-size: 16px;
                 line-height: 1.6;
                 margin-bottom: 24px;
+                font-family: 'Sinkin Sans 300 Light', sans-serif;
+                font-size: 9.854px;
             }
         }
 
@@ -453,17 +508,25 @@
                 text-transform: uppercase;
                 color: #000;
                 border: 0.5px solid #fff;
-                font-size: 12px;
+                // font-size: 12px;
                 padding: 3px 8px;
                 margin: 10px 10px;
                 text-decoration: none;
                 white-space: nowrap;
                 position: relative;
+                font-family: 'Sinkin Sans 400 Light', sans-serif;
+                font-size: 9.854px;
 
                 &::after {
-                    content: "⬇";
-                    font-size: 14px;
-                    margin-left: 8px;
+                  content: "";
+                  display: inline-block;
+                  width: 16px;
+                  height: 16px; 
+                  background-image: url('/icons/download-icon.png');
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                  margin-left: 8px;
+                  vertical-align: middle;
                 }
             }
 
@@ -499,7 +562,8 @@
 
             p {
                 color: #fff;
-                font-size: 16px;
+                font-family: 'Sinkin Sans 300 Light', sans-serif;
+                font-size: 17.290px;
                 line-height: 1.6;
                 margin-bottom: 24px;
             }
@@ -510,7 +574,7 @@
                 color: #fff;
                 border: 0.5px solid #fff;
                 width: 130px;
-                font-size: 15px;
+                // font-size: 15px;
                 padding: 8px 0;
                 cursor: pointer;
                 height: 37px;
@@ -532,7 +596,9 @@
         p {
           font-size: 14px;
           line-height: 1.6;
-          color: #333;
+          color: #a4a4a4;
+          font-family: 'Sinkin Sans 300 Light', sans-serif;
+          font-size: 9.854px;
         }
       
         .swiper {
@@ -553,21 +619,21 @@
           font-size: 13px;
           text-transform: uppercase;
           // font-weight: bold;
-          margin-top: 5px;
+          margin-top: 14px;
           color: #a4a4a4;
         }
       
         img {
-          width: 150px;
-          margin: 16px 0;
+          width: 250px;
+          // margin: 16px 0;
           // border-radius: 8px;
         }
       
         button {
           background-color: transparent;
           border: 0.5px solid gray;
-          width: 118px;
-          padding: 6px;
+          // width: 118px;
+          // padding: 6px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -579,15 +645,21 @@
           bottom: -50px;          
           color: #a4a4a4;
 
-      
+
           &:hover {
             background-color: #f4f4f4;
             border-color: black;
           }
           &::after {
-            content: "➜"; // Unicode right arrow
-            font-size: 14px;
-            margin-left: 5px; // Space between text and arrow
+            content: ""; 
+            display: inline-block;
+            width: 20px; // Adjust width as needed
+            height: 10px; // Adjust height as needed
+            background-image: url('/icons/right_arrow.png'); // Replace with actual image path
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-left: 5px; // Space between text and image
+            vertical-align: middle;
           }
         }
       }
@@ -667,7 +739,5 @@
     .contact_form button:hover {
         background: #1a252f;
     }
-    
-
 
 }

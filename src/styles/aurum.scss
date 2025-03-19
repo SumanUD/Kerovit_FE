@@ -1,86 +1,100 @@
-.aurum {
+.main-content {
+  background-color: #333; // Ensures the background color covers everything
+  position: relative; // Ensures absolutely positioned elements are contained
+  padding-bottom: 1px; // Creates space for the button at the bottom
+  padding-top: 70px;
+
+  .aurum {
     .swiper-pagination-bullets {
-        display: none;
+      display: none;
     }
+
     .aurum_slider {
-        margin: 20px 25px 80px 25px;
-        position: relative;
-      
-        h2 {
-          text-transform: uppercase;
-          text-decoration: underline;
-          font-weight: 500;
-          font-size: 20px;
-          margin-bottom: 20px;
+      margin: 0 25px 50px 25px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      // align-items: center; // Ensures elements are centered
+
+      h2 {
+        text-transform: uppercase;
+        text-decoration: underline;
+        font-weight: 500;
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: white;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #fff;
+        // text-align: center;
+        max-width: 600px;
+      }
+
+      /* Swiper Styling */
+      .swiper {
+        margin-top: 20px;
+        width: 100%;
+      }
+
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .inside {
+        text-align: center;
+
+        img {
+          margin: 16px 0;
+          border-radius: 8px;
         }
-      
+
         p {
-          font-size: 14px;
-          line-height: 1.6;
-          color: #333;
-        }
-      
-        /* Swiper Styling */
-        .swiper {
-          margin-top: 20px;
-        }
-      
-        .swiper-slide {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      
-        .inside {
-          text-align: center;
-      
-          img {
-            // width: 160px;
-            margin: 16px 0;
-            border-radius: 8px;
-          }
-      
-          p {
-            font-size: 13px;
-            text-transform: uppercase;
-            font-weight: bold;
-            margin-top: 5px;
-          }
-        }
-      
-
-        .swiper-button-next,
-        .swiper-button-prev {
-          display: none !important;
-        }
-      
-
-        button {
-          background-color: transparent;
-          border: 0.5px solid gray;
-          width: 118px;
-          padding: 6px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 5px;
-          cursor: pointer;
-          transition: all 0.3s ease-in-out;
-      
-          position: absolute;
-          right: 15px;
-          bottom: -50px;
-      
-          &:hover {
-            background-color: #f4f4f4;
-            border-color: black;
-          }
-      
-          &::after {
-            content: "➜";
-            font-size: 14px;
-            margin-left: 5px;
-          }
+          font-size: 13px;
+          text-transform: uppercase;
+          font-weight: bold;
+          margin-top: 5px;
+          color: white;
         }
       }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        display: none !important;
+      }
+
+      /* Updated Button Styling */
+      button {
+        background-color: transparent;
+        border: 1px solid gray;
+        width: 120px;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        color: #fff;
+
+        margin-top: 20px; // Pushes button below content
+        align-self: flex-end; // Ensures button stays centered
+
+        // &:hover {
+        //   background-color: #f4f4f4;
+        //   border-color: black;
+        // }
+
+        &::after {
+          content: "➜";
+          font-size: 14px;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
 }
