@@ -11,6 +11,8 @@ import { useRef } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
+import { BsArrowRight } from "react-icons/bs";
+
 
 
 const Home = () => {
@@ -97,7 +99,7 @@ const Home = () => {
             ))}
           </Swiper>
 
-          <button type="button" onClick={handleNextSlide}>Swipe</button>
+          <button type="button" onClick={handleNextSlide}>Swipe <BsArrowRight className="right_arrow"/></button>
         </div>
 
         <div className="home_collections">
@@ -115,7 +117,7 @@ const Home = () => {
           <p>Indulge in the luxury of Aurum, our exquisite collection that seamlessly blends elegance with nature's palette of perfection.</p>
           <img src="/single_product.png" alt="Single Product image" />
           <button type="button">
-            <Link to="/aurum" className="showMoreBtn">Show More</Link>
+            <Link to="/aurum" className="showMoreBtn">Show More <BsArrowRight className="right_arrow"/></Link>
           </button>
         </div>
 
@@ -131,7 +133,7 @@ const Home = () => {
           </p>
           <img src="/klassic.png" alt="Single Product image" />
           <button type="button">
-            <Link to="/aurum" className="showMoreBtn">Show More</Link>
+            <Link to="/aurum" className="showMoreBtn">Show More <BsArrowRight className="right_arrow"/></Link>
           </button>
         </div>
 
@@ -193,12 +195,12 @@ const Home = () => {
             ))}
           </Swiper>
 
-          <button type="button" onClick={handleNextBlogSlide}>Swipe</button>
+          <button type="button" onClick={handleNextBlogSlide}>Swipe<BsArrowRight className="right_arrow"/></button>
         </div>
 
         <div className="home_contact">
           <div className="inside_banner_content">
-            <h2><span>submit</span> your query</h2>
+            <h2 ><span>submit</span> your query</h2>
             <form className="contact_form">
               <input type="text" placeholder="Name  |" />
               <input type="email" placeholder="Email  |" />

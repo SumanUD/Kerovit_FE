@@ -57,6 +57,7 @@
         .accordion-item {
             background-color: #212121;
             border: none;
+            border-color: #606060;
 
             .accordion-header {
                 button {
@@ -88,7 +89,7 @@
     .p-3 {
         // background-color: #333;
         padding: 15px;
-        margin-top: 10px;
+        // margin-top: 10px;
         border-radius: 5px;
         // text-align: center;
     }
@@ -130,7 +131,7 @@
             text-decoration: none;
             color: #fff;
             // font-size: 12px;
-            width: 140px;
+            width: 107px;
             text-align: center;
             transition: background 0.3s ease, transform 0.3s ease;
     

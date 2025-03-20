@@ -33,11 +33,11 @@ const SingleProduct = () => {
 
         <div className="description">
           <h2>AENON</h2>
-          <p>MODEL NO.: KB2611010-ND-CP</p>
-          <p>SERIES: Amelia</p>
+          <p className="model">MODEL NO.: KB2611010-ND-CP</p>
+          <p className="series">SERIES: Aenon</p>
 
           <h3>Description</h3>
-          <p>SINGLE LEVER BASIN MIXER WITHOUT POP-UP</p>
+          <p className="description_p">SINGLE LEVER BASIN MIXER WITHOUT POP-UP</p>
 
           <h3>Variants</h3>
           <div className="variants">
