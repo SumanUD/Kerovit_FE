@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import { BsArrowRight } from "react-icons/bs";
 
 
 
@@ -65,7 +66,7 @@ const Aurum = () => {
             ))}
           </Swiper>
 
-          <button type="button" onClick={handleNextSlide}>Swipe</button>
+          <button type="button" onClick={handleNextSlide}>Swipe <BsArrowRight className="right_arrow"/></button>
         </div>
 
         

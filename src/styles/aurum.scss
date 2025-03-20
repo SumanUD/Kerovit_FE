@@ -77,8 +77,6 @@
       button {
         background-color: #fff;
         border: 1px solid gray;
-        width: 120px;
-        padding: 4px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -86,6 +84,11 @@
         cursor: pointer;
         transition: all 0.3s ease-in-out;
         color: #000;
+
+        font-family: 'Sinkin Sans 300 Light', sans-serif;
+        font-size: 10.129px;
+        width: 110px;
+        padding: 4px;
 
         margin-top: 20px; // Pushes button below content
         align-self: flex-end; // Ensures button stays centered
@@ -95,16 +98,20 @@
         //   border-color: black;
         // }
 
-        &::after {
-          content: ""; 
-          display: inline-block;
-          width: 20px; // Adjust width as needed
-          height: 10px; // Adjust height as needed
-          background-image: url('/icons/right_arrow.png'); // Replace with actual image path
-          background-size: contain;
-          background-repeat: no-repeat;
-          margin-left: 5px; // Space between text and image
-          vertical-align: middle;
+        // &::after {
+        //   content: ""; 
+        //   display: inline-block;
+        //   width: 20px; // Adjust width as needed
+        //   height: 10px; // Adjust height as needed
+        //   background-image: url('/icons/right_arrow.png'); // Replace with actual image path
+        //   background-size: contain;
+        //   background-repeat: no-repeat;
+        //   margin-left: 5px; // Space between text and image
+        //   vertical-align: middle;
+        // }
+
+        .right_arrow {
+          margin-bottom: -1px;
         }
       }
     }
