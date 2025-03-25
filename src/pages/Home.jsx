@@ -144,8 +144,6 @@ const Home = () => {
             <button className="locate">locate a store</button>
           </div>
         </div>
-
-
         <div className="second_banner">
           <div className="inside_banner_content">
             <h2>the catalogue</h2>

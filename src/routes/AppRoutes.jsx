@@ -12,6 +12,7 @@ import WhereToBuy from "../pages/WhereToBuy"
 import AllProduct from "../pages/product/allProducts";
 import Aurum from "../pages/product/Aurum";
 import AllVarProduct from "../pages/product/allVarProduct";
+import BlogPage from "../pages/Blog";
 
 
 // import Career from "../pages/More/Career";
@@ -34,7 +35,7 @@ const App = () => {
         <Route path="/aurum" element={<Aurum />} />
         <Route path="/product_var_listing" element={<AllVarProduct />} />
         <Route path="/about" element={<AboutUs />} />
-
+        <Route path="/blog" element={<BlogPage />} />
 
         {/* <Route path="/whats-new" element={<WhatsNew />} />
         <Route path="/resources" element={<Resources />} />

@@ -152,7 +152,6 @@ const About = () => {
         </button>
       </div>
 
-
       <Footer />
     </main>
   );
