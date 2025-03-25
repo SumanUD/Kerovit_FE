@@ -163,7 +163,11 @@ const Home = () => {
             {/* <h2>about us</h2> */}
             <img src="aboutus_heading.png" alt="" className="aboutus_heading"/>
             <p>Kerovit, a distinguished brand from the house of Kajaria, was introduced to transform modern bathroom spaces by creating value that exceeds customers' expectations.</p>
-            <button className="read_more">read more</button>
+            <Link to="/about">
+              <button className="read_more">
+                read more 
+              </button>
+              </Link>
           </div>
         </div>
 
