@@ -21,8 +21,6 @@
             right: 14px;
             font-size: 3rem;
             color: #505050;
-
-
             z-index: 99999;
             bottom: 8% !important;
             right: 6% !important;
@@ -69,7 +67,7 @@
             }
 
             .bannerdescp {
-                width: 253px;
+                width: 286px;
                 margin-top: 24px;
             }
 
@@ -84,7 +82,7 @@
     }
 
     .belowbanner {
-        margin: 80px 25px 50px 25px;
+        margin: 50px 25px 50px 25px;
         text-align: center;
 
         h2 {
@@ -92,9 +90,9 @@
             // text-decoration: underline;
             font-weight: 100;
             font-size: 20px;
-            margin-bottom: 20px;
-            font-size: 15.232px;
-            font-family: 'Sinkin Sans 500 Medium', sans-serif;
+            // margin-bottom: 20px;
+            // font-size: 15.232px;
+            // font-family: 'Sinkin Sans 500 Medium', sans-serif;
             color: #9b9b9b;
         }
 
@@ -104,8 +102,10 @@
             color: #a4a4a4;
             font-family: 'Sinkin Sans 300 Light', sans-serif;
             font-size: 9.854px;
-
         }
+        // .p1 {
+        //     margin-top: 50px;
+        // }
 
         .read_more {
             text-transform: uppercase;
@@ -119,6 +119,75 @@
             font-size: 11px;
             font-weight: 600;
             margin-top: 8px;
+        }
+
+        .p3 {
+            text-align: left;
+        }
+
+        ul {
+            text-align: left;
+            li{
+                list-style-type: circle;
+            }
+        }
+        h4 {
+            text-transform: uppercase;
+            // text-decoration: underline;
+            font-weight: 100;
+            font-size: 20px;
+            margin-bottom: 20px;
+            margin-top: 30px;
+            font-size: 14.232px;
+            font-family: 'Sinkin Sans 500 Medium', sans-serif;
+            color: #9b9b9b;
+        }
+        .p2 {
+            text-align: left;
+        }
+
+
+        .belowBannerText {
+
+            font-family: 'Sinkin Sans 500 Medium', sans-serif;
+            h2{
+                font-size: 34.852px !important;
+                font-family: 'Sinkin Sans 500 Medium', sans-serif !important;
+            }
+
+            .h2_second {
+                position: relative;
+                left: 5.5%;
+                display: ruby-text;
+                margin-top: -2px;
+                color: #777575;
+                p{
+                    text-transform: uppercase;
+                    position: relative;
+                    top: -10px;
+                    font-family: 'Sinkin Sans 500 Medium', sans-serif !important;
+                    font-size: 14.617px;
+                }
+                h2 {
+                    position: relative;
+                    left: -6px;
+                    top: 3px;
+                    font-size: 34.852px !important;
+                    font-family: 'Sinkin Sans 500 Medium', sans-serif !important;
+
+                }
+            }
+
+            p {
+                text-align: center;
+                // position: relative;
+                // left: -9%;
+                // top: -27px;
+                font-family: 'Sinkin Sans 300 Light', sans-serif;
+                font-size: 9.854px;
+                color: #c7c3c3;
+                margin-left: 14px;
+            }
         }
     }
 
@@ -139,6 +208,7 @@
                 color: #a4a4a4;
                 font-family: 'Sinkin Sans 300 Light', sans-serif;
                 font-size: 9.854px;
+                text-align: left;
             }
 
             .read_more {

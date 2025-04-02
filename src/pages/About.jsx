@@ -12,12 +12,12 @@ import { BsArrowRight } from "react-icons/bs";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
 const manufPlant = [
-  { id: 1, img: "/aboutus/faucet_plant.png", name: "FAUCET Plant", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat id laudantium quos beatae animi eos hic accusantium libero omnis sunt, ipsum maiores alias illum amet sequi vitae obcaecati architecto suscipit." },
-  { id: 2, img: "/aboutus/faucet_plant.png", name: "Showers", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat id laudantium quos beatae animi eos hic accusantium libero omnis sunt, ipsum maiores alias illum amet sequi vitae obcaecati architecto suscipit." },
-  { id: 3, img: "/aboutus/faucet_plant.png", name: "Basin", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat id laudantium quos beatae animi eos hic accusantium libero omnis sunt, ipsum maiores alias illum amet sequi vitae obcaecati architecto suscipit." },
-  { id: 4, img: "/aboutus/faucet_plant.png", name: "Toilet", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat id laudantium quos beatae animi eos hic accusantium libero omnis sunt, ipsum maiores alias illum amet sequi vitae obcaecati architecto suscipit." },
-  { id: 5, img: "/aboutus/faucet_plant.png", name: "plant 5", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat id laudantium quos beatae animi eos hic accusantium libero omnis sunt, ipsum maiores alias illum amet sequi vitae obcaecati architecto suscipit." },
-  { id: 6, img: "/aboutus/faucet_plant.png", name: "plant 6", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat id laudantium quos beatae animi eos hic accusantium libero omnis sunt, ipsum maiores alias illum amet sequi vitae obcaecati architecto suscipit." },
+  { id: 1, img: "/aboutus/faucet_plant.png", name: "Kerovit Faucets", description: "Kerovit Faucets are developed at our state-of-the-art manufacturing unit in Gailpur, Rajasthan. Spread over 2 Lac sq. ft., and boasting the latest advanced machinery, the plant is poised to manufacture over 1.4 million pieces a year." },
+  { id: 2, img: "/aboutus/faucet_plant2.png", name: "Kerovit Sanitaryware", description: "Kerovit sanitaryware is manufactured at Morbi, Gujarat, with international standards of manufacturing processes including Mould Making, Shuttle Kiln, Tunnel Kiln, and Glazing Pressure Dye Casting. The entire process is ISI-approved and boasts an annual manufacturing capacity of over 1 million pieces. Our second plant, Kerovit Global Pvt. Ltd., Morbi, Gujarat, is the largest sanitaryware plant in India. Spread over 6 lacs sq. mt., KGPL adheres to international standards, features Cutting-edge R&D, houses advanced machinery and is operated by a team of skilled professionals to provide exceptional quality products." },
+  // { id: 3, img: "/aboutus/faucet_plant.png", name: "Basin", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat id laudantium quos beatae animi eos hic accusantium libero omnis sunt, ipsum maiores alias illum amet sequi vitae obcaecati architecto suscipit." },
+  // { id: 4, img: "/aboutus/faucet_plant.png", name: "Toilet", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat id laudantium quos beatae animi eos hic accusantium libero omnis sunt, ipsum maiores alias illum amet sequi vitae obcaecati architecto suscipit." },
+  // { id: 5, img: "/aboutus/faucet_plant.png", name: "plant 5", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat id laudantium quos beatae animi eos hic accusantium libero omnis sunt, ipsum maiores alias illum amet sequi vitae obcaecati architecto suscipit." },
+  // { id: 6, img: "/aboutus/faucet_plant.png", name: "plant 6", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat id laudantium quos beatae animi eos hic accusantium libero omnis sunt, ipsum maiores alias illum amet sequi vitae obcaecati architecto suscipit." },
 ];
 
 
@@ -63,7 +63,7 @@ const About = () => {
           <div className="bannerdescp">
             <img src="home page-08.png" alt="" className="line_image" />
             <p>
-              Let your desires come alive with the perfect fusion of form, function, and usability with Kerovit.
+            Kerovit's distinguished range of products encircle your soul into a sensational experience. made with utmost precision, we bring wellness into your home with great style and panache.
             </p>
           </div>
         </div>
@@ -71,9 +71,44 @@ const About = () => {
       </div>
 
       <div className="belowbanner">
-        <h2>from the house of kajaria kerovit is a definitive expression of contemporary design.</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aspernatur distinctio accusantium incidunt, amet iure magnam dolores iste ut itaque architecto labore nostrum, autem hic et, necessitatibus quo corrupti eum!
+        {/* <h2>who we are</h2> */}
+        <div className="belowBannerText">
+          <h2>who</h2>
+          <span className="h2_second">
+            <p>we</p> <h2>are</h2>
+          </span>
+        </div>
+        <p className="p1">
+          At Kerovit, we believe in redefining how people perceive and use their bathrooms by blending innovation, design, and technology to create spaces that promote hygiene, luxury and sustainability.
+        </p>
+        <hr />
+        <h4>Proudly Made in India</h4>
+        <p className="p2">Kerovit is a brand Made in India. Our journey is powered by a dedicated workforce and a strong presence across the country:</p>
+        <ul>
+          <li>
+           <p>15 Display Centers/Offices</p>
+          </li>
+          <li>
+            <p>330 Distributors & Premium Dealers</p>
+          </li>
+          <li>
+            <p>216 Exclusive Showrooms</p>
+          </li>
+        </ul>
+
+       <p className="p3">
+        Our state-of-the-art manufacturing plant in Gailpur, Rajasthan, spans over 2 lakh sq. ft., with an annual capacity of 1 million faucets. Crafted with solid metal for superior strength and durability, our faucets exude excellence throughout all its designs. <br/><br/>
+
+        Meanwhile, our sanitaryware unit in Morbi, Gujarat, upholds international manufacturing standards with meticulous processes. Certified by ISI, this facility has an impressive annual capacity of 7.5 lakh pieces. <br/><br/>
+
+        Adding golden feathers to our relentless pursuit of excellence, we established the Kerovit Global Private Limited (KGPL), our second sanitaryware plant, in Morbi, Gujarat. Spanning over 6 lakh sq. meters, this cutting-edge facility is designed to shape the future of the Indian sanitaryware industry.<br/><br/>
+
+        With a focus on precision engineering, automation, and sustainability, complemented by a talented pool of skilled technicians, the KGPL plant is a powerhouse of innovation, ensuring unmatched quality, reliability and efficiency.<br/><br/>
+
+        Driven By Ethos of  Sustainability
+        At Kerovit, we believe in striding towards progress by keeping the best interest of both people and the planet. Our Green Innovation range is designed to conserve water and energy without compromising performance. <br/><br/>
+
+        We also adhere to the Zero Liquid Discharge (ZLD) principle, ensuring that our plants release zero liquid effluent into the environment. By embracing advanced wastewater management, we are actively contributing to water conservation and a sustainable future.
         </p>
         <button className="read_more">read more</button>
       </div>
@@ -82,8 +117,19 @@ const About = () => {
         <img src="/aboutus/director.png" alt="" />
         <div className="belowImageContent">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ea atque minima expedita eius magni obcaecati. Blanditiis recusandae in reiciendis id consequuntur! Corporis repellat iure omnis expedita est quas vitae.
-          </p>
+            At Kerovit, we strive to revolutionize India’s bath and sanitaryware industry by offering luxury, style, and quality that go beyond expectations.<br/><br/>
+
+            With Kerovit, you’re not just investing in products; you’re embracing a lifestyle where design meets functionality. From our meticulously crafted faucets and sanitaryware to our Aurum Collection, which brings you premium coloured faucets using PVD (Physical Vapor Deposition) technology for a flawless finish and lasting durability, every piece is a work of art.<br/><br/>
+
+            Kerovit is where performance, modern aesthetics, and inspiring design come together to create bathrooms that don’t just serve a purpose but make a statement. Every detail is curated to transform your space into an expression of beauty, luxury, and elevated living.<br/><br/>
+
+            We are here to create the Bathrooms You Desire.<br/><br/>
+
+            <b>Mr. Rishi Kajaria</b><br/>
+            <b>Managing Director</b><br/>
+
+            <b>THE NEW DAWN OF INNOVATION
+            THE RISE OF PERFECTION</b></p>
           <button className="read_more">read more</button>
         </div>
       </div>

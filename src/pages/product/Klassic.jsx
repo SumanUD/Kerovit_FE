@@ -1,7 +1,7 @@
 import Navbar from "../../components/Navbar";
 // import Header from "../components/Header";
 import Footer from "../../components/Footer";
-import "../../styles/aurum.scss";
+import "../../styles/klassic.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -13,7 +13,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 
 
-const Aurum = () => {
+const Klassic = () => {
 
   const products = [
     { id: 1, img: "/product/single_product.png", name: "Faucet", description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus impedit omnis id dolorem est illo officia doloremque, voluptates quo cupiditate minima recusandae! Tempora, iure totam. Doloremque consectetur aspernatur quibusdam aliquid." },
@@ -23,8 +23,8 @@ const Aurum = () => {
     { id: 5, img: "/aurum_bath_fur.png", name: "Bathroom Furniture",description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus impedit omnis id dolorem est illo officia doloremque, voluptates quo cupiditate minima recusandae! Tempora, iure totam. Doloremque consectetur aspernatur quibusdam aliquid." },
     { id: 6, img: "/aurum_accessories.png", name: "Accessories",description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus impedit omnis id dolorem est illo officia doloremque, voluptates quo cupiditate minima recusandae! Tempora, iure totam. Doloremque consectetur aspernatur quibusdam aliquid." },
   ];
-  const swiperRef = useRef(null);
 
+  const swiperRef = useRef(null);
   const handleNextSlide = () => {
     if (swiperRef.current) {
       swiperRef.current.slideNext();
@@ -36,11 +36,11 @@ const Aurum = () => {
       <Navbar />
 
       
-      <div className="main-content">
+      <div className="main-klassic-content">
 
-      <main className="aurum">
+      <main className="klassic">
 
-        <div className="aurum_slider">
+        <div className="klassic_slider">
           <Swiper
             modules={[Pagination]}
             spaceBetween={10}
@@ -83,4 +83,4 @@ const Aurum = () => {
   );
 };
 
-export default Aurum;
+export default Klassic;

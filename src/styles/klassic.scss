@@ -1,18 +1,26 @@
 @import url('https://fonts.cdnfonts.com/css/sinkin-sans-400-regular');
 
+$black: #fff;
+$grey: #858282;
+$white: #fff;
+$primary-bg: #888686;
+$secondary-bg: #ffff;
+$tertiary-bg: #ffff;
+$active-color: yellow;
 
-.main-content {
-  background-color: #404041; // Ensures the background color covers everything
-  position: relative; // Ensures absolutely positioned elements are contained
-  padding-bottom: 1px; // Creates space for the button at the bottom
+
+.main-klassic-content {
+    background: linear-gradient(to bottom, $primary-bg 1%, $secondary-bg 18%, $tertiary-bg 100%);
+    position: relative;
+  padding-bottom: 1px;
   padding-top: 70px;
 
-  .aurum {
+  .klassic {
     .swiper-pagination-bullets {
       display: none;
     }
 
-    .aurum_slider {
+    .klassic_slider {
       margin: 30px 25px 50px 25px;
       position: relative;
       display: flex;
@@ -23,7 +31,7 @@
         text-transform:uppercase;
         // text-decoration: underline;
         margin-bottom: 20px;
-        color: white;
+        color: #444444;
         font-family: 'Sinkin Sans 500 Medium', sans-serif;
         font-size: 15.232px;
       }

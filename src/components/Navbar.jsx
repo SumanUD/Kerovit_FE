@@ -72,7 +72,7 @@ const Navbar = () => {
               ].map((item, index) => (
                 <li key={index} onClick={(e) => e.stopPropagation()}>
                   <img src={item.img} alt={item.name} />
-                  <Link to="/single_product">{item.name}</Link>
+                  <Link to="/categories1">{item.name}</Link>
                 </li>
               ))}
             </ul>
@@ -89,7 +89,7 @@ const Navbar = () => {
             <ul className="dropdown" style={{ display: activeIndex === 1 ? "block" : "none" }}>
               {["What's New", "Career", "Resources"].map((item, index) => (
                 <li key={index} onClick={(e) => e.stopPropagation()}>
-                  <Link to={`/${item.toLowerCase().replace(/\s/g, "-")}`}>{item}</Link>
+                  <Link to="/blog">{item}</Link>
                 </li>
               ))}
             </ul>

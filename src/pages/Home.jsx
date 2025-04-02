@@ -92,7 +92,7 @@ const Home = () => {
             {products.map((product) => (
               <SwiperSlide key={product.id}>
                 <div className="inside text-center">
-                  <img src={product.img} alt={product.name} />
+                   <Link to="categories1"><img src={product.img} alt={product.name} /></Link>
                   <p>{product.name}</p>
                 </div>
               </SwiperSlide>
@@ -133,7 +133,7 @@ const Home = () => {
           </p>
           <img src="/klassic.png" alt="Single Product image" />
           <button type="button">
-            <Link to="/aurum" className="showMoreBtn">Show More <BsArrowRight className="right_arrow"/></Link>
+            <Link to="/klassic" className="showMoreBtn">Show More <BsArrowRight className="right_arrow"/></Link>
           </button>
         </div>
 
