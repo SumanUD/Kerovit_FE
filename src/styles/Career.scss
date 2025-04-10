@@ -1,0 +1,80 @@
+.career {
+    .homebanner {
+        background-image: url("/career/banner.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 31.5vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 3rem;
+        position: relative;
+
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 45px;
+            right: 14px;
+            font-size: 3rem;
+            color: #505050;
+            z-index: 99999;
+            bottom: 8% !important;
+            right: 6% !important;
+        }
+
+        p {
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            font-size: 23.9733px;
+            color: #000000;
+            line-height: .8cap;
+        }
+
+        .bannerText {
+            position: absolute;
+            top: 40%;
+            left: 5%;
+            font-family: 'Sinkin Sans 500 Medium', sans-serif;
+        }
+    }
+
+    .belowbanner {
+        background-image: url("/career/belowBanner.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 36.3vh;
+        width: 100%;
+        // display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 3rem;
+        position: relative;
+
+        .belowBannerText {
+            img {
+
+                width: 200px;
+                margin-bottom: 20px;
+            }
+            p {
+                color: #716f70;
+                font-size: 18px;
+            }
+            
+            .mail {
+                font-size: 27px;
+                line-height: 5px;
+                color: #000;
+
+            }
+            
+
+            position: absolute;
+            left: 24%;
+            top: 14%;
+
+        }
+    }
+}

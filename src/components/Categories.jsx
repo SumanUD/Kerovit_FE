@@ -8,7 +8,7 @@ import klassicTabImg from "/public/klassic_collection.png";
 import "../styles/Categories.scss";
 import { BsArrowRight } from "react-icons/bs";
 
-const Categories = ({ aurumImages, klassicImages }) => {
+const Categories = ({ aurumImages, klassicImages, categoryInfo }) => {
     const [activeTab, setActiveTab] = useState("aurum");
     const sliderRef = useRef(null);
 
@@ -31,8 +31,8 @@ const Categories = ({ aurumImages, klassicImages }) => {
     return (
         <main className="catMain">
             <div className="catContent">
-                <h2>faucet</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum illum velit enim quibusdam iusto. Quod, sed quasi officiis aperiam vitae cupiditate vel cumque rerum eligendi voluptas nemo? Eius, natus commodi!</p>
+                <h2>{categoryInfo.name}</h2>
+                <p>{categoryInfo.description}</p>
             </div>
             <section className={`categories ${activeTab === "aurum" ? "aurum-theme" : "kerovit-theme"}`}>
                 <div className="tab-container text-center">

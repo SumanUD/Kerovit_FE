@@ -110,3 +110,83 @@
     }
   }
 }
+@media screen and (min-width: 1024px) {
+  .main-content {
+    padding: 100px 60px 40px;
+
+    .aurum {
+      .aurum_slider {
+        max-width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        .swiper {
+          margin-top: 30px;
+          width: 100%;
+        }
+
+        .swiper-slide {
+          display: flex;
+          justify-content: center;
+          align-items: stretch;
+        }
+
+        .inside {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
+          padding: 15px;
+          // max-width: 280px;
+          margin: auto;
+
+          h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+          }
+
+          p {
+            font-size: 12px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+          }
+
+          img {
+            width: 100%;
+            object-fit: contain;
+            margin-top: auto;
+          }
+        }
+
+        button {
+          align-self: flex-end;
+          margin-top: 30px;
+          width: 120px;
+          padding: 6px 10px;
+          font-size: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+          border: 1px solid gray;
+          background-color: #fff;
+          color: #000;
+          font-family: 'Sinkin Sans 300 Light', sans-serif;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          .right_arrow {
+            margin-bottom: -1px;
+          }
+
+          &:hover {
+            background-color: #f4f4f4;
+            border-color: black;
+          }
+        }
+      }
+    }
+  }
+}

@@ -99,6 +99,95 @@
     }
   }
 
+  @media screen and (min-width: 1024px) {
+    .homebanner {
+      height: 100vh;
+      padding: 4rem 6rem;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .bannerText {
+        top: 50%;
+        left: 35%;
+      }
+  
+      .bannerText {
+        text-align: center;
+        max-width: 700px;
+        color: #ffffff;
+        font-family: 'Sinkin Sans 500 Medium', sans-serif;
+  
+        h2 {
+          font-size: 48px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          color: #ffffff;
+          margin-bottom: 10px;
+        }
+  
+        .h2_second {
+          font-size: 24px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          color: #d0d0d0;
+          margin-bottom: 20px;
+  
+          h2 {
+            font-size: 48px;
+            color: #ffffff;
+          }
+        }
+  
+        .bannerdescp {
+          width: 480px;
+          margin-top: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 16px;
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
+  
+          .line_image {
+            height: 50px;
+            width: 3px;
+            background: #fff;
+            top: -56px;
+            left: 56%;
+          }
+  
+          p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #e0e0e0;
+            text-align: left;
+            margin: 0;
+            left: 33px;
+            top: 60px;
+          }
+        }
+      }
+  
+      .whatsapp-icon {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        font-size: 3rem;
+        color: #25D366;
+        z-index: 99999;
+      }
+    }
+  }
+  
+  
+
 
   .home_categories {
     margin: 80px 25px 0 25px;
@@ -205,6 +294,63 @@
     }
   }
 
+  @media screen and (min-width: 1024px) {
+    .home_categories {
+      margin: 100px 60px 0 60px;
+  
+      .categories_heading {
+        width: 180px;
+        margin-bottom: 25px;
+      }
+  
+      p {
+        font-size: 14px;
+        line-height: 1.8;
+        color: #a4a4a4;
+        // max-width: 70%;
+        margin: 0 auto 30px auto;
+        // text-align: center;
+      }
+  
+      .swiper {
+        margin-top: 30px;
+        padding: 0 40px;
+      }
+  
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .inside {
+        img {
+          width: 400px;
+          height: 468px;
+          margin: 20px 0;
+        }
+  
+        p {
+          font-size: 14px;
+          margin-top: 8px;
+          text-transform: uppercase;
+        }
+      }
+  
+      button {
+        padding: 10px 18px;
+        font-size: 14px;
+        right: 40px;
+        bottom: -60px;
+  
+        .right_arrow {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  
+
 
 
   .home_collections {
@@ -229,6 +375,26 @@
 
     }
   }
+
+  @media screen and (min-width: 1024px) {
+    .home_collections {
+      margin: 100px 60px 0 60px;
+  
+      h2 {
+        font-size: 20px;
+        margin-bottom: 25px;
+      }
+  
+      p {
+        font-size: 14px;
+        line-height: 1.8;
+        // max-width: 70%;
+        margin: 0 auto;
+        // text-align: center;
+      }
+    }
+  }
+  
 
   .home_aurum {
     margin: 80px 25px 0 25px;
@@ -326,6 +492,53 @@
 
     }
   }
+
+  @media screen and (min-width: 1024px) {
+    .home_aurum {
+      margin: 100px 60px 0 60px;
+  
+      .title-container {
+        justify-content: flex-start;
+        gap: 30px;
+  
+        .aurum_heading {
+          width: 140px;
+          margin: 0;
+        }
+  
+        .aurum-icon {
+          position: static;
+          width: 70px;
+          transform: none;
+          margin-left: 50%;
+        }
+      }
+  
+      p {
+        font-size: 14px;
+        line-height: 1.8;
+        max-width: 65%;
+        margin-top: 25px;
+        margin-top: 0;
+      }
+  
+      img {
+        width: 70%;
+        display: block;
+        // margin: 10px auto;
+      }
+  
+      button {
+        position: static;
+        // margin: 0 auto;
+        margin-top: 20px;
+        // padding: 8px 20px;
+        // border-radius: 8px;
+        display: inline;
+      }
+    }
+  }
+  
 
 
   .home_klassic {
@@ -431,6 +644,49 @@
     }
   }
 
+  @media screen and (min-width: 1024px) {
+    .home_klassic {
+      margin: 100px 60px 0 60px;
+  
+      .title-container {
+        justify-content: flex-start;
+        gap: 30px;
+        margin-bottom: 25px;
+  
+        .klassic_heading {
+          width: 140px;
+          margin: 0;
+        }
+  
+        .klassic-icon {
+          position: static;
+          width: 70px;
+          transform: none;
+          margin-left: 50%;
+        }
+      }
+  
+      .klassic_desc {
+        font-size: 14px;
+        line-height: 1.8;
+        max-width: 65%;
+        margin-top: 0;
+      }
+  
+      img {
+        width: 70%;
+        display: block;
+      }
+  
+      button {
+        position: static;
+        margin-top: 20px;
+        display: inline;
+      }
+    }
+  }
+  
+
   .first_banner {
     margin-top: 120px;
     background-image: url("/public/home_banner1.png");
@@ -483,6 +739,37 @@
 
     }
   }
+
+  @media screen and (min-width: 1024px) {
+    .first_banner {
+      margin-top: 160px;
+      height: 135vh;
+      background-size: 100% 100%;
+  
+      .inside_banner_content {
+        top: 60%;
+        width: 70%;
+  
+        h2 {
+          font-size: 28px;
+          margin-bottom: 28px;
+        }
+  
+        p {
+          font-size: 14px;
+          line-height: 1.8;
+          margin-bottom: 30px;
+        }
+  
+        .locate {
+          width: 160px;
+          height: 38px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  
 
   .second_banner {
     background-image: url("/public/home_catalogue.png");
@@ -562,6 +849,45 @@
 
   }
 
+  @media screen and (min-width: 1024px) {
+    .second_banner {
+      height: 135vh;
+      background-size: 100% 100%;
+  
+      .inside_banner_content {
+        top: 30%;
+        width: 60%;
+  
+        h2 {
+          font-size: 28px;
+          margin-bottom: 18px;
+        }
+  
+        p {
+          font-size: 14px;
+          line-height: 1.8;
+          margin-bottom: 30px;
+        }
+      }
+  
+      .catalogue {
+        top: 65%;
+  
+        a {
+          font-size: 12px;
+          padding: 6px 14px;
+          margin: 12px 14px;
+  
+          &::after {
+            width: 18px;
+            height: 10px;
+          }
+        }
+      }
+    }
+  }
+  
+
   .home_aboutus {
     // margin-top: 0px;
     background-image: url("/public/aboutus_bg.png");
@@ -609,6 +935,42 @@
       }
     }
   }
+
+  @media screen and (min-width: 1024px) {
+    .home_aboutus {
+      height: 135vh;
+      background-size: 100% 100%;
+  
+      .inside_banner_content {
+        top: 14%;
+        /* left: 0; */
+        max-width: 100%;
+        transform: translate(-50%, -50%);
+        text-align: left;
+  
+        .aboutus_heading {
+          width: 130px;
+          margin-bottom: 20px;
+        }
+  
+        p {
+          font-size: 14px;
+          line-height: 1.8;
+          max-width: 90%;
+          margin-bottom: 18px;
+        }
+  
+        .read_more {
+          font-size: 11px;
+          padding: 7px 0;
+          width: 120px;
+          height: 30px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  
 
   .home_blog {
     margin: 80px 25px 0 25px;
@@ -700,6 +1062,67 @@
       }
     }
   }
+
+  @media screen and (min-width: 1024px) {
+    .home_blog {
+      margin: 100px 60px 0 60px;
+  
+      .home_blog_heading {
+        width: 70px;
+        margin-bottom: 25px;
+      }
+  
+      p {
+        font-size: 14px;
+        line-height: 1.8;
+        max-width: 60%;
+        margin-bottom: 30px;
+      }
+  
+      .swiperImg {
+        width: 100%;
+        height: 325px;
+        object-fit: cover;
+      }
+  
+      .swiper {
+        margin-top: 30px;
+      }
+  
+      .swiper-slide {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+  
+      .inside {
+        text-align: left;
+      }
+  
+      h3 {
+        font-size: 14px;
+        margin-top: 16px;
+      }
+  
+      img {
+        width: 100%;
+      }
+  
+      button {
+        right: 0;
+        bottom: -60px;
+        font-size: 11px;
+        padding: 6px 12px;
+        width: 130px;
+        height: 34px;
+  
+        .right_arrow {
+          margin-bottom: 2px;
+        }
+      }
+    }
+  }
+  
 
 
   .home_contact {

@@ -48,7 +48,7 @@ const Aurum = () => {
             pagination={{ clickable: true }}
             breakpoints={{
               640: { slidesPerView: 3 },
-              1024: { slidesPerView: 4 },
+              1024: { slidesPerView: 2 },
             }}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
           >

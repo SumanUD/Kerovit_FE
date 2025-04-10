@@ -1,4 +1,6 @@
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar"; 
+// import NavigationMenuDesktop from "../components/Navbar2";
+
 // import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/home.scss";
@@ -18,12 +20,12 @@ import { BsArrowRight } from "react-icons/bs";
 const Home = () => {
 
   const products = [
-    { id: 1, img: "/random_product.png", name: "Faucets" },
-    { id: 2, img: "/shower2.png", name: "Showers" },
-    { id: 3, img: "/basin.png", name: "Basin" },
-    { id: 4, img: "/toilet.png", name: "Toilet" },
-    { id: 5, img: "/random_product.png", name: "Product 5" },
-    { id: 6, img: "/random_product.png", name: "Product 6" },
+    { id: 1, img: "/random_product.png", name: "Faucets", link: "faucet" },
+    { id: 2, img: "/shower2.png", name: "Showers", link:"shower" },
+    { id: 3, img: "/basin.png", name: "Basin", link: "basin" },
+    { id: 4, img: "/toilet.png", name: "Toilet", link:"toilet" },
+    { id: 5, img: "/random_product.png", name: "Bathroom Furniture", link:"bathroomFurniture" },
+    { id: 6, img: "/random_product.png", name: "Accessories", link:"accessories" },
   ];
   const swiperRef = useRef(null);
 
@@ -35,10 +37,10 @@ const Home = () => {
 
   const blogPosts = [
     { id: 1, img: "/blog3.png", title: "Traditional vs. Wall-Mounted Bathroom Faucets: A Comparative Guide", desc: "Lorem ipsum, dolor sit" },
-    { id: 2, img: "/blog2.png", title: "Choosing the Right Faucet Finish for Your Bathroom – A Guide to Chrome, Gold, and Matte Black", desc: "Lorem ipsum, dolor sit" },
-    { id: 3, img: "/blog1.png", title: "Blog 3", desc: "Lorem ipsum, dolor sit" },
-    { id: 4, img: "/blog2.png", title: "Blog 4", desc: "Lorem ipsum, dolor sit" },
-    { id: 5, img: "/blog1.png", title: "Blog 5", desc: "Lorem ipsum, dolor sit" },
+    { id: 2, img: "/blog3.png", title: "Choosing the Right Faucet Finish for Your Bathroom – A Guide to Chrome, Gold, and Matte Black", desc: "Lorem ipsum, dolor sit" },
+    { id: 3, img: "/blog3.png",title: "Traditional vs. Wall-Mounted Bathroom Faucets: A Comparative Guide", desc: "Lorem ipsum, dolor sit"  },
+    { id: 4, img: "/blog3.png", title: "Choosing the Right Faucet Finish for Your Bathroom – A Guide to Chrome, Gold, and Matte Black", desc: "Lorem ipsum, dolor sit" },
+    { id: 5, img: "/blog3.png", title: "Traditional vs. Wall-Mounted Bathroom Faucets: A Comparative Guide", desc: "Lorem ipsum, dolor sit"  },
   ];
 
 
@@ -53,7 +55,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      {/* <Header /> */}
+      {/* <NavigationMenuDesktop /> */}
       <main className="home">
         <div className="homebanner">
           <div className="bannerText">
@@ -92,7 +94,7 @@ const Home = () => {
             {products.map((product) => (
               <SwiperSlide key={product.id}>
                 <div className="inside text-center">
-                   <Link to="categories1"><img src={product.img} alt={product.name} /></Link>
+                   <Link to={product.link}><img src={product.img} alt={product.name} /></Link>
                   <p>{product.name}</p>
                 </div>
               </SwiperSlide>
@@ -108,6 +110,8 @@ const Home = () => {
           <p>Offering an impeccable blend of cutting-edge technology and contemporary design, Kerovit brings a diverse collection of faucets, sanitaryware, showers, bathroom furniture, and accessories with top-notch quality standards.</p>
 
         </div>
+
+
         <div className="home_aurum">
           <div className="title-container">
             {/* <h2>aurum</h2> */}
@@ -141,9 +145,10 @@ const Home = () => {
           <div className="inside_banner_content">
             <h2>world of kerovit</h2>
             <p>Featuring great strength, durability, and a higher-quality finish, Kerovit today stands as a definitive expression of modern lifestyles, exquisitely designed to match the desires of the new India.</p>
-            <button className="locate">locate a store</button>
+            <Link to="/locate-our-store"><button className="locate">locate a store</button></Link>
           </div>
         </div>
+
         <div className="second_banner">
           <div className="inside_banner_content">
             <h2>the catalogue</h2>

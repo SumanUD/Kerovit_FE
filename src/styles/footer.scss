@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap');
 
+
+
 .above-accordian {
 
     .accordion-button::after {
         display: none !important;
+    }
+
+    .accordion-button:not(.collapsed) {
+        color: var(--bs-accordion-active-color);
+        background-color: var(--bs-accordion-active-bg);
+        box-shadow: inset 0 calc(0 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
     }
 
     .custom-accordion-btn {
@@ -80,10 +88,7 @@
                 rem;
             }
         }
-        div {
-            border-bottom: 1px solid white;
 
-        }
     }
 
     .p-3 {
@@ -170,3 +175,95 @@
     }
     
 }
+
+
+@media screen and (min-width: 1024px) {
+    .above-accordian {
+    //   padding: 40px 60px;
+  
+      .social-icons {
+        justify-content: center;
+        gap: 20px;
+        padding-bottom: 30px;
+  
+        .icon {
+          width: 36px;
+          height: 36px;
+        }
+      }
+  
+      .accordion {
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: flex-start;
+        gap: 40px;
+        // max-width: 100%;
+        margin: 0 auto;
+  
+        .accordion-item, .non-accordian {
+          flex: 1;
+          border-bottom: none;
+          padding-bottom: 10px;
+        }
+  
+        .accordion-item {
+          .accordion-header button {
+            font-size: 1.2rem;
+            padding: 12px 10px;
+          }
+  
+          .accordion-body {
+            font-size: 1rem;
+          }
+        }
+  
+        .non-accordian {
+          font-size: 1.2rem;
+          padding: 10px 0;
+        }
+  
+        div {
+          border-bottom: none;
+        }
+      }
+    }
+  
+    .footer {
+      padding: 40px 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      .complaint-text {
+        font-size: 12px;
+        margin-bottom: 20px;
+      }
+  
+      .app-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+  
+        .app-button {
+          width: 130px;
+  
+          .icon {
+            width: 130px;
+          }
+        }
+      }
+  
+      .footer-links {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        margin-top: 30px;
+  
+        .footer-link {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  

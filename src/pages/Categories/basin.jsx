@@ -19,12 +19,12 @@ const klassicImages = [
 ];
 
 const categoryInfo = {
-  name: "faucet",
+  name: "basin",
   description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum illum velit enim quibusdam iusto. Quod, sed quasi officiis aperiam vitae cupiditate vel cumque rerum eligendi voluptas nemo? Eius, natus commodi!",
 }
 
 
-const Categories1 = () => {
+const Basin = () => {
   return (
     <>
       <Navbar />
@@ -37,4 +37,4 @@ const Categories1 = () => {
   );
 };
 
-export default Categories1;
+export default Basin;

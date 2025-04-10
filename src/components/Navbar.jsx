@@ -63,16 +63,16 @@ const Navbar = () => {
             </Link>
             <ul className="dropdown" style={{ display: activeIndex === 0 ? "block" : "none" }}>
               {[
-                { img: "/icons/faucet.png", name: "Faucet" },
-                { img: "/icons/shower.png", name: "Shower" },
-                { img: "/icons/basin.png", name: "Basin" },
-                { img: "/icons/toilet.png", name: "Toilet" },
-                { img: "/icons/bathroom_furniture.png", name: "Bathroom Furniture" },
-                { img: "/icons/accessories.png", name: "Accessories" }
+                { img: "/icons/faucet.png", name: "Faucet", link: "/faucet" },
+                { img: "/icons/shower.png", name: "Shower", link: "/shower"},
+                { img: "/icons/basin.png", name: "Basin", link: "/basin" },
+                { img: "/icons/toilet.png", name: "Toilet", link: "/toilet" },
+                { img: "/icons/bathroom_furniture.png", name: "Bathroom Furniture", link:"/bathroomFurniture" },
+                { img: "/icons/accessories.png", name: "Accessories", link: "/accessories" }
               ].map((item, index) => (
                 <li key={index} onClick={(e) => e.stopPropagation()}>
                   <img src={item.img} alt={item.name} />
-                  <Link to="/categories1">{item.name}</Link>
+                  <Link to={item.link}>{item.name}</Link>
                 </li>
               ))}
             </ul>

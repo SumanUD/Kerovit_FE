@@ -376,3 +376,147 @@ nav {
     }
   }
 }
+@media screen and (min-width: 768px) {
+  nav {
+    position: fixed;
+    background-color: white;
+    height: 80px;
+    padding: 0 60px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+    .nav-left {
+      float: left;
+
+      .kerovit_logo {
+        width: 100px;
+        margin-top: 10px;
+      }
+    }
+
+    .nav-right {
+      position: absolute;
+      right: 60px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      gap: 30px;
+
+      .menu_search {
+        width: 20px;
+        cursor: pointer;
+      }
+
+      .menu_location {
+        width: 18px;
+        cursor: pointer;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      margin: 0 auto;
+      padding: 0;
+      list-style: none;
+
+      li {
+        position: relative;
+
+        a {
+          padding: 20px 10px;
+          font-size: 14px;
+          color: #757575;
+          transition: color 0.3s ease;
+          text-decoration: none;
+
+          &:hover {
+            color: #000;
+          }
+        }
+
+        &.submenu:hover {
+          .dropdown {
+            display: block;
+          }
+
+          .submenu-button::before,
+          .submenu-button::after {
+            background: #000;
+          }
+        }
+
+        .submenu-button {
+          margin-left: 5px;
+          display: inline-block;
+          vertical-align: middle;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 10px;
+            height: 1px;
+            background: #757575;
+            transform: translateY(-50%);
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 46%;
+            left: 105%;
+            width: 1px;
+            height: 10px;
+            background: #757575;
+          }
+        }
+
+        .dropdown {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background: #ffffff;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 10px 0;
+          min-width: 220px;
+          z-index: 10;
+
+          li {
+            padding: 0;
+            display: flex;
+            align-items: center;
+
+            img {
+              width: 24px;
+              height: 24px;
+              margin-right: 10px;
+              margin-left: 15px;
+            }
+
+            a {
+              color: #757575;
+              padding: 10px 0;
+              width: 100%;
+
+              &:hover {
+                color: #000;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .toggleMenu {
+      display: none; // Hide burger menu on desktop
+    }
+
+    .nav-overlay {
+      display: none; // No overlay in desktop view
+    }
+  }
+}

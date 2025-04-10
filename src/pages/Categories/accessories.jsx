@@ -19,22 +19,21 @@ const klassicImages = [
 ];
 
 const categoryInfo = {
-  name: "faucet",
+  name: "accessories",
   description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum illum velit enim quibusdam iusto. Quod, sed quasi officiis aperiam vitae cupiditate vel cumque rerum eligendi voluptas nemo? Eius, natus commodi!",
 }
 
 
-const Categories1 = () => {
+const Accessories = () => {
   return (
     <>
       <Navbar />
 
       <Categories aurumImages={aurumImages} klassicImages={klassicImages} categoryInfo={categoryInfo} />
 
-      
       <Footer />
     </>
   );
 };
 
-export default Categories1;
+export default Accessories;

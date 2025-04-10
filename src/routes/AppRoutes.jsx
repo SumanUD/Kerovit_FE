@@ -18,6 +18,13 @@ import BlogPage from "../pages/Blog";
 import LatestPost from "../pages/LatestPosts";
 import Categories1 from "../pages/Categories/categories1";
 import Klassic from "../pages/product/Klassic";
+import Shower from "../pages/Categories/shower";
+import Accessories from "../pages/Categories/accessories";
+import Basin from "../pages/Categories/basin";
+import BathroomFurniture from "../pages/Categories/bathroom_furniture";
+import Toilet from "../pages/Categories/toilet";
+import LocateOurStore from "../pages/LocateOurStore";
+import Career from "../pages/Career";
 
 const App = () => {
   return (
@@ -38,7 +45,14 @@ const App = () => {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/latestPost" element={<LatestPost />} />
-        <Route path="/categories1" element={<Categories1 />} />
+        <Route path="/faucet" element={<Categories1 />} />
+        <Route path="/shower" element={<Shower />} />
+        <Route path="/accessories" element={<Accessories />} />
+        <Route path="/basin" element={<Basin />} />
+        <Route path="/bathroomFurniture" element={<BathroomFurniture />} />
+        <Route path="/toilet" element={<Toilet />} />
+        <Route path="/locate-our-store" element={<LocateOurStore />} />
+        <Route path="/career" element={<Career />} />
       </Routes>
     </Router>
   );

@@ -81,3 +81,51 @@
     }
   }
   
+
+  @media (min-width: 1024px) {
+    .allProductMain {
+      padding: 100px 80px 60px;
+    }
+  
+    .prod_details {
+      h2 {
+        font-size: 28px;
+      }
+  
+      p {
+        font-size: 14px;
+        max-width: 900px;
+        line-height: 1.6;
+      }
+    }
+  
+    .product_grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      padding: 40px 0;
+  
+      .product_card {
+        img {
+          max-width: 300px;
+        }
+  
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+  
+    .load-more {
+      font-size: 12px;
+      width: 130px;
+      padding: 8px 12px;
+      margin-top: 30px;
+      border-radius: 4px;
+  
+      &:hover {
+        background-color: #e0e0e0;
+        border-color: black;
+      }
+    }
+  }
+  

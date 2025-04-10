@@ -1,0 +1,115 @@
+.store {
+    .banner {
+        background-image: url("locate-our-store/banner.png");
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 35vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 3rem;
+        position: relative;
+
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 45px;
+            right: 14px;
+            font-size: 3rem;
+            color: #505050;
+            z-index: 99999;
+            bottom: 8% !important;
+            right: 6% !important;
+        }
+
+        h2,
+        h1 {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #c7c3c3;
+        }
+
+        .bannerText {
+            position: absolute;
+            top: 62%;
+            left: 24%;
+            font-family: 'Sinkin Sans 500 Medium', sans-serif;
+
+            .h2second {
+                color: #fff;
+                // font-family: 'Sinkin Sans 300 Medium', sans-serif;
+            }
+
+
+        }
+    }
+
+    .store-form-container {
+        max-width: 500px;
+        margin: 60px auto;
+        padding: 0 20px;
+
+        .store-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    font-size: 14px;
+                    margin-bottom: 4px;
+                }
+
+                input,
+                select,
+                textarea {
+                    border: none;
+                    border-bottom: 1px solid #999;
+                    padding: 10px 4px;
+                    font-size: 14px;
+                    outline: none;
+                    font-family: inherit;
+
+                    &:focus {
+                        border-bottom: 1px solid #000;
+                    }
+                }
+
+                select,
+                textarea {
+                    border: 1px solid #000;
+                    border-radius: 0;
+                    padding: 10px;
+                }
+
+                textarea {
+                    resize: vertical;
+                    min-height: 100px;
+                    color: #666;
+                }
+            }
+
+            .submit-btn {
+                width: 120px;
+                background-color: #0057d8;
+                color: #fff;
+                border: none;
+                border-radius: 25px;
+                padding: 6px 0;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #0044aa;
+                }
+            }
+        }
+    }
+
+
+
+}
