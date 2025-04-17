@@ -351,8 +351,6 @@
   }
   
 
-
-
   .home_collections {
     margin: 80px 25px 0 25px;
 
@@ -375,26 +373,6 @@
 
     }
   }
-
-  @media screen and (min-width: 1024px) {
-    .home_collections {
-      margin: 100px 60px 0 60px;
-  
-      h2 {
-        font-size: 20px;
-        margin-bottom: 25px;
-      }
-  
-      p {
-        font-size: 14px;
-        line-height: 1.8;
-        // max-width: 70%;
-        margin: 0 auto;
-        // text-align: center;
-      }
-    }
-  }
-  
 
   .home_aurum {
     margin: 80px 25px 0 25px;
@@ -492,54 +470,6 @@
 
     }
   }
-
-  @media screen and (min-width: 1024px) {
-    .home_aurum {
-      margin: 100px 60px 0 60px;
-  
-      .title-container {
-        justify-content: flex-start;
-        gap: 30px;
-  
-        .aurum_heading {
-          width: 140px;
-          margin: 0;
-        }
-  
-        .aurum-icon {
-          position: static;
-          width: 70px;
-          transform: none;
-          margin-left: 50%;
-        }
-      }
-  
-      p {
-        font-size: 14px;
-        line-height: 1.8;
-        max-width: 65%;
-        margin-top: 25px;
-        margin-top: 0;
-      }
-  
-      img {
-        width: 70%;
-        display: block;
-        // margin: 10px auto;
-      }
-  
-      button {
-        position: static;
-        // margin: 0 auto;
-        margin-top: 20px;
-        // padding: 8px 20px;
-        // border-radius: 8px;
-        display: inline;
-      }
-    }
-  }
-  
-
 
   .home_klassic {
     margin: 104px 25px 0 25px;
@@ -644,47 +574,64 @@
     }
   }
 
-  @media screen and (min-width: 1024px) {
-    .home_klassic {
-      margin: 100px 60px 0 60px;
+  @media (min-width: 1024px) {
+    // Target the parent of both sections (in this case, body or a wrapper div)
+    .home_collections {
+      max-width: 100%;
+      margin: 0 auto;
+      padding-top: 50px;
+      text-align: center;
   
-      .title-container {
-        justify-content: flex-start;
-        gap: 30px;
-        margin-bottom: 25px;
-  
-        .klassic_heading {
-          width: 140px;
-          margin: 0;
-        }
-  
-        .klassic-icon {
-          position: static;
-          width: 70px;
-          transform: none;
-          margin-left: 50%;
-        }
+      h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
       }
   
-      .klassic_desc {
+      p {
         font-size: 14px;
-        line-height: 1.8;
-        max-width: 65%;
-        margin-top: 0;
-      }
-  
-      img {
-        width: 70%;
-        display: block;
-      }
-  
-      button {
-        position: static;
-        margin-top: 20px;
-        display: inline;
+        max-width: 900px;
+        margin: 0 auto 60px;
+        color: #666;
       }
     }
+  
+    .aurum-klassic-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+  
+    .home_aurum,
+    .home_klassic {
+      width: 50%;
+      box-sizing: border-box;
+      margin: 0;
+
+      .title-container{
+        .klassic_heading {
+          width: 100px;
+          height: 33px;
+        }
+
+      } 
+        
+    }
+  
+    .home_aurum {
+      // padding-right: 20px;
+      // border-right: 1px solid #eee;
+    }
+  
+    .home_klassic {
+      // padding-left: 20px;
+    }
   }
+  
+  
+  
   
 
   .first_banner {
@@ -742,6 +689,7 @@
 
   @media screen and (min-width: 1024px) {
     .first_banner {
+      
       margin-top: 160px;
       height: 135vh;
       background-size: 100% 100%;

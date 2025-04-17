@@ -37,11 +37,13 @@ const Navbar = () => {
         {/* Left Side - Logo */}
         <div className="nav-left">
           <div className="toggleMenu" onClick={toggleMenu}>
-            <img
+          <Link to="/">
+          <img
               src="/kerovit_logo.png"
               alt="Logo"
               className="kerovit_logo"
             />
+            </Link>
           </div>
         </div>
 
@@ -79,7 +81,7 @@ const Navbar = () => {
           </li>
 
           <li><Link to="/catalogue">E-Catalogue</Link></li>
-          <li><Link to="/where-to-buy">Where to Buy</Link></li>
+          <li><Link to="/locate-our-store">Where to Buy</Link></li>
 
           {/* More Submenu */}
           <li className={`submenu ${activeIndex === 1 ? "active openSub" : ""}`} onClick={(e) => toggleSubmenu(1, e)}>

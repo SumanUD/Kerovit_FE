@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar"; 
-// import NavigationMenuDesktop from "../components/Navbar2";
+import NavigationMenuDesktop from "../components/Navbar2";
 
 // import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -111,6 +111,7 @@ const Home = () => {
 
         </div>
 
+        <div className="aurum-klassic-row">
 
         <div className="home_aurum">
           <div className="title-container">
@@ -139,6 +140,8 @@ const Home = () => {
           <button type="button">
             <Link to="/klassic" className="showMoreBtn">Show More <BsArrowRight className="right_arrow"/></Link>
           </button>
+        </div>
+
         </div>
 
         <div className="first_banner">
