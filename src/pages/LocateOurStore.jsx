@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer"
 import { FaWhatsapp } from "react-icons/fa";
 import "../styles/LocateOurStore.scss";
-import StoreCard from "./Categories/storeCard";
+import StoreCard from "../components/storeCard";
 
 const LocateOurStore = () => {
     return (

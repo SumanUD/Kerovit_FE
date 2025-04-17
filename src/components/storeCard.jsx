@@ -1,4 +1,4 @@
-import "../../styles/storeCard.scss";
+import "../styles/storeCard.scss";
 import { FaPhoneAlt } from "react-icons/fa";
 import { BsArrowRight } from "react-icons/bs";
 

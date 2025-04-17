@@ -63,7 +63,7 @@ const Footer = () => {
                 </div>
 
                 <div className="p-3 non-accordian">Customer Care</div>
-                <div className="p-3 non-accordian">Warranty</div>
+                <div className="p-3 non-accordian"><Link to="/warranty">Warranty</Link></div>
 
                 <div className="accordion-item">
                     <h2 className="accordion-header">

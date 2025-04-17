@@ -1,10 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "../components/ScrollToTop";
-
 import Home from "../pages/Home";
 import AboutUs from "../pages/About";
-import Contact from "../pages/Contact";
+// import Contact from "../pages/Contact";
 import Catalogue from "../pages/Catalogue";
 import Collection from "../pages/Collection";
 import CustomerCare from "../pages/CustomerCare";
@@ -25,6 +24,7 @@ import BathroomFurniture from "../pages/Categories/bathroom_furniture";
 import Toilet from "../pages/Categories/toilet";
 import LocateOurStore from "../pages/LocateOurStore";
 import Career from "../pages/Career";
+import Warranty from "../pages/warranty";
 
 const App = () => {
   return (
@@ -53,6 +53,7 @@ const App = () => {
         <Route path="/toilet" element={<Toilet />} />
         <Route path="/locate-our-store" element={<LocateOurStore />} />
         <Route path="/career" element={<Career />} />
+        <Route path="/warranty" element={<Warranty />} />
       </Routes>
     </Router>
   );

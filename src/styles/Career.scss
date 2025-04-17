@@ -1,7 +1,7 @@
 .career {
     .homebanner {
         background-image: url("/career/banner.png");
-        background-size: contain;
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         height: 31.5vh;
@@ -41,7 +41,7 @@
 
     .belowbanner {
         background-image: url("/career/belowBanner.png");
-        background-size: contain;
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         height: 36.3vh;
