@@ -15,8 +15,7 @@ $border-top-color: lighten($background-color-active-base, 15%);
 $border-bottom-color: lighten($background-color-active-base, 15%);
 
 /*============NAVBAR============*/
-nav {
-  
+nav {  
   font-family: 'Open Sans', sans-serif;
   line-height: 1;
   // text-transform: uppercase;
@@ -29,6 +28,7 @@ nav {
   left: 0;
   width: 100%;
   z-index: 1000;
+  background: transparent;
   
   :before, :after {
     content: " ";
@@ -79,7 +79,7 @@ nav {
   li {
     float: left;
     position: relative;
-    background-color: #fff;
+    // background-color: #fff;
 
     a {
       list-style: none;
@@ -87,6 +87,26 @@ nav {
       padding: 20px;
       display: block;
       color: $text-color;
+
+      .submenu-icon{
+        filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(50deg) brightness(101%) contrast(104%);
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }        
+      }
+    }
+  }
+
+  .openSub .submenu-icon{
+    img{
+      transform: scaleY(-1);
+      transition: all 0.3s ease-in-out;
     }
   }
 
@@ -94,9 +114,9 @@ nav {
     cursor: pointer;
   }
 
-  li:hover a, .submenu.openSub {
-    color: $text-hover-color;
-  }
+  // li:hover a, .submenu.openSub {
+  //   color: $text-hover-color;
+  // }
 
   .submenu-button {
     float: right;
@@ -256,24 +276,20 @@ nav {
 }
 
 /*============MAKING RESPONSIVE============*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   .toggleMenu {
     opacity: 1;
     display: block;
     cursor: pointer;
-  background-color: #fff;
-  margin-top: -4px;
-  /* padding-top: 0; */
-  margin-bottom: 3px;
-
-
+    background-color: #fff;
+    margin-top: -4px;
+    /* padding-top: 0; */
+    margin-bottom: 3px;
   }
-
   .submenu ul {
     position: relative;
-    margin-left: 25px;
+    margin-left: 25px;    
   }
-
   .submenu li a {
     padding: 20px;
     color: #000;
@@ -289,7 +305,9 @@ nav {
   }
 
   nav {
-
+    .the_logo{
+      display: none;
+    }
     ul {
       display: none;
       margin-top: 10px;
@@ -298,6 +316,7 @@ nav {
     ul.open {
       display: block;
       z-index: 9999;
+      background-color: #fff;
     }
 
     > ul {
@@ -374,15 +393,66 @@ nav {
       position: static;
       width: 100%;
     }
+    .subemnu-icon{
+      display: none;
+    }
   }
 }
 @media screen and (min-width: 768px) {
   nav {
-    position: fixed;
-    background-color: white;
+    position: fixed;    
     height: 80px;
-    padding: 0 60px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 0 60px;    
+    transition: background 0.4s ease;
+
+    .submenu-button{
+      display: none !important;
+    }
+
+    .submenu.openSub .dropdown{
+      height: fit-content;
+    }
+
+    .submenu.openSub a{
+      color: #fff;
+    }
+    .submenu.openSub .dropdown a{
+      color: $text-color;
+    }
+
+    .the_logo{
+      position: absolute;
+      left: 60px;
+      height: 80px;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      img{
+        width: clamp(100px, 10vw, 130px);        
+        object-fit: contain;
+      }
+    }
+
+    &.scrolled{
+      // background: rgba(255, 255, 255, 0.8);
+      // backdrop-filter: blur(5px);
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+      .submenu.openSub a {
+        color: $text-color;
+      }
+
+      .the_logo{
+        img{
+          filter: brightness(0) saturate(100%) invert(47%) sepia(7%) saturate(25%) hue-rotate(33deg) brightness(96%) contrast(90%);
+        }
+      }
+
+      .submenu-icon{
+        filter: brightness(0) saturate(100%) invert(47%) sepia(7%) saturate(25%) hue-rotate(33deg) brightness(96%) contrast(90%);
+      }
+    }
 
     .nav-left {
       float: left;
@@ -411,6 +481,23 @@ nav {
         cursor: pointer;
       }
     }
+    &.scrolled{
+      .nav-right{
+        img{
+          filter: brightness(0) saturate(100%) invert(47%) sepia(7%) saturate(25%) hue-rotate(33deg) brightness(96%) contrast(90%);
+        }
+      }
+    }
+    
+    &.scrolled{
+      ul{
+        li {
+          a {
+            color: $text-color;
+          }
+        }
+      }
+    }
 
     ul {
       display: flex;
@@ -420,6 +507,8 @@ nav {
       margin: 0 auto;
       padding: 0;
       list-style: none;
+      height: 100%;
+      width: fit-content;
 
       li {
         position: relative;
@@ -427,13 +516,9 @@ nav {
         a {
           padding: 20px 10px;
           font-size: 14px;
-          color: #757575;
+          color: white;
           transition: color 0.3s ease;
           text-decoration: none;
-
-          &:hover {
-            color: #000;
-          }
         }
 
         &.submenu:hover {
@@ -477,13 +562,18 @@ nav {
         .dropdown {
           display: none;
           position: absolute;
-          top: 100%;
+          top: 70px;
           left: 0;
-          background: #ffffff;
+          transform: translate(-30%, 0);
+          // background: rgba(255, 255, 255, 0.9);
+          // backdrop-filter: blur(5px);
+          background-color: #fff;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          padding: 10px 0;
+          padding: 10px;
+          // width: clamp(220px, 50vw, 500px);
           min-width: 220px;
           z-index: 10;
+
 
           li {
             padding: 0;

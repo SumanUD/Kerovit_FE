@@ -2,11 +2,14 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/navbar.scss";
 import { FaSearch, FaMapMarkerAlt } from "react-icons/fa"; // Import icons
+import subMenuIcon from "../../public/icons/down.png"; // Import your submenu icon
+import usestate from "usestate";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(null);
   const [scrolled, setScrolled] = useState(false);
+  const [openMenuList, setOpenMenuList] = useState(false);
 
   // Toggle menu open/close
   const toggleMenu = () => {
@@ -16,7 +19,14 @@ const Navbar = () => {
   // Toggle submenus
   const toggleSubmenu = (index, e) => {
     e.stopPropagation();
-    setActiveIndex(activeIndex === index ? null : index);
+    if(activeIndex === index) {
+      setActiveIndex(null);
+      setOpenMenuList(false);
+    }else{
+      setActiveIndex(index);
+      setOpenMenuList(true); 
+    }
+
   };
 
   // Detect scrolling for background effect
@@ -33,7 +43,8 @@ const Navbar = () => {
       {/* Background Blur Overlay */}
       {isOpen && <div className="nav-overlay active" onClick={toggleMenu}></div>}
 
-      <nav id="navbarMenu" className={scrolled ? "scrolled" : ""}>
+      {/* <nav id="navbarMenu" className={`${scrolled ? "scrolled" : ""} ${navState}`}> */}
+      <nav id="navbarMenu" className={`${scrolled ? "scrolled" : ""} ${openMenuList ? "scrolled" : ""}`}>
         {/* Left Side - Logo */}
         <div className="nav-left">
           <div className="toggleMenu" onClick={toggleMenu}>
@@ -45,6 +56,15 @@ const Navbar = () => {
             />
             </Link>
           </div>
+        </div>
+        <div className="the_logo">
+          <Link to="/">
+            <img
+                src="/kerovit_logo.png"
+                alt="Logo"
+                className="kerovit_logo"
+              />
+          </Link>          
         </div>
 
         {/* Right Side - Search & Location Icons */}
@@ -61,7 +81,10 @@ const Navbar = () => {
           {/* Products Submenu */}
           <li className={`submenu ${activeIndex === 0 ? "active openSub" : ""}`} onClick={(e) => toggleSubmenu(0, e)}>
             <Link to="#">
-              Products <span className="submenu-button"></span>
+              Products <span className="submenu-icon">
+                <img src={subMenuIcon} alt="" />
+              </span>
+              <div className="submenu-button"></div>
             </Link>
             <ul className="dropdown" style={{ display: activeIndex === 0 ? "block" : "none" }}>
               {[
@@ -86,7 +109,10 @@ const Navbar = () => {
           {/* More Submenu */}
           <li className={`submenu ${activeIndex === 1 ? "active openSub" : ""}`} onClick={(e) => toggleSubmenu(1, e)}>
             <Link to="#">
-              More <span className="submenu-button"></span>
+              More <span className="submenu-icon">
+                <img src={subMenuIcon} alt="" />
+              </span>
+              <div className="submenu-button"></div>
             </Link>
             <ul className="dropdown" style={{ display: activeIndex === 1 ? "block" : "none" }}>
               {[
@@ -99,7 +125,6 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-
           </li>
         </ul>
       </nav>
