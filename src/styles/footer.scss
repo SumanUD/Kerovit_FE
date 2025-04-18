@@ -207,9 +207,32 @@ $text-color: #757575;
       gap: 1rem;
       font-size: 14px;
       font-weight: 400;
-      a{
+      p, a{
         color: #fff;
         text-decoration: none;
+        cursor: pointer;
+        margin: 0;
+        img{
+          filter: brightness(0) saturate(100%) invert(47%) sepia(7%) saturate(25%) hue-rotate(33deg) brightness(96%) contrast(90%);
+          height: 20px;
+          margin-left: 25px;
+        }
+        .flip img{
+          transform: scaleY(-1);
+        }
+      }
+      
+      .hide{
+        display: none;
+        padding: 0;
+        margin: 0;
+      }
+      .footer_accordian{
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+        p{
+          text-transform: capitalize;
+        }
       }
     }
   }

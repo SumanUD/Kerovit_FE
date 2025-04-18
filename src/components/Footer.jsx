@@ -13,15 +13,21 @@ import instagram from "../../public/instagram.png";
 import twitter from "../../public/twitter.png";
 import youtube from "../../public/youtube.png";
 import linkedin from "../../public/linkedin.png";
+import down from "../../public/icons/down.png";
 
 
 
 const Footer = () => {
     const [openAccordion, setOpenAccordion] = useState(null);
+    const [openDesktopAccordion, setOpenDesktopAccordion] = useState(null);
 
     const toggleAccordion = (index) => {
         setOpenAccordion(openAccordion === index ? null : index);
     };
+
+    const toggleDesktopAccordion = (index) => {
+        setOpenDesktopAccordion(openDesktopAccordion === index ? null : index);
+    }
 
     return (
         <> 
@@ -135,10 +141,16 @@ const Footer = () => {
                     <div className="quick_menu_section">
                         <div className="footer_heading">Quick Menu</div>
                         <div className="quick_menu">
-                            <a href="#">Collection</a>
+                            <p onClick={()=> toggleDesktopAccordion(1)}>Collection <span className={openDesktopAccordion == 1 ? 'flip' : ''}><img src={down} alt="" /></span></p>
+                            <div className={` ${openDesktopAccordion === 1 ? "" : " hide"} footer_accordian ` } onClick={() => toggleDesktopAccordion(1)}>
+                                <p>this is the first item's accordion body</p>
+                            </div>
                             <a href="#">Customer Care</a>
                             <a href="#">Warranty</a>
-                            <a href="#">More</a>
+                            <p onClick={()=> toggleDesktopAccordion(2)}>More <span className={openDesktopAccordion == 2 ? 'flip' : ''}><img src={down} alt="" /></span></p>
+                            <div className={` ${openDesktopAccordion === 2 ? "" : " hide"} footer_accordian ` } onClick={() => toggleDesktopAccordion(1)}>
+                                <p>this is the first item's accordion body</p>
+                            </div>
                         </div>
                     </div>
                     <div className="other_section">                        
