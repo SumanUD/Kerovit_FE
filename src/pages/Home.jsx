@@ -15,6 +15,11 @@ import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
 import { BsArrowRight } from "react-icons/bs";
 
+import firstBannerImg from "../../public/home_banner1.png"
+
+import cat1 from "../../public/catelogue1.png"
+import cat2 from "../../public/catelogue2.png"
+
 
 
 const Home = () => {
@@ -52,6 +57,15 @@ const Home = () => {
   };
 
 
+  //swiper category
+  const [activeIndex, setActiveIndex] = useState(0);
+  const handleTextClick = (index) => {
+    setActiveIndex(index);
+    if (swiperRef.current) {
+      swiperRef.current.slideTo(index); // Use the Swiper instance to navigate
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -59,9 +73,10 @@ const Home = () => {
       <main className="home">
         <div className="homebanner">
           <div className="bannerText">
-            <h2>bathrooms</h2>
-
-            <span className="h2_second">you <h2>desire</h2></span>
+            <div className="center-heading">
+              <h2>bathrooms</h2>           
+              <h2> <span className="h2_second">you </span> desire</h2>  
+            </div>       
             <div className="bannerdescp">
               <img src="home page-08.png" alt="" className="line_image"/>
               <p>Let your desires come alive with the perfect fusion of form, function and usability with Kerovit. Featuring an eclectic blend of exquisite design, environment-friendly technology and unparalleled quality, Kerovit enhances your bathroom décor and experience.</p>
@@ -80,26 +95,44 @@ const Home = () => {
           Designed by skillfully unifying creativity and engineering, Kerovit has combined unmatched functional expertise with a promise of excellence, giving customers an exceptional experience that fulfils their heart's desires!
           </p>
 
-          <Swiper
-            modules={[Pagination]}
-            spaceBetween={10}
-            slidesPerView={2}
-            pagination={{ clickable: true }}
-            breakpoints={{
-              640: { slidesPerView: 3 },
-              1024: { slidesPerView: 4 },
-            }}
-            onSwiper={(swiper) => (swiperRef.current = swiper)}
-          >
-            {products.map((product) => (
-              <SwiperSlide key={product.id}>
-                <div className="inside text-center">
-                   <Link to={product.link}><img src={product.img} alt={product.name} /></Link>
-                  <p>{product.name}</p>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <div className="categories-slide">
+            <div className="category-option">
+              <div className="heading">CATEGORIES</div>
+              {
+                products.map((item, index)=>(
+                  <div className={`option ${activeIndex === index ? 'category-active': ''}`} onClick={() => handleTextClick(index)} key={index}>{item.name}</div>
+                ))
+              }
+            </div>
+            <Swiper
+              modules={[Pagination]}
+              spaceBetween={10}
+              slidesPerView={2}
+              pagination={{ clickable: true }}
+              breakpoints={{
+                640: { slidesPerView: 2 },
+                1023: { slidesPerView: 1.5 },
+                // 1200: { slidesPerView: 1.5},
+                1440: { slidesPerView: 2.3 },
+              }}              
+              onSwiper={(swiper) => (swiperRef.current = swiper)}
+              onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+            >
+              {products.map((product) => (
+                <SwiperSlide key={product.id}>
+                  <div className="inside text-center">
+                    <Link to={product.link}><img src={product.img} alt={product.name} /></Link>
+                    <div className="pop-on-hover">
+                      <p>{product.name}</p>
+                      <Link to={product.link}>
+                        <button type="button" className="showMoreBtn">Show More <BsArrowRight className="right_arrow"/></button>
+                      </Link>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
 
           <button type="button" onClick={handleNextSlide}>Swipe <BsArrowRight className="right_arrow"/></button>
         </div>
@@ -113,38 +146,50 @@ const Home = () => {
 
         <div className="aurum-klassic-row">
 
-        <div className="home_aurum">
-          <div className="title-container">
-            {/* <h2>aurum</h2> */}
-            <img src="aurum_heading.png" alt="" className="aurum_heading"/>
-            <img src="/aurum_A.png" alt="A icon" className="aurum-icon" />
+          <div className="vertical-line"></div>
+
+          <div className="home_aurum">
+            <div className="title-container">
+              {/* <h2>aurum</h2> */}
+              <img src="aurum_heading.png" alt="" className="aurum_heading"/>
+              <img src="/aurum_A.png" alt="A icon" className="aurum-icon" />
+            </div>
+            <p>Indulge in the luxury of Aurum, our exquisite collection that seamlessly blends elegance with nature's palette of perfection.</p>
+            <img src="/single_product.png" alt="Single Product image" />
+            <button type="button">
+              <Link to="/aurum" className="showMoreBtn">Show More <BsArrowRight className="right_arrow"/></Link>
+            </button>
           </div>
-          <p>Indulge in the luxury of Aurum, our exquisite collection that seamlessly blends elegance with nature's palette of perfection.</p>
-          <img src="/single_product.png" alt="Single Product image" />
-          <button type="button">
-            <Link to="/aurum" className="showMoreBtn">Show More <BsArrowRight className="right_arrow"/></Link>
-          </button>
-        </div>
 
-        <div className="home_klassic">
-          <div className="title-container">
-            {/* <h2 className="klassic_heading">KLASSIC</h2> */}
-            <img src="klassic_heading.png" alt="" className="klassic_heading"/>
-            <img src="/klassic_K.png" alt="K icon" className="klassic-icon" />
+          <div className="home_klassic">
+            <div className="title-container">
+              {/* <h2 className="klassic_heading">KLASSIC</h2> */}
+              <img src="klassic_heading.png" alt="" className="klassic_heading"/>
+              <img src="/klassic_K.png" alt="K icon" className="klassic-icon" />
+            </div>
+          
+            <p className="klassic_desc">
+            Bring home the true definition of timeless luxury with our Klassic collection, which maintains sophistication at its peak with elegant, minimal aesthetics.
+            </p>
+            <img src="/klassic.png" alt="Single Product image" />
+            <button type="button">
+              <Link to="/klassic" className="showMoreBtn">Show More <BsArrowRight className="right_arrow"/></Link>
+            </button>
           </div>
-        
-          <p className="klassic_desc">
-          Bring home the true definition of timeless luxury with our Klassic collection, which maintains sophistication at its peak with elegant, minimal aesthetics.
-          </p>
-          <img src="/klassic.png" alt="Single Product image" />
-          <button type="button">
-            <Link to="/klassic" className="showMoreBtn">Show More <BsArrowRight className="right_arrow"/></Link>
-          </button>
-        </div>
 
         </div>
 
-        <div className="first_banner">
+        <div className="first_banner desktop_view">          
+          <div className="inside_banner_content">
+            <h2>world of kerovit</h2>
+            <p>Featuring great strength, durability, and a higher-quality finish, Kerovit today stands as a definitive expression of modern lifestyles, exquisitely designed to match the desires of the new India.</p>            
+          </div>
+          <div className="inside_banner_image">
+            <img src={firstBannerImg} alt="" className="inside_banner_img"/>
+            <Link to="/locate-our-store"><button className="locate">locate a store</button></Link>
+          </div>
+        </div>
+        <div className="first_banner mobile_view">
           <div className="inside_banner_content">
             <h2>world of kerovit</h2>
             <p>Featuring great strength, durability, and a higher-quality finish, Kerovit today stands as a definitive expression of modern lifestyles, exquisitely designed to match the desires of the new India.</p>
@@ -152,7 +197,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="second_banner">
+        <div className="second_banner mobile_view">
           <div className="inside_banner_content">
             <h2>the catalogue</h2>
             <p>Browse our latest catalogue and discover the perfect bathroom solutions for your home.</p>
@@ -163,8 +208,37 @@ const Home = () => {
             <a href="#">General product catalogue</a>
           </div>
         </div>
+        <div className="second_banner desktop_view">
+          <div className="inside_banner_content">
+            <h2>the catalogue</h2>
+            <p>Browse our latest catalogue and discover the perfect bathroom solutions for your home.</p>            
+          </div>
+          <div className="catalogue">
+            <div className="the_catelogue">              
+              <img src={cat1} alt="" />
+              <a href="#">General product catalogue</a>
+            </div>
+            <div className="the_catelogue">
+              <img src={cat2} alt="" />
+              <a href="#">General product catalogue</a>
+            </div>
+          </div>
+        </div>
 
-        <div className="home_aboutus">
+        <div className="home_aboutus desktop_view">
+          <div className="inside_banner_content">
+            {/* <h2>about us</h2> */}
+            <img src="aboutus_heading.png" alt="" className="aboutus_heading"/>
+            <p>Kerovit, a distinguished brand from the house of Kajaria, was introduced to transform modern bathroom spaces by creating value that exceeds customers' expectations.</p>
+            <Link to="/about">
+              <button className="read_more">
+                read more 
+              </button>
+              </Link>
+          </div>
+        </div>
+
+        <div className="home_aboutus mobile_view">
           <div className="inside_banner_content">
             {/* <h2>about us</h2> */}
             <img src="aboutus_heading.png" alt="" className="aboutus_heading"/>
@@ -185,7 +259,7 @@ const Home = () => {
           {/* Swiper for Blog Section */}
           <Swiper
             modules={[Pagination]}
-            spaceBetween={10}
+            spaceBetween={20}
             slidesPerView={1}
             pagination={{ clickable: true }}
             breakpoints={{
@@ -210,7 +284,7 @@ const Home = () => {
 
         <div className="home_contact">
           <div className="inside_banner_content">
-            <h2 ><span>submit</span> your query</h2>
+            <div className="contact_header"><span>submit</span> <h2>your query</h2></div>
             <form className="contact_form">
               <input type="text" placeholder="Name  |" />
               <input type="email" placeholder="Email  |" />
