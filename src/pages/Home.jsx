@@ -14,6 +14,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
 import { BsArrowRight } from "react-icons/bs";
+import { BsArrowLeft } from "react-icons/bs";
 
 import firstBannerImg from "../../public/home_banner1.png"
 
@@ -38,7 +39,7 @@ const Home = () => {
     if (swiperRef.current) {
       swiperRef.current.slideNext();
     }
-  };
+  }
 
   const blogPosts = [
     { id: 1, img: "/blog3.png", title: "Traditional vs. Wall-Mounted Bathroom Faucets: A Comparative Guide", desc: "Lorem ipsum, dolor sit" },
@@ -50,6 +51,11 @@ const Home = () => {
 
 
   const swiperRefBlog = useRef(null);
+  const handlePrevBlogSlide = () => {
+    if (swiperRefBlog.current) {
+      swiperRefBlog.current.slidePrev();
+    }
+  }
   const handleNextBlogSlide = () => {
     if (swiperRefBlog.current) {
       swiperRefBlog.current.slideNext();
@@ -111,9 +117,8 @@ const Home = () => {
               pagination={{ clickable: true }}
               breakpoints={{
                 640: { slidesPerView: 2 },
-                1023: { slidesPerView: 1.5 },
-                // 1200: { slidesPerView: 1.5},
-                1440: { slidesPerView: 2.3 },
+                1023: { slidesPerView: 1.5 },                
+                1440: { slidesPerView: 2.5 },
               }}              
               onSwiper={(swiper) => (swiperRef.current = swiper)}
               onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
@@ -155,7 +160,9 @@ const Home = () => {
               <img src="/aurum_A.png" alt="A icon" className="aurum-icon" />
             </div>
             <p>Indulge in the luxury of Aurum, our exquisite collection that seamlessly blends elegance with nature's palette of perfection.</p>
-            <img src="/single_product.png" alt="Single Product image" />
+            <div className="img-container">
+              <img src="/single_product.png" alt="Single Product image" />
+            </div>
             <button type="button">
               <Link to="/aurum" className="showMoreBtn">Show More <BsArrowRight className="right_arrow"/></Link>
             </button>
@@ -171,7 +178,9 @@ const Home = () => {
             <p className="klassic_desc">
             Bring home the true definition of timeless luxury with our Klassic collection, which maintains sophistication at its peak with elegant, minimal aesthetics.
             </p>
-            <img src="/klassic.png" alt="Single Product image" />
+            <div className="img-container">
+              <img src="/klassic.png" alt="Single Product image" />
+            </div>
             <button type="button">
               <Link to="/klassic" className="showMoreBtn">Show More <BsArrowRight className="right_arrow"/></Link>
             </button>
@@ -256,6 +265,7 @@ const Home = () => {
           <img src="home_blog_heading.png" alt="" className="home_blog_heading"/>
           <p>Explore our Blog and witness a world where desires take shape.</p>
 
+          {/* <button type="button" onClick={handleNextBlogSlide}>Swipe<BsArrowRight className="right_arrow"/></button> */}
           {/* Swiper for Blog Section */}
           <Swiper
             modules={[Pagination]}
@@ -279,7 +289,10 @@ const Home = () => {
             ))}
           </Swiper>
 
-          <button type="button" onClick={handleNextBlogSlide}>Swipe<BsArrowRight className="right_arrow"/></button>
+          <div className="blog-swiper-button">
+            <button className="prev" onClick={handlePrevBlogSlide}><BsArrowLeft /> Prev</button>
+            <button className="next" type="button" onClick={handleNextBlogSlide}>Swipe<BsArrowRight className="right_arrow"/></button>
+          </div>
         </div>
 
         <div className="home_contact">
