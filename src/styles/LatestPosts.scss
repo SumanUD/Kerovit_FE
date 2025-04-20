@@ -106,6 +106,7 @@
                 }
 
                 ul {
+                    columns: 3;
                     list-style: none;
                     padding: 0;
                     margin: 5px 0 0;
@@ -155,5 +156,65 @@
     .filterContainer:has(.filterDropdown) ~ * {
         filter: blur(5px);
         pointer-events: none;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .latestPost{
+        .latestPost_contents{
+            max-width: 1300px;
+            width: 100%;
+            margin: 0 auto ;
+            padding:0 25px;
+        }
+        .content{
+            margin-top: clamp(2rem, 5vw, 3rem) !important;
+            margin: 0;
+
+            p{
+                font-size: clamp(.9rem , 2vw, 1.1rem) !important;
+                line-height: 1.6;
+                color: #a4a4a4;                
+                margin-bottom: 35px;
+            }
+        }
+        .title{
+            font-size: clamp(1.2rem , 5vw, 1.6rem) !important;
+        }
+
+        .filterContainer{
+            .filterTop{
+                width: 100%;
+                span{
+                    margin-left: 25px;
+                    color: #333;
+                    font-weight: 500;
+                }
+            }
+            .filterDropdown{
+                display: grid;     
+                grid-template-columns: 1fr 1fr 1fr .5fr;
+                gap: 25px;
+                // align-items: center;
+                .clearFilterBtn{
+                    height: fit-content;
+                    margin: 0;
+                }
+            }
+        }
+        .container{
+            margin: 50px auto;
+
+            .row{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                & > div{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
     }
 }
