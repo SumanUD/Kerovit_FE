@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "../styles/navbar.scss";
 import { FaSearch, FaMapMarkerAlt } from "react-icons/fa"; // Import icons
@@ -37,6 +37,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const searchInputRef = useRef(null);
   //handleling search input
   const [openSearch, setOpenSearch] = useState(false);
   const [searchInput, setSearchInput] = useState("");
@@ -47,9 +48,11 @@ const Navbar = () => {
   const handleOpenSearch = () => {
     console.log("cleicked")
     setOpenSearch(!openSearch);
+    setSearchInput("");
   }
   const handleCloseSearch = () => {
     setOpenSearch(false);
+    setSearchInput("");
   }
 
   return (
@@ -88,7 +91,7 @@ const Navbar = () => {
 
           <div className={`search-desktop ${openSearch ? "open" : ""}`}>
             <div className="search-desktop-container">
-              <input type="text" placeholder="Search" onChange={(e)=> handleSearchInputChange(e)} className="search-desktop-input" />
+              <input type="text" ref={searchInputRef} placeholder="Search" onChange={(e)=> handleSearchInputChange(e)} className="search-desktop-input" />
               {/* <img src="menu_search.png" alt="" className="menu_search" /> */}
               <IoClose className="close_icon" onClick={handleCloseSearch}/>              
             </div>
