@@ -28,20 +28,18 @@ $text-color: #757575;
     padding: 3rem 2rem;
     position: relative;
 
-    .whatsapp-icon {
+    .whatsapp-icon {      
       position: fixed;
       bottom: 45px;
       right: 14px;
       font-size: 3rem;
       color: #505050;
-
-
       z-index: 99999;
-      bottom: 50px !important;
-      right: 40px !important;
-      cursor: pointer;
-      svg{
-        fill: $text-color !important
+      bottom: 20px ;
+      right: 20px ;
+      cursor: pointer;      
+      svg{        
+        fill: $text-color;
       }
     }
 
@@ -187,11 +185,43 @@ $text-color: #757575;
   
       .whatsapp-icon {
         position: fixed;
-        bottom: 30px;
-        right: 30px;
+        bottom: 6dvb;
+        right: 0px;
         font-size: 3rem;
-        color: #505050;
+        color: #a4a4a4;
         z-index: 99999;
+
+        background: #000;
+        height: 55px;
+        width: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+        z-index: 9999;      
+        svg{
+          height: 60%;
+        }
+        &::after{
+          content:"Let's have a chat!";
+          background: transparent;
+          position: absolute;
+          left: 0%;
+          text-align: right;
+          width: 200%;
+          font-size: 18px;
+          font-weight: 500;
+          color: #a4a4a4;          
+          mix-blend-mode: difference;    
+          overflow: hidden;      
+          opacity: 0;
+          transition: all .3s ease-in-out;
+          z-index: 1;
+        }
+
+        &:hover::after{
+          left: -230%;
+          opacity: 1;
+        }
       }
     }
   }

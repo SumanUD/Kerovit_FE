@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import "../styles/singleProduct.scss";
 import plusIcon from "../../public/icons/plus.png";
 import minusIcon from "../../public/icons/minus.png";
+import ReactImageMagnify from "react-image-magnify";
 
 const SingleProduct = () => {
 
@@ -27,10 +28,26 @@ const SingleProduct = () => {
     <>
       <Navbar />
 
-      <div className="single-product-page">
+      <div className="single-product-page">S
         <div className="singlePro">
 
-          <img src={selectedImage} alt="Selected Product" className="main-image" />
+        <div className="image-container">
+            <ReactImageMagnify
+              {...{
+                smallImage: {
+                  alt: "Selected Product",
+                  isFluidWidth: true,
+                  src: selectedImage,
+                },
+                largeImage: {
+                  src: selectedImage,
+                  width: 1200, // Adjust as needed for the zoomed image
+                  height: 1200,
+                },
+                enlargedImagePosition: "over", // Options: 'over', 'beside', etc.
+              }}
+            />
+          </div>
 
           <div className="product-details">
             <div className="description">

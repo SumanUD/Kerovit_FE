@@ -90,7 +90,9 @@ const Home = () => {
             </div>
           </div>
 
-          <FaWhatsapp className="whatsapp-icon" />
+          <div className="whatsapp-icon">
+            <FaWhatsapp />
+          </div>
 
         </div>
 
