@@ -6,11 +6,13 @@ $secondary-bg: #3f3d3d;
 $tertiary-bg: #212020;
 $active-color: yellow;
 
+.single-product-page{
+  background: linear-gradient(to bottom, $primary-bg 5%, $secondary-bg 20%, $tertiary-bg 100%);
+}
 .singlePro {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background: linear-gradient(to bottom, $primary-bg 5%, $secondary-bg 20%, $tertiary-bg 100%);
+  align-items: center;  
   color: $white;
   padding: 20px;
   min-height: 100vh;
@@ -118,6 +120,41 @@ $active-color: yellow;
         font-size: 14px;
         background: #222;
         color: #ccc;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 800px){
+  .singlePro{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 35px;
+
+
+    .main-image{
+      position: sticky;
+      top: 120px;
+      margin: 0;
+
+      max-width: 500px;
+      width: 100%;
+      height: fit-content;
+    }
+
+    .product-details{
+      padding-top: 80px;
+      .description{
+        max-width: none;
+        width: 100%;
+      }
+
+      .dropdown-section{
+        width: 100%;
       }
     }
   }

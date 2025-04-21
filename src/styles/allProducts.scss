@@ -84,43 +84,51 @@
 
   @media (min-width: 1024px) {
     .allProductMain {
-      padding: 100px 80px 60px;
+      padding: 100px 80px 60px;      
     }
   
     .prod_details {
       h2 {
-        font-size: 28px;
+        margin-top: 45px;
+        font-size: 28px !important;
       }
   
       p {
-        font-size: 14px;
+        font-size: 14px !important;
         max-width: 900px;
         line-height: 1.6;
       }
     }
   
     .product_grid {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 35px !important;
       padding: 40px 0;
   
       .product_card {
-        img {
-          max-width: 300px;
+        a{
+          height: 90%;
+          width: 100%;
+          display: inline-block;
+          img {         
+            max-width: none; 
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
         }
-  
+        
         p {
-          font-size: 10px;
+          font-size: 14px !important;
         }
       }
     }
   
     .load-more {
-      font-size: 12px;
-      width: 130px;
-      padding: 8px 12px;
-      margin-top: 30px;
-      border-radius: 4px;
+      font-size: 13px !important;      
+      width: fit-content !important;      
+      padding: 6px 28px !important;
+      margin-top: 30px;      
   
       &:hover {
         background-color: #e0e0e0;

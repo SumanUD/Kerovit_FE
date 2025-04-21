@@ -135,7 +135,7 @@ const Footer = () => {
             </div>
             <div className="desktop-footer">
                <div className="the_footer">
-                <div className="the_logo_section">
+                    <div className="the_logo_section">
                         <img src={logo} alt="" />
                     </div>
                     <div className="quick_menu_section">

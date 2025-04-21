@@ -27,57 +27,61 @@ const SingleProduct = () => {
     <>
       <Navbar />
 
-      <div className="singlePro">
+      <div className="single-product-page">
+        <div className="singlePro">
 
-        <img src={selectedImage} alt="Selected Product" className="main-image" />
+          <img src={selectedImage} alt="Selected Product" className="main-image" />
 
-        <div className="description">
-          <h2>AENON</h2>
-          <p className="model">MODEL NO.: KB2611010-ND-CP</p>
-          <p className="series">SERIES: Aenon</p>
+          <div className="product-details">
+            <div className="description">
+              <h2>AENON</h2>
+              <p className="model">MODEL NO.: KB2611010-ND-CP</p>
+              <p className="series">SERIES: Aenon</p>
 
-          <h3>Description</h3>
-          <p className="description_p">SINGLE LEVER BASIN MIXER WITHOUT POP-UP</p>
+              <h3>Description</h3>
+              <p className="description_p">SINGLE LEVER BASIN MIXER WITHOUT POP-UP</p>
 
-          <h3>Variants</h3>
-          <div className="variants">
-            {variants.map((variant, index) => (
-              <img
-                key={index}
-                src={variant.image}
-                alt={variant.alt}
-                className={`variant-image ${selectedImage === variant.image ? "active" : ""}`}
-                onClick={() => setSelectedImage(variant.image)}
-              />
-            ))}
-          </div>
+              <h3>Variants</h3>
+              <div className="variants">
+                {variants.map((variant, index) => (
+                  <img
+                    key={index}
+                    src={variant.image}
+                    alt={variant.alt}
+                    className={`variant-image ${selectedImage === variant.image ? "active" : ""}`}
+                    onClick={() => setSelectedImage(variant.image)}
+                  />
+                ))}
+              </div>
 
-          <button className="nearest-showroom-btn">NEAREST SHOWROOM</button>
-        </div>
-
-
-        <div className="dropdown-section">
-          {["Features", "Installation & Service Parts", "Design Files", "Additional Information"].map((section, index) => (
-          <div key={index} className="dropdown-item">
-          <button onClick={() => toggleSection(index)}>
-            {section}
-            <span className="dropdown-icon">
-              <img
-                src={openSection === index ? minusIcon : plusIcon}
-                alt={openSection === index ? "Collapse" : "Expand"}
-                width="16"
-                height="16"
-              />
-            </span>
-          </button>
-          {openSection === index && (
-            <div className="dropdown-content">
-              <p>Content for {section} goes here...</p>
+              <button className="nearest-showroom-btn">NEAREST SHOWROOM</button>
             </div>
-          )}
-        </div>
-        
-          ))}
+
+
+            <div className="dropdown-section">
+              {["Features", "Installation & Service Parts", "Design Files", "Additional Information"].map((section, index) => (
+              <div key={index} className="dropdown-item">
+              <button onClick={() => toggleSection(index)}>
+                {section}
+                <span className="dropdown-icon">
+                  <img
+                    src={openSection === index ? minusIcon : plusIcon}
+                    alt={openSection === index ? "Collapse" : "Expand"}
+                    width="16"
+                    height="16"
+                  />
+                </span>
+              </button>
+              {openSection === index && (
+                <div className="dropdown-content">
+                  <p>Content for {section} goes here...</p>
+                </div>
+              )}
+            </div>
+
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 

@@ -38,6 +38,7 @@ const BlogPage = () => {
 
       <main className="blogPage">
         <div className="banner">
+          <div className="black-filter"></div>
           <div className="banner_content">
             <h2 className="banner_title">Blog</h2>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, facilis! Eum dolorum sapiente officia ipsum in consectetur impedit possimus, modi, nisi quas aut voluptate tempore!</p>
@@ -50,7 +51,7 @@ const BlogPage = () => {
 
           <Swiper
             modules={[Pagination]}
-            spaceBetween={10}
+            spaceBetween={25}
             slidesPerView={1}
             pagination={{ clickable: true }}
             breakpoints={{
@@ -81,7 +82,7 @@ const BlogPage = () => {
 
           <Swiper
             modules={[Pagination]}
-            spaceBetween={10}
+            spaceBetween={25}
             slidesPerView={1}
             pagination={{ clickable: true }}
             breakpoints={{

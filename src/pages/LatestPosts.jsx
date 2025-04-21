@@ -76,93 +76,95 @@ const LatestPost = () => {
         <main className={`latestPost ${isFilterOpen ? "blur-background" : ""}`}>
             <Navbar />
 
-            <div className="content">
-                <h2 className="title">Latest Posts</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, facilis! Eum dolorum sapiente officia ipsum in consectetur impedit possimus, modi, nisi quas aut voluptate tempore!</p>
-            </div>
-
-            {/* Filter Button & Dropdown */}
-            <div className="filterContainer" ref={filterRef}>
-                <div className="filterTop" onClick={() => setIsFilterOpen(!isFilterOpen)}>
-                    <IoFilter className="filterIcon" />
-                    <span className="selected-date">
-                        {selectedFilters.date || selectedFilters.month || selectedFilters.year
-                            ? `${selectedFilters.date || ""} ${selectedFilters.month || ""} ${selectedFilters.year || ""}`.trim()
-                            : "Select Date"}
-                    </span>
+            <div className="latestPost_contents">
+                <div className="content">
+                    <h2 className="title">Latest Posts</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, facilis! Eum dolorum sapiente officia ipsum in consectetur impedit possimus, modi, nisi quas aut voluptate tempore!</p>
                 </div>
 
-                {isFilterOpen && (
-                    <div className="filterDropdown">
-                        <div className="filterSection">
-                            <h4 onClick={() => toggleSection("date")}>
-                                Date <span>{openSections.date ? "−" : "+"}</span>
-                            </h4>
-                            {openSections.date && (
-                                <ul>
-                                    {[...Array(31)].map((_, i) => (
-                                        <li key={i + 1} onClick={() => handleFilterSelection("date", i + 1)}>
-                                            {i + 1}
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                        </div>
-
-                        <div className="filterSection">
-                            <h4 onClick={() => toggleSection("month")}>
-                                Month <span>{openSections.month ? "−" : "+"}</span>
-                            </h4>
-                            {openSections.month && (
-                                <ul>
-                                    {["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"].map((month, index) => (
-                                        <li key={index} onClick={() => handleFilterSelection("month", month)}>
-                                            {month}
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                        </div>
-
-                        <div className="filterSection">
-                            <h4 onClick={() => toggleSection("year")}>
-                                Year <span>{openSections.year ? "−" : "+"}</span>
-                            </h4>
-                            {openSections.year && (
-                                <ul>
-                                    {[2021, 2022, 2023, 2024, 2025].map((year, index) => (
-                                        <li key={index} onClick={() => handleFilterSelection("year", year)}>
-                                            {year}
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                        </div>
-
-                        {/* Clear Filters Button */}
-                        <button className="clearFilterBtn" onClick={clearFilters}>
-                            Clear Filters
-                        </button>
+                {/* Filter Button & Dropdown */}
+                <div className="filterContainer" ref={filterRef}>
+                    <div className="filterTop" onClick={() => setIsFilterOpen(!isFilterOpen)}>
+                        <IoFilter className="filterIcon" />
+                        <span className="selected-date">
+                            {selectedFilters.date || selectedFilters.month || selectedFilters.year
+                                ? `${selectedFilters.date || ""} ${selectedFilters.month || ""} ${selectedFilters.year || ""}`.trim()
+                                : "Select Date"}
+                        </span>
                     </div>
-                )}
-            </div>
 
-            <div className="container">
-                <div className="row">
-                    {filteredProducts.length > 0 ? (
-                        filteredProducts.map((product) => (
-                            <div key={product.id} className="col-6 mb-4 text-center">
-                                <img
-                                    src={product.img}
-                                    alt={product.title}
-                                    className="img-fluid product-img"
-                                />
-                                <p className="product-title mt-2">{product.title}</p>
+                    {isFilterOpen && (
+                        <div className="filterDropdown">
+                            <div className="filterSection">
+                                <h4 onClick={() => toggleSection("date")}>
+                                    Date <span>{openSections.date ? "−" : "+"}</span>
+                                </h4>
+                                {openSections.date && (
+                                    <ul>
+                                        {[...Array(31)].map((_, i) => (
+                                            <li key={i + 1} onClick={() => handleFilterSelection("date", i + 1)}>
+                                                {i + 1}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </div>                                
+
+                            <div className="filterSection">
+                                <h4 onClick={() => toggleSection("month")}>
+                                    Month <span>{openSections.month ? "−" : "+"}</span>
+                                </h4>
+                                {openSections.month && (
+                                    <ul>
+                                        {["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"].map((month, index) => (
+                                            <li key={index} onClick={() => handleFilterSelection("month", month)}>
+                                                {month}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
                             </div>
-                        ))
-                    ) : (
-                        <p className="text-center w-100">No posts found for the selected date.</p>
+
+                            <div className="filterSection">
+                                <h4 onClick={() => toggleSection("year")}>
+                                    Year <span>{openSections.year ? "−" : "+"}</span>
+                                </h4>
+                                {openSections.year && (
+                                    <ul>
+                                        {[2021, 2022, 2023, 2024, 2025].map((year, index) => (
+                                            <li key={index} onClick={() => handleFilterSelection("year", year)}>
+                                                {year}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </div>
+
+                            {/* Clear Filters Button */}
+                            <button className="clearFilterBtn" onClick={clearFilters}>
+                                Clear Filters
+                            </button>
+                        </div>
                     )}
+                </div>
+
+                <div className="container">
+                    <div className="row">
+                        {filteredProducts.length > 0 ? (
+                            filteredProducts.map((product) => (
+                                <div key={product.id} className="col-6 mb-4 text-center">
+                                    <img
+                                        src={product.img}
+                                        alt={product.title}
+                                        className="img-fluid product-img"
+                                    />
+                                    <p className="product-title mt-2">{product.title}</p>
+                                </div>
+                            ))
+                        ) : (
+                            <p className="text-center w-100">No posts found for the selected date.</p>
+                        )}
+                    </div>
                 </div>
             </div>
             <Footer />

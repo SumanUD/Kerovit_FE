@@ -24,12 +24,24 @@ const Career = () => {
                     </p>
                 </div>
 
-                <div className="belowbanner">
+                <div className="belowbanner hide_on_desktop">
                     <div className="belowBannerText">
                         <img src="/career/belowBannerText.png" alt="belowBannerText" />
                         <p>Send us your resume at</p>
                         <p className="mail">info@kerovit.com</p>
                     </div>
+                </div>
+
+                <div className="below-banner-desktop">
+
+                    <div className="belowbanner">
+                        <div className="belowBannerText">
+                            <img src="/career/belowBannerText.png" alt="belowBannerText" />
+                            <p>Send us your resume at</p>
+                            <a href="mailto:info@kerovit.com" className="mail" target="_blank">info@kerovit.com</a>
+                        </div>
+                    </div>
+
                 </div>
 
             </main>

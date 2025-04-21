@@ -47,17 +47,38 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        height: clamp(350px, 50vw, 400px);
       }
 
       .inside {
         // text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        .inside_contents{
+          height: 100%;
+          position: relative;
+          img {                    
+            width: 100%;
+            height: 100%;          
+          }
+          .inside_text_content{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding:25px 15px;
+            position: absolute;
+            bottom: 0;            
+            background: #000000;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 6%, rgba(0, 0, 0, 0.69) 88%);
 
-        img {
-          margin: 16px 0;
-          // border-radius: 8px;
-          width: 100%;
+            p{
+              color: white;
+              margin-bottom: 0;
+            }
+          }
         }
-
 
       }
 
@@ -106,7 +127,19 @@
         .right_arrow {
           margin-bottom: -1px;
         }
-      }
+      }      
+    }
+  }
+
+  .swiper_nav_buttons{    
+    width: 100%;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 25px;
+    margin-bottom: 45px;
+    button{
+      margin: 25px 0;
     }
   }
 }
@@ -130,9 +163,12 @@
           display: flex;
           justify-content: center;
           align-items: stretch;
+
+          height: clamp(450px, 50vw, 550px);
+          aspect-ratio: 1/1;
         }
 
-        .inside {
+        .inside {          
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -141,22 +177,28 @@
           // max-width: 280px;
           margin: auto;
 
+          .inside_contents{
+            .inside_text_content{
+              padding: 50px 25px;
+            }
+          }
+
           h2 {
-            font-size: 18px;
-            margin-bottom: 10px;
+            font-size: 24px;
+            margin-bottom: 18px;
             text-transform: uppercase;
           }
 
           p {
-            font-size: 12px;
+            font-size: 13px;
             line-height: 1.6;
             margin-bottom: 15px;
           }
-
+          
           img {
             width: 100%;
-            object-fit: contain;
-            margin-top: auto;
+            height: 100%;
+            object-fit: cover;            
           }
         }
 

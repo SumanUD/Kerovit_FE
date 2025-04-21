@@ -187,7 +187,8 @@ $text-color: #757575;
   grid-template-columns: 1fr 1fr 2fr;
   
   .the_logo_section{
-    align-self: center;
+    // align-self: center;
+    margin-top: 8px;
     img{
       height: auto;
       width: 200px;
