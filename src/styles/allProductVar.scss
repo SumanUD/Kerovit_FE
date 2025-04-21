@@ -62,24 +62,20 @@
     }
   
     .product_card {
-      text-align: center;
-    //   padding: 10px;
-      
-      img {
+      a{
+        height: 90%;
         width: 100%;
-        max-width: 180px;
-      }
-  
-      p {
-        margin-top: 8px;
-        font-size: 14px;
-        // font-weight: bold;
-        text-transform: uppercase;
-        color: #a4a4a4;
-        font-family: 'Sinkin Sans 300 Light', sans-serif;
-        font-size: 7.825px;
+        display: inline-block;
         text-decoration: none;
+        img {         
+          max-width: none; 
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
       }
+      
+         
     }
   }
   

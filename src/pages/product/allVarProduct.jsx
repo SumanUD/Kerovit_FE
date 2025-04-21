@@ -43,10 +43,13 @@ const AllVarProduct = () => {
 
         <div className="product_grid">
           {products.map((product) => (
-            <Link to={`/single_product`} key={product.id} className="product_card">
+            <div className="product_card" key={product.id} >
+              <Link to={`/single_product`} >
               <img src={product.img} alt={product.name} />
               <p>{product.name}</p>
             </Link>
+            </div>
+            
           ))}
         </div>
 
