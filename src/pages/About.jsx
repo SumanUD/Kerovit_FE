@@ -4,11 +4,12 @@ import Footer from "../components/Footer";
 import "../styles/about.scss";
 import { FaWhatsapp } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay,  Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { BsArrowRight } from "react-icons/bs";
+import {BsArrowLeft} from "react-icons/bs";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
 const manufPlant = [
@@ -39,17 +40,22 @@ const About = () => {
 
   const [readMoreOne, setReadMoreOne] = useState(false);
   const [readMoreTwo, setReadMoreTwo] = useState(false);
-  // const handleNextSlide = () => {
-  //   if (swiperInstance) {
-  //     swiperInstance.slideNext();
-  //   }
-  // };
+  const handleNextSlide = () => {
+    if (swiperInstance) {
+      swiperInstance.slideNext();
+    }
+  };
 
-  // const handleNextCertificateSlide = () => {
-  //   if (swiperCertificateInstance) {
-  //     swiperCertificateInstance.slideNext();
-  //   }
-  // };
+  const handleNextCertificateSlide = () => {
+    if (swiperCertificateInstance) {
+      swiperCertificateInstance.slideNext();
+    }
+  };
+  const handlePrevCertificateSlide = () => {
+    if (swiperCertificateInstance) {
+      swiperCertificateInstance.slidePrev();
+    }
+  };
 
 
   return (
@@ -147,11 +153,12 @@ const About = () => {
         <div className="manufacturingPlant">
           <h2 className="mpTitle">manufacturing plant</h2>
           <Swiper
-            modules={[Navigation, Pagination]}
+            modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={10}
             slidesPerView={1}
             pagination={{ clickable: true }}
             navigation={{ nextEl: ".next-btn", prevEl: ".prev-btn" }}
+            loop
             breakpoints={{
               640: { slidesPerView: 3 },
               1024: { slidesPerView: numberOfSlides },
@@ -170,26 +177,32 @@ const About = () => {
           </Swiper>
 
 
-          <button className="prev-btn"><MdKeyboardArrowLeft /></button>
-          <button className="next-btn"><MdKeyboardArrowRight /></button>
+          {/* <button className="prev-btn"><MdKeyboardArrowLeft /></button>
+          <button className="next-btn"><MdKeyboardArrowRight /></button> */}
 
 
-          {/* <button type="button" className="swipeButton" onClick={handleNextSlide}>Swipe <BsArrowRight className="right_arrow" /></button> */}
+          <button type="button" className="swipeButton" onClick={handleNextSlide}>Swipe <BsArrowRight className="right_arrow" /></button>
         </div>
 
         <div className="certifications">
           <h2 className="mpTitle">Certifications</h2>
           <Swiper
-            modules={[Navigation, Pagination]}
+            modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={10}
             slidesPerView={4}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            loop={true}
             pagination={{ clickable: true }}
+            
             navigation={{ nextEl: ".next-btn-cert", prevEl: ".prev-btn-cert" }}
             breakpoints={{
               640: { slidesPerView: 3 },
               1024: { slidesPerView: 4 },
             }}
-            onSwiper={setSwiperCertificateInstance}
+            onSwiper={setSwiperCertificateInstance}            
           >
             {certificates.map((certificate) => (
               <SwiperSlide key={certificate.id}>
@@ -200,12 +213,13 @@ const About = () => {
             ))}
           </Swiper>
 
-          <button className="prev-btn-cert"><MdKeyboardArrowLeft /></button>
-          <button className="next-btn-cert"><MdKeyboardArrowRight /></button>
+          {/* <button className="prev-btn-cert"><MdKeyboardArrowLeft /></button>
+          <button className="next-btn-cert"><MdKeyboardArrowRight /></button> */}
 
-          {/* <button type="button" className="swipeButton" onClick={handleNextCertificateSlide}>
-            Swipe <BsArrowRight className="right_arrow" />
-          </button> */}
+          <div className="swiper-button-2">
+            <button type="button" className="swipeButton" onClick={handleNextCertificateSlide}>Next<BsArrowRight className="right_arrow" /></button>
+            <button type="button" className="swipeButton" onClick={handlePrevCertificateSlide}><BsArrowLeft className="right_arrow" />Prev</button>
+          </div>
         </div>
       </div>
 

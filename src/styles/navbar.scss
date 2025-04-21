@@ -227,29 +227,36 @@ nav {
   background-color: #fff;
   color: $text-color;
   cursor: pointer;
+  width: fit-content;
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    display: block;
-    width: 15px;
-    height: 2px;
-    background: #ffffff;
-  }
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   top: 20px;
+  //   left: 20px;
+  //   display: block;
+  //   width: 15px;
+  //   height: 2px;
+  //   background: #ffffff;
+  // }
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 25px;
-    left: 20px;
-    display: block;
-    width: 15px;
-    height: 3px;
-    border-top: 2px solid #ffffff;
-    border-bottom: 2px solid #ffffff;
-    padding: 1.5px;
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 25px;
+  //   left: 20px;
+  //   display: block;
+  //   width: 15px;
+  //   height: 3px;
+  //   border-top: 2px solid #ffffff;
+  //   border-bottom: 2px solid #ffffff;
+  //   padding: 1.5px;
+  // }
+
+  svg{
+    height: 30px;
+    width: 30px;
+    color: white;
   }
 }
 
@@ -333,6 +340,13 @@ nav{
     margin-top: -4px;
     /* padding-top: 0; */
     margin-bottom: 3px;
+
+    display: flex;
+    align-items: center;
+
+    img{
+      margin: 0 20px !important;
+    }
   }
   .submenu ul {
     position: relative;

@@ -403,7 +403,7 @@ $text-color: #757575;
       .inside {
         position: relative;
         overflow: hidden;
-        height: clamp(500px, 100vh, 700px);
+        height: clamp(500px, 70vh, 700px);
         width: 100%;
         .pop-on-hover{
           position: absolute;
@@ -750,7 +750,7 @@ $text-color: #757575;
       flex-direction: column;
       align-items: center;      
       .img-container {      
-        max-width: 530px;
+        max-width: clamp(350px, 30vw, 500px);
         width: 100%;
         aspect-ratio: 1/1;
         overflow: hidden;
@@ -758,8 +758,13 @@ $text-color: #757575;
           height: 100%;
           width: 100%;
           object-fit: cover;
-          transition: all 0.3s ease-in-out;     
+          transition: all 0.3s ease-in-out;           
         }    
+
+        &:hover .desktop-card-button{
+          opacity: 1;
+          bottom: 40px;
+        }
       }
       width: 40%;
       box-sizing: border-box;
@@ -778,7 +783,8 @@ $text-color: #757575;
         margin: 25px 0;
       }
         
-      button{        
+      button{       
+        display: none; 
         left: 50%;
         transform: translate(-50%, 0);
         bottom: -50px;
@@ -786,9 +792,24 @@ $text-color: #757575;
         width: 150px;
         &:hover {
           background-color: #f4f4f4;
-          border-color: black;
+          border-color: black;          
+        }        
+
+        &.desktop-card-button{  
+          display: block;      
+          bottom: 0%;
+          opacity: 0;
+          border-color: white;
+          a{
+            color:white !important;
+          }
+          &:hover a{
+            color: black !important;
+          }
         }
       }
+
+
 
       &:hover {
         .img-container img{
