@@ -90,7 +90,9 @@ const Home = () => {
             </div>
           </div>
 
-          <FaWhatsapp className="whatsapp-icon" />
+          <div className="whatsapp-icon">
+            <FaWhatsapp />
+          </div>
 
         </div>
 
@@ -162,6 +164,10 @@ const Home = () => {
             <p>Indulge in the luxury of Aurum, our exquisite collection that seamlessly blends elegance with nature's palette of perfection.</p>
             <div className="img-container">
               <img src="/single_product.png" alt="Single Product image" />
+
+              <button type="button" className="desktop-card-button">
+                <Link to="/aurum" className="showMoreBtn">Show More <BsArrowRight className="right_arrow"/></Link>
+              </button>
             </div>
             <button type="button">
               <Link to="/aurum" className="showMoreBtn">Show More <BsArrowRight className="right_arrow"/></Link>
@@ -180,6 +186,10 @@ const Home = () => {
             </p>
             <div className="img-container">
               <img src="/klassic.png" alt="Single Product image" />
+
+              <button type="button" className="desktop-card-button">
+                <Link to="/klassic" className="showMoreBtn">Show More <BsArrowRight className="right_arrow"/></Link>
+              </button>
             </div>
             <button type="button">
               <Link to="/klassic" className="showMoreBtn">Show More <BsArrowRight className="right_arrow"/></Link>

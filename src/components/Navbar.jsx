@@ -4,6 +4,8 @@ import "../styles/navbar.scss";
 import { FaSearch, FaMapMarkerAlt } from "react-icons/fa"; // Import icons
 import subMenuIcon from "../../public/icons/down.png"; // Import your submenu icon
 import { IoClose } from "react-icons/io5";
+import { GiHamburgerMenu } from "react-icons/gi";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,10 +64,11 @@ const Navbar = () => {
       <nav id="navbarMenu" className={`${scrolled ? "scrolled" : ""} ${openMenuList ? "scrolled" : ""} ${openSearch ? "scrolled" : ""}`}>         
         <div className="nav-contents">
           <div className="nav-left">
-            <div className="toggleMenu" onClick={toggleMenu}>
-            <Link to="/">
-            <img
-                src="/kerovit_logo.png"
+            <div className="toggleMenu" >
+              <GiHamburgerMenu onClick={toggleMenu}/>
+              <Link to="/">
+              <img
+                  src="/kerovit_logo.png"
                 alt="Logo"
                 className="kerovit_logo"
               />
