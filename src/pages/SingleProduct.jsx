@@ -4,7 +4,8 @@ import Footer from "../components/Footer";
 import "../styles/singleProduct.scss";
 import plusIcon from "../../public/icons/plus.png";
 import minusIcon from "../../public/icons/minus.png";
-import ReactImageMagnify from "react-image-magnify";
+import 'react-inner-image-zoom/lib/styles.min.css';
+import InnerImageZoom from 'react-inner-image-zoom';
 
 const SingleProduct = () => {
 
@@ -31,22 +32,8 @@ const SingleProduct = () => {
       <div className="single-product-page">S
         <div className="singlePro">
 
-        <div className="image-container">
-            <ReactImageMagnify
-              {...{
-                smallImage: {
-                  alt: "Selected Product",
-                  isFluidWidth: true,
-                  src: selectedImage,
-                },
-                largeImage: {
-                  src: selectedImage,
-                  width: 1200, // Adjust as needed for the zoomed image
-                  height: 1200,
-                },
-                enlargedImagePosition: "over", // Options: 'over', 'beside', etc.
-              }}
-            />
+          <div className="main-image">
+            <InnerImageZoom src={selectedImage} zoomSrc={selectedImage} />
           </div>
 
           <div className="product-details">
