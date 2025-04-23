@@ -40,6 +40,18 @@ const Klassic = () => {
     }
   };
 
+  const swiperDesktopRef = useRef(null);
+  const handleNextSlideDesktop = () => {
+    if (swiperDesktopRef.current) {
+      swiperDesktopRef.current.slideNext();
+    }
+  };
+  const handlePrevSlideDesktop = () => {
+    if (swiperDesktopRef.current) {
+      swiperDesktopRef.current.slidePrev();
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -60,7 +72,7 @@ const Klassic = () => {
               640: { slidesPerView: 3 },
               1024: { slidesPerView: 2 },
             }}
-            onSwiper={(swiper) => (swiperRef.current = swiper)}
+            onSwiper={(swiper) => (swiperDesktopRef.current = swiper)}
           >
         
 
@@ -82,8 +94,8 @@ const Klassic = () => {
           </Swiper>
 
           <div className="swiper_nav_buttons">
-            <button type="button" onClick={handlePrevSlide}><FaChevronLeft className="left_arrow"/></button>
-            <button type="button" onClick={handleNextSlide}><FaChevronRight className="right_arrow"/></button>
+            <button type="button" onClick={handlePrevSlideDesktop}><FaChevronLeft className="left_arrow"/></button>
+            <button type="button" onClick={handleNextSlideDesktop}><FaChevronRight className="right_arrow"/></button>
           </div>
         </div>
 

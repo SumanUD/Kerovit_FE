@@ -149,10 +149,11 @@ const Home = () => {
             </Swiper>
           </div>
 
-          <div className="swiper_action_button">
+          <div className="swiper_action_button view_on_desktop">
             <button type="button" className="swip_button" onClick={handlePrevSlide}><FaChevronLeft className="right_arrow swip_button_icon"/></button>
             <button type="button" className="swip_button" onClick={handleNextSlide}><FaChevronRight className="right_arrow swip_button_icon"/></button>            
           </div>          
+          <button type="button" className="view_on_mobile" onClick={handleNextSlide}>Swipe <BsArrowRight className="right_arrow"/></button>
         </div>
 
         <div className="home_collections">

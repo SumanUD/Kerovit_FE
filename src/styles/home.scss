@@ -5,6 +5,10 @@ $text-color: #757575;
   // color: #a1a1a1;
   margin-top: -67px;
 
+  a{
+    text-decoration: none !important;
+  }
+
   button {
     font-family: 'Sinkin Sans 300 Light', sans-serif;
     font-size: 10.129px;
@@ -38,7 +42,8 @@ $text-color: #757575;
       font-size: 3rem;
       color: white;
       z-index: 99999;
-      background: #25D366;
+      // background: #25D366;
+      background: black;
       height: 50px;
       width: 50px;
       display: flex;
@@ -202,7 +207,7 @@ $text-color: #757575;
         font-size: 3rem;
         color: white;
         z-index: 99999;
-        background: #25D366;
+        background: black;
         height: 50px;
         width: 50px;
         display: flex;
@@ -223,6 +228,21 @@ $text-color: #757575;
     margin: 80px 25px 0 25px;
     position: relative;
     font-family: 'Sinkin Sans 300 Light', sans-serif;
+
+    .view_on_desktop{
+      display: none !important;
+    }
+    
+    .view_on_mobile{
+      display: flex;
+      background-color: transparent;
+      border: 0.5px solid gray;              
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      position: absolute;
+      right: 15px;
+      bottom: -60px;      
+    }    
 
     .categories_heading {
       margin-bottom: 15px;
@@ -361,6 +381,14 @@ $text-color: #757575;
     .home_categories {
       margin: 100px 60px 120px 60px;
   
+      .view_on_desktop{
+        display: flex !important;
+      }
+      
+      .view_on_mobile{
+        display: none !important;  
+      }   
+
       .categories_heading {
         width: 180px;        
         margin: 0 auto 25px;
