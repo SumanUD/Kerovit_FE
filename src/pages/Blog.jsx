@@ -7,6 +7,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { useRef } from "react";
 import { BsArrowRight } from "react-icons/bs";
+import { Link } from "react-router-dom";
+
+import { FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft } from "react-icons/fa";
+
+
 
 const BlogPage = () => {
   const blogPosts = [
@@ -26,11 +32,27 @@ const BlogPage = () => {
     }
   };
 
+  
+  const handlePrevBlogSlide1 = () => {
+    if (swiperRefBlog1.current) {
+      swiperRefBlog1.current.slidePrev();
+    }
+  };
+
+
   const handleNextBlogSlide2 = () => {
     if (swiperRefBlog2.current) {
       swiperRefBlog2.current.slideNext();
     }
   };
+
+  const handlePrevBlogSlide2 = () => {
+    if (swiperRefBlog2.current) {
+      swiperRefBlog2.current.slidePrev();
+    }
+  };
+
+
 
   return (
     <>
@@ -40,15 +62,24 @@ const BlogPage = () => {
         <div className="banner">
           <div className="black-filter"></div>
           <div className="banner_content">
+            <div className="text">
+
             <h2 className="banner_title">Blog</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, facilis! Eum dolorum sapiente officia ipsum in consectetur impedit possimus, modi, nisi quas aut voluptate tempore!</p>
+            <p>Designed with skillfull unification of creativity and engineering. Kerovit has combined un-matched functional expertise with a promise of excellence giving the customers an alluring experience they desire!</p>
+            </div>
           </div>
         </div>
 
         <div className="latest_post">
+          <div className="content">
+
           <h2 className="blog_title">Latest Posts</h2>
           <p>Explore our Blog and witness a world where desires take shape.</p>
-
+          </div>
+          <div className="swiper_action_button view_on_desktop">
+                      <button type="button" className="swip_button" onClick={handleNextBlogSlide1}><FaChevronRight className="right_arrow swip_button_icon"/></button>            
+                      <button type="button" className="swip_button" onClick={handlePrevBlogSlide1}><FaChevronLeft className="right_arrow swip_button_icon"/></button>
+                    </div> 
           <Swiper
             modules={[Pagination]}
             spaceBetween={25}
@@ -71,14 +102,24 @@ const BlogPage = () => {
             ))}
           </Swiper>
 
-          <button type="button" onClick={handleNextBlogSlide1}>
+          {/* <button type="button" onClick={handleNextBlogSlide1}>
             Swipe <BsArrowRight className="right_arrow" />
-          </button>
+          </button> */}
+          <Link to = "/latestPost">
+          <button type="button">
+            Show more <BsArrowRight className="right_arrow" />
+          </button> 
+          </Link>
+          
         </div>
 
         <div className="latest_post">
           <h2 className="blog_title">Popular Posts</h2>
           <p>Explore our Blog and witness a world where desires take shape.</p>
+          <div className="swiper_action_button view_on_desktop">
+                      <button type="button" className="swip_button" onClick={handleNextBlogSlide2}><FaChevronRight className="right_arrow swip_button_icon"/></button>            
+                      <button type="button" className="swip_button" onClick={handlePrevBlogSlide2}><FaChevronLeft className="right_arrow swip_button_icon"/></button>
+                    </div> 
 
           <Swiper
             modules={[Pagination]}
@@ -102,9 +143,17 @@ const BlogPage = () => {
             ))}
           </Swiper>
 
-          <button type="button" onClick={handleNextBlogSlide2}>
+          {/* <button type="button" onClick={handleNextBlogSlide2}>
             Swipe <BsArrowRight className="right_arrow" />
+          </button> */}
+          <Link to = "/latestPost">
+
+          <button type="button">
+            Show more <BsArrowRight className="right_arrow" />
           </button>
+          </Link>
+
+
         </div>
       </main>
 

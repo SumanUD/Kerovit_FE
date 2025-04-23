@@ -20,7 +20,7 @@ const klassicImages = [
 
 const categoryInfo = {
   name: "shower",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum illum velit enim quibusdam iusto. Quod, sed quasi officiis aperiam vitae cupiditate vel cumque rerum eligendi voluptas nemo? Eius, natus commodi!",
+  description: "Whether you need an energizing start or a calming wind-down, our vast range of Aurum and Klassic collections has it all to match your space.",
 }
 
 

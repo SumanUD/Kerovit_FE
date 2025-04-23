@@ -29,12 +29,12 @@ import { FaChevronLeft } from "react-icons/fa";
 const Home = () => {
 
   const products = [
-    { id: 1, img: "/random_product.png", name: "Faucets", link: "faucet" },
-    { id: 2, img: "/shower2.png", name: "Showers", link:"shower" },
-    { id: 3, img: "/basin.png", name: "Basin", link: "basin" },
-    { id: 4, img: "/toilet.png", name: "Toilet", link:"toilet" },
-    { id: 5, img: "/random_product.png", name: "Bathroom Furniture", link:"bathroomFurniture" },
-    { id: 6, img: "/random_product.png", name: "Accessories", link:"accessories" },
+    { id: 1, img: "/random_product.png", name: "Faucets", link: "faucet", icon: "./icons/faucet.png" },
+    { id: 2, img: "/shower2.png", name: "Showers", link:"shower", icon: "./icons/shower.png" },
+    { id: 3, img: "/basin.png", name: "Basin", link: "basin", icon: "./icons/basin.png" },
+    { id: 4, img: "/toilet.png", name: "Toilet", link:"toilet", icon: "./icons/toilet.png" },
+    { id: 5, img: "/random_product.png", name: "Bathroom Furniture", link:"bathroomFurniture", icon: "./icons/bathroom_furniture.png" },
+    { id: 6, img: "/random_product.png", name: "Accessories", link:"accessories", icon: "./icons/accessories.png" },
   ];
   const swiperRef = useRef(null);
 
@@ -113,10 +113,10 @@ const Home = () => {
 
           <div className="categories-slide">
             <div className="category-option">
-              <div className="heading">CATEGORIES</div>
+              {/* <div className="heading">CATEGORIES</div> */}
               {
                 products.map((item, index)=>(
-                  <div className={`option ${activeIndex === index ? 'category-active': ''}`} onClick={() => handleTextClick(index)} key={index}>{item.name}</div>
+                  <div className={`option ${activeIndex === index ? 'category-active': ''}`} onClick={() => handleTextClick(index)} key={index}><img src= {item.icon} alt="catalogue" className="categoryNameIcon"/>{item.name}</div>
                 ))
               }
             </div>

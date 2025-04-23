@@ -3,6 +3,7 @@
 
 .blogPage {
 
+
   .banner{
     background-image: url("/blogs/blog.png");
     background-size: cover;
@@ -171,5 +172,43 @@
     }
 
 
+  }
+  .swiper_action_button {
+    
+    display: flow-root;
+    button {
+      background-color: transparent;
+      border: 0.5px solid gray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      color: #000;
+      &:hover {
+        background-color: #f4f4f4;
+        border-color: black;
+      }
+
+ 
+
+      &.swip_button{
+        aspect-ratio: 1/1;
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+        border-radius: 50%;
+        padding: 0;   
+        margin-left: 7px;     
+
+        @media (max-width: 750px){
+
+        }
+      }
+      .right_arrow {
+        margin-bottom: 1px;
+      }
+    }
   }
 }

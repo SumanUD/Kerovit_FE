@@ -20,7 +20,7 @@ const klassicImages = [
 
 const categoryInfo = {
   name: "Bathroom Furniture",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum illum velit enim quibusdam iusto. Quod, sed quasi officiis aperiam vitae cupiditate vel cumque rerum eligendi voluptas nemo? Eius, natus commodi!",
+  description: "From Aurum’s sleek sophistication to Klassic’s practical ease, our bathroom furniture range keeps your space organised, elevated, and unmistakably yours.",
 }
 
 

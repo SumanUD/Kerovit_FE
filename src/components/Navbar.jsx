@@ -87,8 +87,6 @@ const Navbar = () => {
           </div>
           
           <div className="nav-right">
-            {/* <FaMapMarkerAlt className="nav-icon" /> */}
-            {/* <FaSearch className="nav-icon" /> */}
             <Link to="/locate-our-store">
               <img src="menu_location.png" alt="" className="menu_location" />
             </Link>
@@ -129,10 +127,9 @@ const Navbar = () => {
               </ul>
             </li>
 
-            <li><Link to="#">E-Catalogue</Link></li>
-            <li><Link to="/locate-our-store">Where to Buy</Link></li>
+            <li><Link to="#"><img src= "/icons/catalogue.png" alt="catalogue" className="hideInDesktop"/>E-Catalogue</Link></li>
+            <li><Link to="/locate-our-store"><img src= "/icons/wheretobuy.png" alt="wheretobuy" className="hideInDesktop"/>Where to Buy</Link></li>
 
-            {/* More Submenu */}
             <li className={`submenu ${activeIndex === 1 ? "active openSub" : ""}`} onClick={(e) => toggleSubmenu(1, e)}>
               <Link to="#">
                 More <span className="submenu-icon">
@@ -142,11 +139,12 @@ const Navbar = () => {
               </Link>
               <ul className="dropdown" style={{ display: activeIndex === 1 ? "block" : "none" }}>
                 {[
-                  { label: "What's New", link: "#" },
-                  { label: "Career", link: "/career" },
-                  { label: "Resources", link: "/blog" }
+                  // { img: "/icons/whatsnew.png", label: "What's New", link: "#" },
+                  { img: "/icons/career.png", label: "Career", link: "/career" },
+                  { img: "/icons/resources.png", label: "Resources", link: "/blog" }
                 ].map((item, index) => (
                   <li key={index} onClick={(e) => e.stopPropagation()}>
+                    <img src={item.img} alt={item.name} className="moreIcon"/>
                     <Link to={item.link}>{item.label}</Link>
                   </li>
                 ))}

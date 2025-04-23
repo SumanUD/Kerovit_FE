@@ -264,10 +264,7 @@ $text-color: #757575;
       font-size: 8.2809px;
     }
 
-    /* Swiper Styling */
-    .swiper {
-      margin-top: 20px;
-    }
+
 
     .swiper-slide {
       display: flex;
@@ -414,12 +411,19 @@ $text-color: #757575;
             cursor: pointer;
             margin-bottom: 2px;
             transition: all 0.2s ease-in-out; 
+        font-family: 'Sinkin Sans 500 Medium', sans-serif;
+
+
             
             &.category-active{
               color: #000;
               scale: 1.05;              
               border-bottom: 2px solid #000;
             }
+          }
+          .categoryNameIcon {
+            width: 20px;
+            margin: 7px;
           }
         }
       }
@@ -434,7 +438,7 @@ $text-color: #757575;
       }
   
       .swiper {
-        margin-top: 30px;
+        // margin-top: 30px;
         padding: 0 40px;
       }
   
@@ -447,7 +451,7 @@ $text-color: #757575;
       .inside {
         position: relative;
         overflow: hidden;
-        height: clamp(500px, 70vh, 700px);
+        height: clamp(500px, 60vh, 700px);
         width: 100%;
         .pop-on-hover{
           position: absolute;
@@ -490,13 +494,16 @@ $text-color: #757575;
           height: 100%;
           width: 100%;
           object-fit: cover;
-          margin: 20px 0;
+          // margin: 20px 0;
         }
   
         p {
           font-size: 24px;
           text-transform: uppercase;
           color: #fff;
+      font-family: 'Sinkin Sans 300 Light', sans-serif;
+
+
         }
 
         &:hover{
@@ -1651,7 +1658,7 @@ $text-color: #757575;
 
       span {
         font-weight: 100;
-        ;
+        
       }
     }
   }
