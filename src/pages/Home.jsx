@@ -29,7 +29,7 @@ import { FaChevronLeft } from "react-icons/fa";
 const Home = () => {
 
   const products = [
-    { id: 1, img: "/random_product.png", name: "Faucets", link: "faucet", icon: "public/icons/faucet.png" },
+    { id: 1, img: "/random_product.png", name: "Faucets", link: "faucet", icon: "./icons/faucet.png" },
     { id: 2, img: "/shower2.png", name: "Showers", link:"shower", icon: "public/icons/shower.png" },
     { id: 3, img: "/basin.png", name: "Basin", link: "basin", icon: "public/icons/basin.png" },
     { id: 4, img: "/toilet.png", name: "Toilet", link:"toilet", icon: "public/icons/toilet.png" },
