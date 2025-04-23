@@ -113,7 +113,7 @@ const Home = () => {
 
           <div className="categories-slide">
             <div className="category-option">
-              <div className="heading">CATEGORIES</div>
+              {/* <div className="heading">CATEGORIES</div> */}
               {
                 products.map((item, index)=>(
                   <div className={`option ${activeIndex === index ? 'category-active': ''}`} onClick={() => handleTextClick(index)} key={index}>{item.name}</div>

@@ -433,7 +433,7 @@ nav{
     transition: all 0.3s ease-in-out;
 
     li{
-      margin-left: 20px;
+      // margin-left: 20px;
       border: none;
 
       img {
@@ -470,6 +470,7 @@ nav{
       gap: 15px;      
     }
   }
+
 }
   // Responsive Styles
   @media screen and (max-width: 600px) {
@@ -483,6 +484,13 @@ nav{
     .subemnu-icon{
       display: none;
     }
+    .hideInDesktop {
+      display: block !important;
+      float: left;
+      height: 29px;
+      margin-right: 6px;
+      margin-top: -9px;
+     }
   }
 @media screen and (min-width: 768px) {
   nav {
@@ -699,6 +707,16 @@ nav{
     }
   }
 }
+
+ .hideInDesktop {
+  display: none;
+ }
+
+ .moreIcon {
+  float: left !important;
+  height: 29px !important;
+  margin-right: 6px !important;
+ }
 
 
 // @media (min-width: 1024px) {
