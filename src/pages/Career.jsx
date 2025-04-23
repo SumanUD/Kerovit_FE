@@ -15,7 +15,9 @@ const Career = () => {
                         <p>to the <b>Kerovit</b></p>
                         <p><b>team</b></p>
                     </div>
-                    <FaWhatsapp className="whatsapp-icon" />
+                    <div className="whatsapp-icon">
+                        <FaWhatsapp/>
+                    </div>
                 </div>
 
                 <div className="carrerText">

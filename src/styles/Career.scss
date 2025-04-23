@@ -14,14 +14,27 @@
 
         .whatsapp-icon {
             position: fixed;
-            bottom: 45px;
-            right: 14px;
+            bottom: 2%;
+            right: 1%;
             font-size: 3rem;
-            color: #505050;
+            color: white;
             z-index: 99999;
-            bottom: 8% !important;
-            right: 6% !important;
-        }
+            background: #25D366;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;  
+            z-index: 9999;      
+            border-radius: 8px;
+            overflow: hidden;
+            svg{
+              height: 60%;
+            }
+            @media (max-width:750px){
+                right: 2% !important;
+            }
+          }
 
         p {
             text-transform: capitalize;
@@ -58,16 +71,11 @@
                 width: 200px;
                 margin-bottom: 20px;
             }
-            p {
-                color: #716f70;
-                font-size: 18px;
-            }
             
             .mail {
-                font-size: 27px;
+                font-size: 18px;
                 line-height: 5px;
                 color: #000;
-
             }
             
 
@@ -128,16 +136,10 @@
                         width: 260px;
                         margin-bottom: 20px;
                     }
-                    p {
-                        color: #716f70;
-                        font-size: 18px;
-                    }
-                    
                     .mail {
                         font-size: 27px;
                         line-height: 5px;
-                        color: #000;
-        
+                        color: #000;        
                     }
                     position: absolute;
                     left: 50%;

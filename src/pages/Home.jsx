@@ -21,6 +21,9 @@ import firstBannerImg from "../../public/home_banner1.png"
 import cat1 from "../../public/catelogue1.png"
 import cat2 from "../../public/catelogue2.png"
 
+import { FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft } from "react-icons/fa";
+
 
 
 const Home = () => {
@@ -38,6 +41,11 @@ const Home = () => {
   const handleNextSlide = () => {
     if (swiperRef.current) {
       swiperRef.current.slideNext();
+    }
+  }
+  const handlePrevSlide = () => {
+    if (swiperRef.current) {
+      swiperRef.current.slidePrev();
     }
   }
 
@@ -141,7 +149,10 @@ const Home = () => {
             </Swiper>
           </div>
 
-          <button type="button" onClick={handleNextSlide}>Swipe <BsArrowRight className="right_arrow"/></button>
+          <div className="swiper_action_button">
+            <button type="button" className="swip_button" onClick={handlePrevSlide}><FaChevronLeft className="right_arrow swip_button_icon"/></button>
+            <button type="button" className="swip_button" onClick={handleNextSlide}><FaChevronRight className="right_arrow swip_button_icon"/></button>            
+          </div>          
         </div>
 
         <div className="home_collections">
@@ -272,8 +283,10 @@ const Home = () => {
 
         <div className="home_blog">
           {/* <h2>Blog</h2> */}
-          <img src="home_blog_heading.png" alt="" className="home_blog_heading"/>
-          <p>Explore our Blog and witness a world where desires take shape.</p>
+          <div className="home_blog_top_heading">
+            <img src="home_blog_heading.png" alt="" className="home_blog_heading"/>
+            <p>Explore our Blog and witness a world where desires take shape.</p>
+          </div>
 
           {/* <button type="button" onClick={handleNextBlogSlide}>Swipe<BsArrowRight className="right_arrow"/></button> */}
           {/* Swiper for Blog Section */}
@@ -299,10 +312,11 @@ const Home = () => {
             ))}
           </Swiper>
 
-          <div className="blog-swiper-button">
-            <button className="prev" onClick={handlePrevBlogSlide}><BsArrowLeft /> Prev</button>
-            <button className="next" type="button" onClick={handleNextBlogSlide}>Swipe<BsArrowRight className="right_arrow"/></button>
+          <div className="blog-swiper-button view_on_desktop">
+            <button type="button" className="swip_button" onClick={handlePrevBlogSlide}><FaChevronLeft className="right_arrow swip_button_icon"/></button>
+            <button type="button" className="swip_button" onClick={handleNextBlogSlide}><FaChevronRight className="right_arrow swip_button_icon"/></button>
           </div>
+          <button type="button" className="view_on_mobile" onClick={handleNextBlogSlide}>Swipe<BsArrowRight className="right_arrow "/></button>
         </div>
 
         <div className="home_contact">

@@ -28,18 +28,30 @@ $text-color: #757575;
     padding: 3rem 2rem;
     position: relative;
 
-    .whatsapp-icon {      
+    .disable_button{
+      display: none;
+    }
+    .whatsapp-icon {
       position: fixed;
-      bottom: 45px;
-      right: 14px;
+      bottom: 2%;
+      right: 1%;
       font-size: 3rem;
-      color: #505050;
+      color: white;
       z-index: 99999;
-      bottom: 20px ;
-      right: 20px ;
-      cursor: pointer;      
-      svg{        
-        fill: $text-color;
+      background: #25D366;
+      height: 50px;
+      width: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;  
+      z-index: 9999;      
+      border-radius: 8px;
+      overflow: hidden;
+      svg{
+        height: 60%;
+      }
+      @media (max-width:750px){
+          right: 2% !important;
       }
     }
 
@@ -185,42 +197,22 @@ $text-color: #757575;
   
       .whatsapp-icon {
         position: fixed;
-        bottom: 6dvb;
-        right: 0px;
+        bottom: 2%;
+        right: 1%;
         font-size: 3rem;
-        color: #a4a4a4;
+        color: white;
         z-index: 99999;
-
-        background: #000;
-        height: 55px;
-        width: 55px;
+        background: #25D366;
+        height: 50px;
+        width: 50px;
         display: flex;
         align-items: center;
         justify-content: center;  
         z-index: 9999;      
+        border-radius: 8px;
+        overflow: hidden;
         svg{
           height: 60%;
-        }
-        &::after{
-          content:"Let's have a chat!";
-          background: transparent;
-          position: absolute;
-          left: 0%;
-          text-align: right;
-          width: 200%;
-          font-size: 18px;
-          font-weight: 500;
-          color: #a4a4a4;          
-          mix-blend-mode: difference;    
-          overflow: hidden;      
-          opacity: 0;
-          transition: all .3s ease-in-out;
-          z-index: 1;
-        }
-
-        &:hover::after{
-          left: -230%;
-          opacity: 1;
         }
       }
     }
@@ -298,6 +290,19 @@ $text-color: #757575;
       display: none !important;
     }
 
+    .swiper_action_button{
+      position: absolute;
+      right: 25px;
+      bottom: -70px;
+
+      display: flex;
+      column-gap: 15px;
+
+      @media (max-width: 750px){
+        position: absolute;        
+        bottom: -50px;                
+      }
+    }
     /* Swipe Button */
     button {
       background-color: transparent;
@@ -309,11 +314,6 @@ $text-color: #757575;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
       color: #000;
-
-
-      position: absolute;
-      right: 15px;
-      bottom: -50px;
 
       &:hover {
         background-color: #f4f4f4;
@@ -332,16 +332,29 @@ $text-color: #757575;
       //   vertical-align: middle;
       // }
 
+      &.swip_button{
+        aspect-ratio: 1/1;
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+        border-radius: 50%;
+        padding: 0;        
+
+        @media (max-width: 750px){
+          height: 30px;
+          width: 30px;
+        }
+      }
       .right_arrow {
         margin-bottom: 1px;
       }
-
     }
   }
   @media (max-width:1023px){
     .category-option{
       display: none;
     }
+
   }
 
   @media screen and (min-width: 1024px) {
@@ -419,6 +432,7 @@ $text-color: #757575;
 
           a{
             width: 150px;
+            text-decoration: none;
           }
 
           button{
@@ -477,7 +491,7 @@ $text-color: #757575;
   
 
   .home_collections {
-    margin: 80px 25px 0 25px;
+    margin: 80px 25px 0 25px;    
 
     h2 {
       text-transform: uppercase;
@@ -560,23 +574,6 @@ $text-color: #757575;
       right: 15px;
       bottom: -60px;
 
-      &:hover {
-        background-color: #f4f4f4;
-        border-color: black;
-      }
-
-      // &::after {
-      //   content: ""; 
-      //   display: inline-block;
-      //   width: 20px; // Adjust width as needed
-      //   height: 10px; // Adjust height as needed
-      //   background-image: url('/icons/right_arrow.png'); // Replace with actual image path
-      //   background-size: contain;
-      //   background-repeat: no-repeat;
-      //   margin-left: 5px; // Space between text and image
-      //   vertical-align: middle;
-
-      // }
       .right_arrow {
         margin-bottom: 1px;
       }
@@ -586,12 +583,13 @@ $text-color: #757575;
       }
 
     }
-
-
     .showMoreBtn {
       text-decoration: none;
       color: #000;
       margin-top: 2px;
+      a{
+        text-decoration: none !important;
+      }
 
     }
   }
@@ -625,8 +623,6 @@ $text-color: #757575;
       margin: 0;
     }
 
-
-
     .klassic-icon {
       width: 50px; // Adjust size based on design
       height: auto;
@@ -636,7 +632,6 @@ $text-color: #757575;
       transform: translate(-50%, -50%);
       //   opacity: 0.2; // Light fade effect like in the image
     }
-
 
     p {
       font-size: 14px;
@@ -666,28 +661,9 @@ $text-color: #757575;
       bottom: -60px;
       color: #a4a4a4;
 
-
-      &:hover {
-        background-color: #f4f4f4;
-        border-color: black;
-      }
-
-    //   &::after {
-    //     content: "";
-    //     display: inline-block;
-    //     width: 20px; // Adjust width as needed
-    //     height: 10px; // Adjust height as needed
-    //     background-image: url('/icons/right_arrow.png'); // Replace with actual image path
-    //     background-size: contain;
-    //     background-repeat: no-repeat;
-    //     margin-left: 5px; // Space between text and image
-    //     vertical-align: middle;
-    //   }
-
     .right_arrow {
         margin-bottom: 1px;
       }
-
 
       &:hover::after {
         margin-left: 12px; // Slight movement to the right on hover for a smooth effect
@@ -697,8 +673,6 @@ $text-color: #757575;
     .showMoreBtn {
       text-decoration: none;
       color: #000;
-
-
     }
   }
 
@@ -708,8 +682,8 @@ $text-color: #757575;
       max-width: 100%;
       margin: 0 auto;
       padding-top: 50px;
-      text-align: center;
-  
+      text-align: center;      
+
       h2 {
         font-size: 32px;
         margin-bottom: 20px;
@@ -750,7 +724,7 @@ $text-color: #757575;
       flex-direction: column;
       align-items: center;      
       .img-container {      
-        max-width: clamp(350px, 30vw, 500px);
+        max-width: clamp(250px, 30vw, 300px);
         width: 100%;
         aspect-ratio: 1/1;
         overflow: hidden;
@@ -764,6 +738,10 @@ $text-color: #757575;
         &:hover .desktop-card-button{
           opacity: 1;
           bottom: 40px;
+        }
+
+        @media (min-width: 1600px){
+          max-width: clamp(350px, 30vw, 500px);
         }
       }
       width: 40%;
@@ -790,10 +768,10 @@ $text-color: #757575;
         bottom: -50px;
         font-size: 14px;
         width: 150px;
-        &:hover {
-          background-color: #f4f4f4;
-          border-color: black;          
-        }        
+        // &:hover {
+        //   background-color: #f4f4f4;
+        //   border-color: black;          
+        // }        
 
         &.desktop-card-button{  
           display: block;      
@@ -803,17 +781,14 @@ $text-color: #757575;
           a{
             color:white !important;
           }
-          &:hover a{
-            color: black !important;
-          }
+          // &:hover a{
+          //   color: black !important;
+          // }
         }
       }
-
-
-
       &:hover {
         .img-container img{
-          scale: 1.05;          
+          scale: 1.05;              
         }
       }
     }
@@ -949,7 +924,7 @@ $text-color: #757575;
 
     .inside_banner_image{
       position: relative;
-      height: clamp(500px , 100vh, 680px);
+      height: clamp(500px , 100vh, 580px);
       padding:.5rem 2rem;
       img{
         width: 100%;
@@ -1099,7 +1074,11 @@ $text-color: #757575;
           justify-content: center;
           flex-direction: column;
           img{
-            height: 500px;
+            height: 430px;
+
+            @media (min-width: 1600px){
+              height: 500px;
+            }
           }
         }
         a {
@@ -1454,11 +1433,32 @@ $text-color: #757575;
 
     .blog-swiper-button{
       position: absolute;
-      bottom: -25px;
+      bottom: -45px;
       right: 0;
 
       display: flex;
-      gap: 8%;      
+      gap: 8%;     
+      
+      .swip_button{
+        aspect-ratio: 1/1;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        padding: 0;
+        font-size: 16px;
+
+        @media (max-width: 750px){
+          height: 35px;
+          width: 35px;
+          font-size: 12px;
+        }
+      }
+
+      @media (max-width: 750px){
+        right: 50%;
+        bottom: -30px;
+        transform: translateX(50%);
+      }
     }
 
     button {
@@ -1484,28 +1484,43 @@ $text-color: #757575;
         border-color: black;
       }
 
-    //   &::after {
-    //     content: "";
-    //     display: inline-block;
-    //     width: 20px; // Adjust width as needed
-    //     height: 10px; // Adjust height as needed
-    //     background-image: url('/icons/right_arrow.png'); // Replace with actual image path
-    //     background-size: contain;
-    //     background-repeat: no-repeat;
-    //     margin-left: 5px; // Space between text and image
-    //     vertical-align: middle;
-    //   }
-
     .right_arrow {
         margin-bottom: 1px;
       }
+    }
+
+    .view_on_mobile{
+      display: flex;
+      background-color: transparent;
+      border: 0.5px solid gray;              
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      position: absolute;
+      right: 15px;
+      bottom: -60px;      
+    }
+    .view_on_desktop{
+      display: none;
     }
   }
 
   @media screen and (min-width: 1024px) {
     .home_blog {
       margin: 100px 60px 0 60px;
-  
+      
+      .view_on_desktop{
+        display: flex;
+      }
+      .view_on_mobile{
+        display: none;
+      }
+
+      .home_blog_top_heading{
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+      }
+
       .home_blog_heading {
         width: 70px;
         margin-bottom: 25px;
@@ -1514,8 +1529,8 @@ $text-color: #757575;
       p {
         font-size: 14px;
         line-height: 1.8;
-        max-width: 60%;
-        margin-bottom: 30px;
+        max-width: 60%;        
+        margin: 0;
       }
   
       .swiperImg {
@@ -1693,7 +1708,7 @@ $text-color: #757575;
   @media (min-width: 1024px) {
     .mobile_view{
       display: none;
-    }    
+    }
   }
   @media (max-width: 1023px){
     .desktop_view{

@@ -2,6 +2,7 @@
 
 
 .aboutus_main {
+
     .homebanner {
         background-image: url("/aboutus/banner.png");
         background-size: cover;
@@ -17,15 +18,28 @@
 
         .whatsapp-icon {
             position: fixed;
-            bottom: 45px;
-            right: 14px;
+            bottom: 2%;
+            right: 1%;
             font-size: 3rem;
-            color: #505050;
+            color: white;
             z-index: 99999;
-            bottom: 8% !important;
-            right: 6% !important;
+            background: #25D366;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;  
+            z-index: 9999;      
+            border-radius: 8px;
+            overflow: hidden;
+            svg{
+              height: 60%;
+            }
 
-        }
+            @media (max-width:750px){
+                right: 2% !important;
+            }
+          }
 
         h2,
         span {
@@ -109,7 +123,7 @@
         // }
 
         .read_more {
-            text-transform: uppercase;
+            text-transform: capitalize;
             background-color: white;
             color: #000;
             border: 0.5px solid #a4a4a4;
@@ -118,7 +132,7 @@
             cursor: pointer;
             height: 26px;
             font-size: 11px;
-            font-weight: 600;
+            font-weight: 400;
             margin-top: 8px;
         }
 
@@ -222,7 +236,7 @@
             }
 
             .read_more {
-                text-transform: uppercase;
+                text-transform: capitalize;
                 background-color: white;
                 color: #000;
                 border: 0.5px solid #a4a4a4;
@@ -231,7 +245,7 @@
                 cursor: pointer;
                 height: 26px;
                 font-size: 11px;
-                font-weight: 600;
+                font-weight: 400;
                 margin-top: 8px;
             }
 
@@ -256,6 +270,10 @@
         position: relative;
         padding: 0 20px;
         margin: 0px 0px 50px 0px;
+
+        .disableOnMobile{
+            display: none;
+        }
 
         .mpTitle {
             text-transform: uppercase;
@@ -377,6 +395,10 @@
         padding: 40px 20px;
         margin: 0px 0px 50px 0px;
 
+        .disableOnMobile{
+            display: none;
+        }
+
         .mpTitle {
             text-transform: uppercase;
             text-align: left;
@@ -477,6 +499,7 @@
             right: 10px;
         }
 
+
         .swipeButton {
             color: #000;
             border: 0.5px solid #a4a4a4;
@@ -492,6 +515,7 @@
             .read_more {
                 margin-top: -1px;
             }
+
         }
     }
 
@@ -548,7 +572,7 @@
                 }
 
                 .read_more {
-                    text-transform: uppercase;
+                    text-transform: capitalize;
                     background-color: white;
                     color: #000;
                     border: 0.5px solid #a4a4a4;
@@ -557,7 +581,7 @@
                     cursor: pointer;
                     height: fit-content;
                     font-size: 14px;
-                    font-weight: 600;
+                    font-weight: 400;
                     margin-top: 8px;                    
                 }
             }
@@ -610,7 +634,7 @@
                 }
 
                 .read_more {
-                    text-transform: uppercase;
+                    text-transform: capitalize;
                     background-color: white;
                     color: #000;
                     border: 0.5px solid #a4a4a4;
@@ -619,7 +643,7 @@
                     cursor: pointer;
                     height: fit-content;
                     font-size: 14px;
-                    font-weight: 600;
+                    font-weight: 400;
                     margin-top: 8px;                    
                 }
             }
@@ -652,6 +676,25 @@
                         }   
                     }
                 }
+
+                .swipeButton {
+                    color: #000;
+                    border: 0.5px solid #a4a4a4;
+                    width: 50px !important;
+                    height: 50px !important;
+                    cursor: pointer;            
+                    font-size: 13px;
+                    padding-bottom: 4px;
+                    float: right;
+                    margin-right: 18px;            
+                    background-color: #fff;
+                    border-radius: 50%;        
+                    border: 1px solid black;    
+        
+                    .read_more {
+                        margin-top: -1px;
+                    }
+                }
             }
 
             .certifications{
@@ -662,7 +705,32 @@
                     z-index: 99999;
                 }
 
+                .swipeButton {
+                    color: #000;
+                    border: 0.5px solid #a4a4a4;
+                    width: 50px !important;
+                    height: 50px !important;
+                    cursor: pointer;            
+                    font-size: 13px;
+                    padding-bottom: 4px;
+                    float: right;
+                    margin-right: 18px;            
+                    background-color: #fff;
+                    border-radius: 50%;        
+                    border: 1px solid black;    
+        
+                    .read_more {
+                        margin-top: -1px;
+                    }
+                }
             }
+        }
+
+        .disableOnMobile{
+            display: inline !important;
+        }
+        .disableOnDesktop{
+            display: none !important;
         }
     }
 }

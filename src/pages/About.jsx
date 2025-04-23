@@ -12,6 +12,9 @@ import { BsArrowRight } from "react-icons/bs";
 import {BsArrowLeft} from "react-icons/bs";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
+import { FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft } from "react-icons/fa";
+
 const manufPlant = [
   { id: 1, img: "/aboutus/faucet_plant.png", name: "Kerovit Faucets", description: "Kerovit Faucets are developed at our state-of-the-art manufacturing unit in Gailpur, Rajasthan. Spread over 2 Lac sq. ft., and boasting the latest advanced machinery, the plant is poised to manufacture over 1.4 million pieces a year." },
   { id: 2, img: "/aboutus/faucet_plant2.png", name: "Kerovit Sanitaryware", description: "Kerovit sanitaryware is manufactured at Morbi, Gujarat, with international standards of manufacturing processes including Mould Making, Shuttle Kiln, Tunnel Kiln, and Glazing Pressure Dye Casting. The entire process is ISI-approved and boasts an annual manufacturing capacity of over 1 million pieces. Our second plant, Kerovit Global Pvt. Ltd., Morbi, Gujarat, is the largest sanitaryware plant in India. Spread over 6 lacs sq. mt., KGPL adheres to international standards, features Cutting-edge R&D, houses advanced machinery and is operated by a team of skilled professionals to provide exceptional quality products." },
@@ -77,7 +80,9 @@ const About = () => {
             </p>
           </div>
         </div>
-        <FaWhatsapp className="whatsapp-icon" />
+        <div className="whatsapp-icon">
+          <FaWhatsapp  />
+        </div>        
       </div>
 
       <div className="about-page-contents">
@@ -181,7 +186,7 @@ const About = () => {
           <button className="next-btn"><MdKeyboardArrowRight /></button> */}
 
 
-          <button type="button" className="swipeButton" onClick={handleNextSlide}>Swipe <BsArrowRight className="right_arrow" /></button>
+          <button type="button" className="swipeButton" onClick={handleNextSlide}><FaChevronRight className="right_arrow disableOnMobile" /><span className="disableOnDesktop">Swipe < BsArrowRight  className="right_arrow" /></span></button>
         </div>
 
         <div className="certifications">
@@ -216,9 +221,9 @@ const About = () => {
           {/* <button className="prev-btn-cert"><MdKeyboardArrowLeft /></button>
           <button className="next-btn-cert"><MdKeyboardArrowRight /></button> */}
 
-          <div className="swiper-button-2">
-            <button type="button" className="swipeButton" onClick={handleNextCertificateSlide}>Next<BsArrowRight className="right_arrow" /></button>
-            <button type="button" className="swipeButton" onClick={handlePrevCertificateSlide}><BsArrowLeft className="right_arrow" />Prev</button>
+          <div className="swiper-button-2 disableOnMobile">
+            <button type="button" className="swipeButton dissable_button" onClick={handleNextCertificateSlide}><FaChevronRight className="right_arrow" /></button>
+            <button type="button" className="swipeButton" onClick={handlePrevCertificateSlide}><FaChevronLeft className="right_arrow" /></button>
           </div>
         </div>
       </div>

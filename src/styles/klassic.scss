@@ -19,7 +19,23 @@ $active-color: yellow;
     .swiper-pagination-bullets {
       display: none;
     }
-
+    .view_on_desktop{
+      display:none !important;
+    }
+    .view_on_mobile{
+      .inside h2{
+        color: #a4a4a4;
+      }
+      a{
+        height: 100%;
+        width: 100%;
+        img{
+          height: calc(100% + 15px);
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
     .klassic_slider {
       margin: 30px 25px 50px 25px;
       position: relative;
@@ -67,7 +83,7 @@ $active-color: yellow;
           position: relative;
           img {                    
             width: 100%;
-            height: 100%;          
+            height: calc(100% + 15px);
           }
           .inside_text_content{
             height: 100%;
@@ -148,6 +164,12 @@ $active-color: yellow;
     margin-bottom: 45px;
     button{
       margin: 25px 0;
+      height: 50px !important;
+      width: 50px !important;
+      align-self: 1/1;
+      padding: 0;
+      border-radius: 50%;
+      border: 1px solid black;
     }
   }
 }
@@ -157,6 +179,12 @@ $active-color: yellow;
     padding: 100px 60px 40px;
 
     .klassic {
+      .view_on_desktop{
+        display: block !important;
+      }
+      .view_on_mobile{
+        display: none !important;        
+      }
       .klassic_slider {
         max-width: 1300px;
         margin: 0 auto;
@@ -187,7 +215,34 @@ $active-color: yellow;
 
           .inside_contents{
             .inside_text_content{
+              
+              transition: all .4s ease;
+            }
+            .inside_text_content{
+              height: calc(100% + 15px);
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
               padding: 50px 25px;
+              bottom: -80px;                  
+              position: absolute;                  
+              background: #000000;
+              background: linear-gradient(180deg, rgba(0, 0, 0, 0) 6%, rgba(0, 0, 0, 0.69) 88%);
+              // transition: all .4s ease;
+  
+              p{
+                color: white;
+                margin-bottom: 0;              
+                transition: all .3s ease;
+              }
+  
+              &:hover{
+                bottom: -15px;
+  
+                p{
+                  opacity: 1;
+                }
+              }
             }
           }
 
@@ -202,12 +257,12 @@ $active-color: yellow;
             font-size: 13px;
             line-height: 1.6;
             margin-bottom: 15px;
+            opacity: 0;
           }
 
           img {
             width: 100%;
-            object-fit: cover;
-            height: 100%;
+            object-fit: cover;            
           }
         }
 

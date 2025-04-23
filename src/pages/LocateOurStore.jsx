@@ -15,7 +15,9 @@ const LocateOurStore = () => {
                         <h2>locate</h2>
                         <h1 className="h2second">our store</h1>
                     </div>
-                    <FaWhatsapp className="whatsapp-icon" />
+                    <div className="whatsapp-icon">
+                        <FaWhatsapp  />
+                    </div>                    
                 </div>
 
                 <div className="store-main-contents">

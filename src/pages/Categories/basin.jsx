@@ -7,17 +7,15 @@ import "../../styles/categories1.scss";
 
 
 const aurumImages = [
-    "/product/1.jpg",
-    "/product/2.jpg",
-    "/product/3.jpg",
+  "/product/1.jpg",
+  "/product/2.jpg",
+  "/product/3.jpg",
 ];
-
 const klassicImages = [
-    "/product/4.jpg",
-    "/product/5.jpg",
-    // "/product/1.jpg",
+  "/product/4.jpg",
+  "/product/5.jpg",
+  // "/product/1.jpg",
 ];
-
 const categoryInfo = {
   name: "basin",
   description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum illum velit enim quibusdam iusto. Quod, sed quasi officiis aperiam vitae cupiditate vel cumque rerum eligendi voluptas nemo? Eius, natus commodi!",

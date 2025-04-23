@@ -12,6 +12,9 @@ import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 
+import { FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft } from "react-icons/fa";
+
 
 
 const Klassic = () => {
@@ -46,7 +49,7 @@ const Klassic = () => {
 
       <main className="klassic">
 
-        <div className="klassic_slider">
+        <div className="klassic_slider view_on_desktop">
           <Swiper
             modules={[Pagination]}
             spaceBetween={10}
@@ -79,9 +82,42 @@ const Klassic = () => {
           </Swiper>
 
           <div className="swiper_nav_buttons">
-            <button type="button" onClick={handlePrevSlide}>Swipe <BsArrowLeft className="left_arrow"/></button>
-            <button type="button" onClick={handleNextSlide}>Swipe <BsArrowRight className="right_arrow"/></button>
+            <button type="button" onClick={handlePrevSlide}><FaChevronLeft className="left_arrow"/></button>
+            <button type="button" onClick={handleNextSlide}><FaChevronRight className="right_arrow"/></button>
           </div>
+        </div>
+
+        <div className="klassic_slider view_on_mobile">
+          <Swiper
+            modules={[Pagination]}
+            spaceBetween={10}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+            breakpoints={{
+              640: { slidesPerView: 3 },
+              1024: { slidesPerView: 2 },
+            }}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
+          >
+        
+
+            {products.map((product) => (
+              <SwiperSlide key={product.id}>
+                
+                <div className="inside">
+                <h2>{product.name}</h2>
+                <p>{product.description}</p>
+                <Link to="/product_listing">
+                    <img src={product.img} alt={product.name} />
+                </Link>
+
+                  {/* <p>{product.name}</p> */}
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          <button type="button" onClick={handleNextSlide}>Swipe <BsArrowRight className="right_arrow"/></button>
         </div>
 
         
