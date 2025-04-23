@@ -22,12 +22,6 @@ const Categories = ({ aurumImages, klassicImages, categoryInfo }) => {
         dots: false,
     };
 
-    const swipeRight = () => {
-        if (sliderRef.current) {
-            sliderRef.current.slickNext();
-        }
-    };
-
     return (
         <main className="catMain">
             <div className="catContent">
@@ -59,9 +53,6 @@ const Categories = ({ aurumImages, klassicImages, categoryInfo }) => {
                                 </div>
                             ))}
                         </Slider>
-                        <button type="button" onClick={swipeRight} className="swipe-button">
-                            Swipe <BsArrowRight className="right_arrow" />
-                        </button>
                     </div>
                 </div>
             </section>
