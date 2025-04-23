@@ -574,7 +574,7 @@ $text-color: #757575;
       width: 50px; // Adjust size as needed
       height: auto;
       position: absolute;
-      top: 50%;
+      top: 24%;
       left: 50%;
       transform: translate(-50%, -50%);
       //   opacity: 0.2; // Light fade effect like in the image
@@ -1105,7 +1105,7 @@ $text-color: #757575;
       }
   
       .catalogue {      
-        margin-top: 20px;      
+        // margin-top: 20px;      
         width: 100%;          
         display: flex;
         justify-content: space-evenly;

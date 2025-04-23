@@ -7,6 +7,7 @@ import { IoClose } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(null);
@@ -88,7 +89,9 @@ const Navbar = () => {
           <div className="nav-right">
             {/* <FaMapMarkerAlt className="nav-icon" /> */}
             {/* <FaSearch className="nav-icon" /> */}
-            <img src="menu_location.png" alt="" className="menu_location" />
+            <Link to="/locate-our-store">
+              <img src="menu_location.png" alt="" className="menu_location" />
+            </Link>
             <img src="menu_search.png" alt="" className="menu_search desktop" onClick={handleOpenSearch}/>
           </div>
 
@@ -126,7 +129,7 @@ const Navbar = () => {
               </ul>
             </li>
 
-            <li><Link to="/catalogue">E-Catalogue</Link></li>
+            <li><Link to="#">E-Catalogue</Link></li>
             <li><Link to="/locate-our-store">Where to Buy</Link></li>
 
             {/* More Submenu */}
