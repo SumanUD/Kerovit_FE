@@ -241,7 +241,7 @@ $text-color: #757575;
       transition: all 0.3s ease-in-out;
       position: absolute;
       right: 15px;
-      bottom: -60px;      
+      bottom: -40px;      
     }    
 
     .categories_heading {
@@ -334,6 +334,9 @@ $text-color: #757575;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
       color: #000;
+      @media (max-width: 750px) {
+        display: none;
+      }
 
       &:hover {
         background-color: #f4f4f4;
@@ -458,10 +461,13 @@ $text-color: #757575;
           justify-content: center;
           flex-direction: column;
 
-          a{
+
+          a {
             width: 150px;
             text-decoration: none;
           }
+          
+
 
           button{
             margin: 0 auto;
@@ -572,6 +578,10 @@ $text-color: #757575;
       left: 50%;
       transform: translate(-50%, -50%);
       //   opacity: 0.2; // Light fade effect like in the image
+
+      @media (max-width:750px){
+        left: 80%;
+      }
     }
 
     p {
@@ -659,6 +669,9 @@ $text-color: #757575;
       left: 50%;
       transform: translate(-50%, -50%);
       //   opacity: 0.2; // Light fade effect like in the image
+      @media (max-width:750px){
+        left: 80%;
+      }
     }
 
     p {
@@ -1525,7 +1538,7 @@ $text-color: #757575;
       transition: all 0.3s ease-in-out;
       position: absolute;
       right: 15px;
-      bottom: -60px;      
+      bottom: -40px;      
     }
     .view_on_desktop{
       display: none;

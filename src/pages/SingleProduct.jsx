@@ -29,7 +29,7 @@ const SingleProduct = () => {
     <>
       <Navbar />
 
-      <div className="single-product-page">S
+      <div className="single-product-page">
         <div className="singlePro">
 
           <div className="main-image">
