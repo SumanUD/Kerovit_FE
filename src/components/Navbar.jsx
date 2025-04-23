@@ -139,7 +139,7 @@ const Navbar = () => {
               </Link>
               <ul className="dropdown" style={{ display: activeIndex === 1 ? "block" : "none" }}>
                 {[
-                  { img: "/icons/whatsnew.png", label: "What's New", link: "#" },
+                  // { img: "/icons/whatsnew.png", label: "What's New", link: "#" },
                   { img: "/icons/career.png", label: "Career", link: "/career" },
                   { img: "/icons/resources.png", label: "Resources", link: "/blog" }
                 ].map((item, index) => (

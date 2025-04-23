@@ -128,7 +128,7 @@ const About = () => {
             We also adhere to the Zero Liquid Discharge (ZLD) principle, ensuring that our plants release zero liquid effluent into the environment. By embracing advanced wastewater management, we are actively contributing to water conservation and a sustainable future.
             </p>
           </div>
-          <button className="read_more" onClick={()=> setReadMoreOne(!readMoreOne)}>{readMoreOne ? "read less":"read more"}</button>
+          <button className="read_more" onClick={()=> setReadMoreOne(!readMoreOne)}>{readMoreOne ? "close":"read more"}</button>
         </div>
 
         <div className="directorMessage">
@@ -151,7 +151,7 @@ const About = () => {
               </div>
             </div>
 
-            <button className="read_more" onClick={()=>setReadMoreTwo(!readMoreTwo)}>{readMoreTwo ? 'read less' : 'read more'}</button>
+            <button className="read_more" onClick={()=>setReadMoreTwo(!readMoreTwo)}>{readMoreTwo ? 'close' : 'read more'}</button>
           </div>
         </div>
 
@@ -186,7 +186,7 @@ const About = () => {
           <button className="next-btn"><MdKeyboardArrowRight /></button> */}
 
 
-          <button type="button" className="swipeButton" onClick={handleNextSlide}><FaChevronRight className="right_arrow disableOnMobile" /><span className="disableOnDesktop">Swipe < BsArrowRight  className="right_arrow" /></span></button>
+          {/* <button type="button" className="swipeButton" onClick={handleNextSlide}><FaChevronRight className="right_arrow disableOnMobile" /><span className="disableOnDesktop">Swipe < BsArrowRight  className="right_arrow" /></span></button> */}
         </div>
 
         <div className="certifications">

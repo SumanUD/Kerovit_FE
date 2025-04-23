@@ -20,7 +20,7 @@ const klassicImages = [
 
 const categoryInfo = {
   name: "toilet",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum illum velit enim quibusdam iusto. Quod, sed quasi officiis aperiam vitae cupiditate vel cumque rerum eligendi voluptas nemo? Eius, natus commodi!",
+  description: "Be it the refined hues of Aurum or the everyday comfort of Klassic, our toilets are cleverly designed to keep things clean and sophisticated.",
 }
 
 

@@ -38,7 +38,7 @@ const categorieList = [
     ],
     categoryInfo:{
       name: "accessories",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum illum velit enim quibusdam iusto. Quod, sed quasi officiis aperiam vitae cupiditate vel cumque rerum eligendi voluptas nemo? Eius, natus commodi!",
+      description: "From the finely crafted details of Aurum to the everyday functionality of Klassic, our accessories are made to accentuate your space.",
     }
   },
   // {

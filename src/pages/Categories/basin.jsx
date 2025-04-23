@@ -18,7 +18,7 @@ const klassicImages = [
 ];
 const categoryInfo = {
   name: "basin",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum illum velit enim quibusdam iusto. Quod, sed quasi officiis aperiam vitae cupiditate vel cumque rerum eligendi voluptas nemo? Eius, natus commodi!",
+  description: "Whether you’re drawn to the sculptural beauty of Aurum or the simplicity of Klassic, our basins bring a sense of balance to your daily rituals.",
 }
 
 
