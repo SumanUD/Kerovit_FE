@@ -41,7 +41,7 @@ const categorieList = [
     ],  
     categoryInfo:{
       name: "faucet",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum illum velit enim quibusdam iusto. Quod, sed quasi officiis aperiam vitae cupiditate vel cumque rerum eligendi voluptas nemo? Eius, natus commodi!",
+      description: "From sculptural silhouettes to everyday essentials, our range of faucets, spanning the Aurum and Klassic collections, blends style with smooth performance in every turn.",
     }
   },
   {
@@ -56,7 +56,7 @@ const categorieList = [
     ],    
     categoryInfo:{
       name: "shower",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum illum velit enim quibusdam iusto. Quod, sed quasi officiis aperiam vitae cupiditate vel cumque rerum eligendi voluptas nemo? Eius, natus commodi!",
+      description: "Whether you need an energizing start or a calming wind-down, our vast range of Aurum and Klassic collections has it all to match your space.",
     }
   },
   {
@@ -71,7 +71,7 @@ const categorieList = [
     ],
     categoryInfo:{
       name: "basin",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum illum velit enim quibusdam iusto. Quod, sed quasi officiis aperiam vitae cupiditate vel cumque rerum eligendi voluptas nemo? Eius, natus commodi!",
+      description: "Whether you’re drawn to the sculptural beauty of Aurum or the simplicity of Klassic, our basins bring a sense of balance to your daily rituals.",
     }
   },
   {
@@ -86,7 +86,7 @@ const categorieList = [
     ],    
     categoryInfo:{
       name: "toilet",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum illum velit enim quibusdam iusto. Quod, sed quasi officiis aperiam vitae cupiditate vel cumque rerum eligendi voluptas nemo? Eius, natus commodi!",
+      description: "Be it the refined hues of Aurum or the everyday comfort of Klassic, our toilets are cleverly designed to keep things clean and sophisticated.",
     }  
   },
   {
@@ -101,7 +101,7 @@ const categorieList = [
     ],    
     categoryInfo:{
       name: "Bathroom Furniture",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum illum velit enim quibusdam iusto. Quod, sed quasi officiis aperiam vitae cupiditate vel cumque rerum eligendi voluptas nemo? Eius, natus commodi!",
+      description: "From Aurum’s sleek sophistication to Klassic’s practical ease, our bathroom furniture range keeps your space organised, elevated, and unmistakably yours.",
     }
   },  
 ]

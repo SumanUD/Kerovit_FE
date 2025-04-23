@@ -36,6 +36,13 @@ $tertiary-bg: #ffff;
           width: 50px;
           border-radius: 50%;
           padding: 12px;
+
+          @media (max-width:750px){
+            height: 45px;
+            width: 45px;
+            background: $primary-bg;
+            color: white;            
+          }
         }
         .swiper-button-prev:after, .swiper-button-next:after{
           display: none;  
