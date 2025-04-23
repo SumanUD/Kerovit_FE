@@ -451,7 +451,7 @@ $text-color: #757575;
       .inside {
         position: relative;
         overflow: hidden;
-        height: clamp(500px, 70vh, 700px);
+        height: clamp(500px, 60vh, 700px);
         width: 100%;
         .pop-on-hover{
           position: absolute;
