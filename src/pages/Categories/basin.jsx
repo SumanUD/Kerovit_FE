@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 
 import { FaChevronRight } from "react-icons/fa";
 import { FaChevronLeft } from "react-icons/fa";
+import { useRef } from "react";
 
 const categorieList = [    
     {
@@ -107,6 +108,17 @@ const categorieList = [
   ]
 
 const Basin = () => {
+    const swiperRef = useRef(null);
+    const handleNextSlide = () => {
+      if (swiperRef.current) {
+        swiperRef.current.slideNext();
+      }
+    }
+    const handlePrevSlide = () => {
+      if (swiperRef.current) {
+        swiperRef.current.slidePrev();
+      }
+    }
   return (
     <>
       <Navbar />
@@ -130,6 +142,7 @@ const Basin = () => {
                 1024: { slidesPerView: 3 },
               }}
               modules={[Navigation]}
+              onSwiper={(swiper) => (swiperRef.current = swiper)}  
             >
               {categorieList.map((item, index) => (
                 <SwiperSlide key={index}>
@@ -141,6 +154,11 @@ const Basin = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
+
+            <div className="swiper_action_button view_on_desktop">
+              <button type="button" className="swip_button" onClick={handlePrevSlide}><FaChevronLeft className="right_arrow swip_button_icon"/></button>
+              <button type="button" className="swip_button" onClick={handleNextSlide}><FaChevronRight className="right_arrow swip_button_icon"/></button>            
+            </div>
 
             {/* Navigation buttons */}
             <div className="swiper-button-prev">

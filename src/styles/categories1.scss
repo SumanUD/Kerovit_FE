@@ -37,15 +37,35 @@ $tertiary-bg: #ffff;
           border-radius: 50%;
           padding: 12px;
 
-          @media (max-width:750px){
-            height: 45px;
-            width: 45px;
-            background: $primary-bg;
-            color: white;            
+          @media (max-width:750px){            
+            display: none;
           }
         }
         .swiper-button-prev:after, .swiper-button-next:after{
           display: none;  
+        }
+
+        .swiper_action_button{
+          display: flex;
+          justify-content: flex-end;
+          column-gap: 15px;
+          margin-top: 25px;
+          button{
+            all: unset;
+            height: 40px;
+            width: 40px;
+            border: 1px solid black;
+            border-radius: 50%;
+            text-align: center;
+            aspect-ratio: 1/1;
+            display: flex;
+            align-items: center;
+            justify-content: center;            
+          }
+
+          @media (min-width: 749px){
+            display: none;
+          }
         }
       }
       .swiper-container > .swiper-slide__content {

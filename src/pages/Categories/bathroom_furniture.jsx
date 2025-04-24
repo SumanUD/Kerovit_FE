@@ -3,7 +3,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Categories from "../../components/Categories";
 import "../../styles/categories1.scss";
-
+import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -107,6 +107,17 @@ const categorieList = [
 ]
 
 const BathroomFurniture = () => {
+  const swiperRef = useRef(null);
+  const handleNextSlide = () => {
+    if (swiperRef.current) {
+      swiperRef.current.slideNext();
+    }
+  }
+  const handlePrevSlide = () => {
+    if (swiperRef.current) {
+      swiperRef.current.slidePrev();
+    }
+  }
   return (
     <>
       <Navbar />
@@ -130,6 +141,7 @@ const BathroomFurniture = () => {
               1024: { slidesPerView: 3 },
             }}
             modules={[Navigation]}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}  
           >
             {categorieList.map((item, index) => (
               <SwiperSlide key={index}>
@@ -141,6 +153,11 @@ const BathroomFurniture = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+
+          <div className="swiper_action_button view_on_desktop">
+              <button type="button" className="swip_button" onClick={handlePrevSlide}><FaChevronLeft className="right_arrow swip_button_icon"/></button>
+              <button type="button" className="swip_button" onClick={handleNextSlide}><FaChevronRight className="right_arrow swip_button_icon"/></button>            
+            </div> 
 
           {/* Navigation buttons */}
           <div className="swiper-button-prev">
