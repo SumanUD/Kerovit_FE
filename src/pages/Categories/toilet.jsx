@@ -17,58 +17,13 @@ const categorieList = [
   {
     aurumImages:[
       "/product/1.jpg",
-      "/product/2.jpg",
-      "/product/3.jpg",
-    ],    
-    klassicImages:[
-      "/product/4.jpg",
-      "/product/5.jpg",      
-    ],    
-    categoryInfo:{
-      name: "toilet",
-      description: "Be it the refined hues of Aurum or the everyday comfort of Klassic, our toilets are cleverly designed to keep things clean and sophisticated.",
-    }  
-  },
-  {
-    aurumImages:[
-      "/product/1.jpg",
-      "/product/2.jpg",
-      "/product/3.jpg",
-    ],    
-    klassicImages:[
-      "/product/4.jpg",
-      "/product/5.jpg",      
-    ],    
-    categoryInfo:{
-      name: "Bathroom Furniture",
-      description: "From Aurum’s sleek sophistication to Klassic’s practical ease, our bathroom furniture range keeps your space organised, elevated, and unmistakably yours.",
-    }
-  },  
-  {
-    aurumImages:[
-      "/product/1.jpg",
-      "/product/2.jpg",
-      "/product/3.jpg",
-    ],
-    klassicImages:[
-      "/product/4.jpg",
-      "/product/5.jpg",      
-    ],
-    categoryInfo:{
-      name: "accessories",
-      description: "From the finely crafted details of Aurum to the everyday functionality of Klassic, our accessories are made to accentuate your space.",
-    }
-  },
-  {
-    aurumImages:[
-      "/product/1.jpg",
-      "/product/2.jpg",
-      "/product/3.jpg",
+      // "/product/2.jpg",
+      // "/product/3.jpg",
     ],
     
     klassicImages:[
       "/product/4.jpg",
-      "/product/5.jpg",    
+      // "/product/5.jpg",    
     ],  
     categoryInfo:{
       name: "faucet",
@@ -77,12 +32,12 @@ const categorieList = [
   },
   {
     aurumImages:[
-      "/product/1.jpg",
+      // "/product/1.jpg",
       "/product/2.jpg",
-      "/product/3.jpg",
+      // "/product/3.jpg",
     ],    
     klassicImages:[
-      "/product/4.jpg",
+      // "/product/4.jpg",
       "/product/5.jpg",      
     ],    
     categoryInfo:{
@@ -92,17 +47,62 @@ const categorieList = [
   },
   {
     aurumImages:[
-      "/product/1.jpg",
-      "/product/2.jpg",
+      // "/product/1.jpg",
+      // "/product/2.jpg",
       "/product/3.jpg",
     ],
     klassicImages:[
-      "/product/4.jpg",
+      // "/product/4.jpg",
       "/product/5.jpg",      
     ],
     categoryInfo:{
       name: "basin",
       description: "Whether you’re drawn to the sculptural beauty of Aurum or the simplicity of Klassic, our basins bring a sense of balance to your daily rituals.",
+    }
+  },
+  {
+    aurumImages:[
+      "/product/1.jpg",
+      // "/product/2.jpg",
+      // "/product/3.jpg",
+    ],    
+    klassicImages:[
+      "/product/4.jpg",
+      // "/product/5.jpg",      
+    ],    
+    categoryInfo:{
+      name: "toilet",
+      description: "Be it the refined hues of Aurum or the everyday comfort of Klassic, our toilets are cleverly designed to keep things clean and sophisticated.",
+    }  
+  },
+  {
+    aurumImages:[
+      // "/product/1.jpg",
+      "/product/2.jpg",
+      // "/product/3.jpg",
+    ],    
+    klassicImages:[
+      // "/product/4.jpg",
+      "/product/5.jpg",      
+    ],    
+    categoryInfo:{
+      name: "Bathroom Furniture",
+      description: "From Aurum’s sleek sophistication to Klassic’s practical ease, our bathroom furniture range keeps your space organised, elevated, and unmistakably yours.",
+    }
+  },  
+  {
+    aurumImages:[
+      // "/product/1.jpg",
+      // "/product/2.jpg",
+      "/product/3.jpg",
+    ],
+    klassicImages:[
+      "/product/4.jpg",
+      // "/product/5.jpg",      
+    ],
+    categoryInfo:{
+      name: "accessories",
+      description: "From the finely crafted details of Aurum to the everyday functionality of Klassic, our accessories are made to accentuate your space.",
     }
   },
 ]

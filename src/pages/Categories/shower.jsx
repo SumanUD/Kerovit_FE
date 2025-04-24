@@ -16,11 +16,27 @@ const categorieList = [
   {
     aurumImages:[
       "/product/1.jpg",
-      "/product/2.jpg",
-      "/product/3.jpg",
-    ],    
+      // "/product/2.jpg",
+      // "/product/3.jpg",
+    ],
+    
     klassicImages:[
       "/product/4.jpg",
+      // "/product/5.jpg",    
+    ],  
+    categoryInfo:{
+      name: "faucet",
+      description: "From sculptural silhouettes to everyday essentials, our range of faucets, spanning the Aurum and Klassic collections, blends style with smooth performance in every turn.",
+    }
+  },
+  {
+    aurumImages:[
+      // "/product/1.jpg",
+      "/product/2.jpg",
+      // "/product/3.jpg",
+    ],    
+    klassicImages:[
+      // "/product/4.jpg",
       "/product/5.jpg",      
     ],    
     categoryInfo:{
@@ -30,12 +46,12 @@ const categorieList = [
   },
   {
     aurumImages:[
-      "/product/1.jpg",
-      "/product/2.jpg",
+      // "/product/1.jpg",
+      // "/product/2.jpg",
       "/product/3.jpg",
     ],
     klassicImages:[
-      "/product/4.jpg",
+      // "/product/4.jpg",
       "/product/5.jpg",      
     ],
     categoryInfo:{
@@ -46,12 +62,12 @@ const categorieList = [
   {
     aurumImages:[
       "/product/1.jpg",
-      "/product/2.jpg",
-      "/product/3.jpg",
+      // "/product/2.jpg",
+      // "/product/3.jpg",
     ],    
     klassicImages:[
       "/product/4.jpg",
-      "/product/5.jpg",      
+      // "/product/5.jpg",      
     ],    
     categoryInfo:{
       name: "toilet",
@@ -60,12 +76,12 @@ const categorieList = [
   },
   {
     aurumImages:[
-      "/product/1.jpg",
+      // "/product/1.jpg",
       "/product/2.jpg",
-      "/product/3.jpg",
+      // "/product/3.jpg",
     ],    
     klassicImages:[
-      "/product/4.jpg",
+      // "/product/4.jpg",
       "/product/5.jpg",      
     ],    
     categoryInfo:{
@@ -75,33 +91,17 @@ const categorieList = [
   },  
   {
     aurumImages:[
-      "/product/1.jpg",
-      "/product/2.jpg",
+      // "/product/1.jpg",
+      // "/product/2.jpg",
       "/product/3.jpg",
     ],
     klassicImages:[
       "/product/4.jpg",
-      "/product/5.jpg",      
+      // "/product/5.jpg",      
     ],
     categoryInfo:{
       name: "accessories",
       description: "From the finely crafted details of Aurum to the everyday functionality of Klassic, our accessories are made to accentuate your space.",
-    }
-  },
-  {
-    aurumImages:[
-      "/product/1.jpg",
-      "/product/2.jpg",
-      "/product/3.jpg",
-    ],
-    
-    klassicImages:[
-      "/product/4.jpg",
-      "/product/5.jpg",    
-    ],  
-    categoryInfo:{
-      name: "faucet",
-      description: "From sculptural silhouettes to everyday essentials, our range of faucets, spanning the Aurum and Klassic collections, blends style with smooth performance in every turn.",
     }
   },
 ]

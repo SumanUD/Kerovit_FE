@@ -12,32 +12,17 @@ import "swiper/css/navigation";
 import { FaChevronRight } from "react-icons/fa";
 import { FaChevronLeft } from "react-icons/fa";
 
-const categorieList = [
+const categorieList = [    
   {
     aurumImages:[
       "/product/1.jpg",
-      "/product/2.jpg",
-      "/product/3.jpg",
-    ],
-    klassicImages:[
-      "/product/4.jpg",
-      "/product/5.jpg",      
-    ],
-    categoryInfo:{
-      name: "accessories",
-      description: "From the finely crafted details of Aurum to the everyday functionality of Klassic, our accessories are made to accentuate your space.",
-    }
-  },
-  {
-    aurumImages:[
-      "/product/1.jpg",
-      "/product/2.jpg",
-      "/product/3.jpg",
+      // "/product/2.jpg",
+      // "/product/3.jpg",
     ],
     
     klassicImages:[
       "/product/4.jpg",
-      "/product/5.jpg",    
+      // "/product/5.jpg",    
     ],  
     categoryInfo:{
       name: "faucet",
@@ -46,12 +31,12 @@ const categorieList = [
   },
   {
     aurumImages:[
-      "/product/1.jpg",
+      // "/product/1.jpg",
       "/product/2.jpg",
-      "/product/3.jpg",
+      // "/product/3.jpg",
     ],    
     klassicImages:[
-      "/product/4.jpg",
+      // "/product/4.jpg",
       "/product/5.jpg",      
     ],    
     categoryInfo:{
@@ -61,12 +46,12 @@ const categorieList = [
   },
   {
     aurumImages:[
-      "/product/1.jpg",
-      "/product/2.jpg",
+      // "/product/1.jpg",
+      // "/product/2.jpg",
       "/product/3.jpg",
     ],
     klassicImages:[
-      "/product/4.jpg",
+      // "/product/4.jpg",
       "/product/5.jpg",      
     ],
     categoryInfo:{
@@ -77,12 +62,12 @@ const categorieList = [
   {
     aurumImages:[
       "/product/1.jpg",
-      "/product/2.jpg",
-      "/product/3.jpg",
+      // "/product/2.jpg",
+      // "/product/3.jpg",
     ],    
     klassicImages:[
       "/product/4.jpg",
-      "/product/5.jpg",      
+      // "/product/5.jpg",      
     ],    
     categoryInfo:{
       name: "toilet",
@@ -91,12 +76,12 @@ const categorieList = [
   },
   {
     aurumImages:[
-      "/product/1.jpg",
+      // "/product/1.jpg",
       "/product/2.jpg",
-      "/product/3.jpg",
+      // "/product/3.jpg",
     ],    
     klassicImages:[
-      "/product/4.jpg",
+      // "/product/4.jpg",
       "/product/5.jpg",      
     ],    
     categoryInfo:{
@@ -104,8 +89,22 @@ const categorieList = [
       description: "From Aurum’s sleek sophistication to Klassic’s practical ease, our bathroom furniture range keeps your space organised, elevated, and unmistakably yours.",
     }
   },  
+  {
+    aurumImages:[
+      // "/product/1.jpg",
+      // "/product/2.jpg",
+      "/product/3.jpg",
+    ],
+    klassicImages:[
+      "/product/4.jpg",
+      // "/product/5.jpg",      
+    ],
+    categoryInfo:{
+      name: "accessories",
+      description: "From the finely crafted details of Aurum to the everyday functionality of Klassic, our accessories are made to accentuate your space.",
+    }
+  },
 ]
-
 const Accessories = () => {
 
   const swiperRef = useRef(null);
