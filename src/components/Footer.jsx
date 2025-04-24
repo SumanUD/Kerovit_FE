@@ -145,8 +145,8 @@ const Footer = () => {
                             <div className={` ${openDesktopAccordion === 1 ? "" : " hide"} footer_accordian ` } onClick={() => toggleDesktopAccordion(1)}>
                                 <p>this is the first item's accordion body</p>
                             </div>
-                            <a href="#">Customer Care</a>
-                            <a href="#">Warranty</a>
+                            <Link to="#">Customer Care</Link>
+                            <Link to="/warranty">Warranty</Link>
                             <p onClick={()=> toggleDesktopAccordion(2)}>More <span className={openDesktopAccordion == 2 ? 'flip' : ''}><img src={down} alt="" /></span></p>
                             <div className={` ${openDesktopAccordion === 2 ? "" : " hide"} footer_accordian ` } onClick={() => toggleDesktopAccordion(1)}>
                                 <p>this is the first item's accordion body</p>

@@ -1,12 +1,11 @@
 .warranty  {
     .banner{
         background-image: url("/warranty/banner.png");
-        background-size: 100% 100%;
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         height: 70vh;
         width: 100%;
-        // display: flex;
         align-items: center;
     
         .banner_content{
@@ -105,4 +104,26 @@
         }
     }
     
+}
+
+@media screen and (min-width: 1024px) {
+    .banner{
+
+        height: 100vh !important;
+
+    
+        .banner_content{
+            margin: 0px 40px 0 40px;
+    
+          .banner_title{
+            font-size: 27px !important;
+
+          }
+          p{
+            font-size: 15px !important;
+
+          }
+        }
+    
+      }
 }

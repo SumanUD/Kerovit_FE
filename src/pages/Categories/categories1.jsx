@@ -16,13 +16,13 @@ const categorieList = [
   {
     aurumImages:[
       "/product/1.jpg",
-      "/product/2.jpg",
-      "/product/3.jpg",
+      // "/product/2.jpg",
+      // "/product/3.jpg",
     ],
     
     klassicImages:[
       "/product/4.jpg",
-      "/product/5.jpg",    
+      // "/product/5.jpg",    
     ],  
     categoryInfo:{
       name: "faucet",
@@ -31,12 +31,12 @@ const categorieList = [
   },
   {
     aurumImages:[
-      "/product/1.jpg",
+      // "/product/1.jpg",
       "/product/2.jpg",
-      "/product/3.jpg",
+      // "/product/3.jpg",
     ],    
     klassicImages:[
-      "/product/4.jpg",
+      // "/product/4.jpg",
       "/product/5.jpg",      
     ],    
     categoryInfo:{
@@ -46,12 +46,12 @@ const categorieList = [
   },
   {
     aurumImages:[
-      "/product/1.jpg",
-      "/product/2.jpg",
+      // "/product/1.jpg",
+      // "/product/2.jpg",
       "/product/3.jpg",
     ],
     klassicImages:[
-      "/product/4.jpg",
+      // "/product/4.jpg",
       "/product/5.jpg",      
     ],
     categoryInfo:{
@@ -62,12 +62,12 @@ const categorieList = [
   {
     aurumImages:[
       "/product/1.jpg",
-      "/product/2.jpg",
-      "/product/3.jpg",
+      // "/product/2.jpg",
+      // "/product/3.jpg",
     ],    
     klassicImages:[
       "/product/4.jpg",
-      "/product/5.jpg",      
+      // "/product/5.jpg",      
     ],    
     categoryInfo:{
       name: "toilet",
@@ -76,12 +76,12 @@ const categorieList = [
   },
   {
     aurumImages:[
-      "/product/1.jpg",
+      // "/product/1.jpg",
       "/product/2.jpg",
-      "/product/3.jpg",
+      // "/product/3.jpg",
     ],    
     klassicImages:[
-      "/product/4.jpg",
+      // "/product/4.jpg",
       "/product/5.jpg",      
     ],    
     categoryInfo:{
@@ -91,13 +91,13 @@ const categorieList = [
   },  
   {
     aurumImages:[
-      "/product/1.jpg",
-      "/product/2.jpg",
+      // "/product/1.jpg",
+      // "/product/2.jpg",
       "/product/3.jpg",
     ],
     klassicImages:[
       "/product/4.jpg",
-      "/product/5.jpg",      
+      // "/product/5.jpg",      
     ],
     categoryInfo:{
       name: "accessories",

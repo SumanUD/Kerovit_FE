@@ -46,13 +46,13 @@ const Categories = ({ aurumImages, klassicImages, categoryInfo }) => {
                     </div>
 
                     <div className="tab-content mt-3 img-content">
-                        <Slider ref={sliderRef} {...settings}>
+                        {/* <Slider ref={sliderRef} {...settings}> */}
                             {(activeTab === "aurum" ? aurumImages : klassicImages).map((image, index) => (
                                 <div key={index} className="slider-item">
                                     <img src={image} alt={`Slide ${index + 1}`} className="content-image" />
                                 </div>
                             ))}
-                        </Slider>
+                        {/* </Slider> */}
                     </div>
                 </div>
             </section>
