@@ -4,6 +4,7 @@ import Footer from "../components/Footer"
 import { FaWhatsapp } from "react-icons/fa";
 import "../styles/LocateOurStore.scss";
 import StoreCard from "../components/storeCard";
+import { FaSearch } from "react-icons/fa";
 
 const LocateOurStore = () => {
     return (
@@ -17,7 +18,33 @@ const LocateOurStore = () => {
                     </div>
                     <div className="whatsapp-icon">
                         <FaWhatsapp  />
-                    </div>                    
+                    </div>
+
+                    <div className="store-locator-box">
+  <div className="search-bar">
+    <input type="text" placeholder="Stores near me" />
+    <button className="search-btn">
+      <FaSearch />
+    </button>
+  </div>
+
+  <hr className="divider" />
+
+  <select className="dropdown">
+    <option>Select State</option>
+    <option>California</option>
+    <option>Texas</option>
+  </select>
+
+  <select className="dropdown">
+    <option>Select City</option>
+    <option>Los Angeles</option>
+    <option>Houston</option>
+  </select>
+
+  <button className="submit-btn">Submit</button>
+</div>
+               
                 </div>
 
                 <div className="store-main-contents">

@@ -127,7 +127,7 @@ const Navbar = () => {
               </ul>
             </li>
 
-            <li><Link to="#"><img src= "/icons/catalogue.png" alt="catalogue" className="hideInDesktop"/>E-Catalogue</Link></li>
+            <li><Link to="/catalogue"><img src= "/icons/catalogue.png" alt="catalogue" className="hideInDesktop"/>E-Catalogue</Link></li>
             <li><Link to="/locate-our-store"><img src= "/icons/wheretobuy.png" alt="wheretobuy" className="hideInDesktop"/>Where to Buy</Link></li>
 
             <li className={`submenu ${activeIndex === 1 ? "active openSub" : ""}`} onClick={(e) => toggleSubmenu(1, e)}>

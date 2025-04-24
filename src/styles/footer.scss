@@ -84,8 +84,20 @@ $text-color: #757575;
             .accordion-body {
                 color: #fff;
                 padding: 15px;
-                font-size: 0.9
-                rem;
+                font-size: 0.9rem;
+                ul {
+                  li {
+                    list-style-type: none;
+                    a{
+                      text-decoration: none;
+                    }
+
+                    p{
+                      color: #fff;
+
+                    }
+                  }
+                }
             }
         }
 
@@ -229,8 +241,8 @@ $text-color: #757575;
         margin: 0;
       }
       .footer_accordian{
-        margin-left: 1rem;
-        margin-bottom: 1rem;
+        // margin-left: 1rem;
+        // margin-bottom: 1rem;
         p{
           text-transform: capitalize;
         }
@@ -317,6 +329,13 @@ $text-color: #757575;
   
           .accordion-body {
             font-size: 1rem;
+            ul {
+              li {
+                text-decoration: none;
+                color: #fff;
+                list-style-type: none;
+              }
+            }
           }
         }
   

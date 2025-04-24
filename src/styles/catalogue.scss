@@ -11,6 +11,10 @@
         margin: 0 auto;
         width: 90%;
         max-width: 900px;
+        img{
+
+          width: 300px;
+        }
   
         h2 {
           text-transform: uppercase;
@@ -129,6 +133,10 @@
   
         h2, p {
           color: #fff;
+        }
+        img {
+          width: 150px;
+          margin-top: 50px;
         }
       }
   

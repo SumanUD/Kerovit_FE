@@ -56,7 +56,147 @@
 
 
         }
+        .store-locator-box {
+            position: absolute;
+            top: 60%;
+            right: 15%;
+            transform: translateY(-50%);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            min-width: 280px;
+          
+            .search-bar {
+              display: flex;
+              align-items: center;
+              background: rgba(255, 255, 255, 0.1);
+              border: 1px solid rgba(255, 255, 255, 0.2);
+              backdrop-filter: blur(8px);
+              border-radius: 4px;
+          
+              input {
+                flex: 1;
+                background: transparent;
+                border: none;
+                color: white;
+                padding: 0.8rem 1rem;
+                font-size: 0.85rem;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+          
+                &::placeholder {
+                  color: white;
+                  opacity: 0.8;
+                }
+          
+                &:focus {
+                  outline: none;
+                }
+              }
+          
+              .search-btn {
+                background: transparent;
+                border: none;
+                color: white;
+                padding: 0.8rem 1rem;
+                font-size: 1rem;
+                cursor: pointer;
+              }
+            }
+          
+            .divider {
+              border: none;
+              height: 1px;
+              background-color: rgba(255, 255, 255, 0.25);
+              margin: 0.5rem 0;
+            }
+          
+            .dropdown {
+              background: rgba(255, 255, 255, 0.1);
+              backdrop-filter: blur(8px);
+              border: 1px solid rgba(255, 255, 255, 0.2);
+              color: white;
+              padding: 0.8rem 1rem;
+              font-size: 0.85rem;
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+              border-radius: 4px;
+          
+              option {
+                background: #222;
+                color: white;
+              }
+          
+              &:focus {
+                outline: none;
+              }
+            }
+          
+            .submit-btn {
+              background-color: #2e5c85;
+              color: white;
+              padding: 0.85rem;
+              border: none;
+              border-radius: 4px;
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 0.8px;
+              cursor: pointer;
+              transition: background 0.3s ease;
+          
+              &:hover {
+                background-color: #244a6b;
+              }
+            }
+          }
+          
+          
     }
+
+    @media (max-width: 768px) {
+        .banner{
+            height: 70vh;
+            .bannerText {
+                top: 20%
+            }
+        }
+
+        .store-locator-box {
+          position: absolute;
+          top: unset;
+          bottom: 5%;
+          right: 50%;
+          transform: translateX(50%);
+          padding: 1.5rem;
+          width: 90%;
+          max-width: 360px;
+      
+          .search-bar {
+            input {
+              padding: 0.6rem 0.8rem;
+              font-size: 0.8rem;
+            }
+      
+            .search-btn {
+              padding: 0.6rem 0.8rem;
+              font-size: 0.95rem;
+            }
+          }
+      
+          .dropdown {
+            padding: 0.6rem 0.8rem;
+            font-size: 0.8rem;
+          }
+      
+          .submit-btn {
+            padding: 0.7rem;
+            font-size: 0.85rem;
+            width: 100%;
+          }
+        }
+      }
+      
 
     .store-form-container {
         max-width: 500px;

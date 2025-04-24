@@ -12,7 +12,8 @@ const Catalogue = () => {
       <div className="catalogueSingle">
         <div className="second_banner mobile_view">
           <div className="inside_banner_content">
-            <h2>the catalogue</h2>
+            {/* <h2>the catalogue</h2> */}
+            <img src="./catalogue/year.png" alt="" />
             <p>Browse our latest catalogue and discover the perfect bathroom solutions for your home.</p>
           </div>
           <div className="catalogue">
@@ -23,7 +24,9 @@ const Catalogue = () => {
 
         <div className="second_banner desktop_view">
           <div className="inside_banner_content">
-            <h2>the catalogue</h2>
+            {/* <h2>the catalogue</h2> */}
+            <img src="./catalogue/year.png" alt="" />
+
             <p>Browse our latest catalogue and discover the perfect bathroom solutions for your home.</p>
           </div>
           <div className="catalogue">
