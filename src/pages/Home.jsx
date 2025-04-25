@@ -16,10 +16,10 @@ import { FaWhatsapp } from "react-icons/fa";
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 
-import firstBannerImg from "../../public/home_banner1.png"
+import firstBannerImg from "../../public/new/about.png"
 
-import cat1 from "../../public/catelogue1.png"
-import cat2 from "../../public/catelogue2.png"
+import cat1 from "../../public/new/catalogue1.png"
+import cat2 from "../../public/new/catalogue2.png"
 
 import { FaChevronRight } from "react-icons/fa";
 import { FaChevronLeft } from "react-icons/fa";
@@ -29,12 +29,12 @@ import { FaChevronLeft } from "react-icons/fa";
 const Home = () => {
 
   const products = [
-    { id: 1, img: "/random_product.png", name: "Faucets", link: "faucet", icon: "./icons/faucet.png" },
-    { id: 2, img: "/shower2.png", name: "Showers", link:"shower", icon: "./icons/shower.png" },
-    { id: 3, img: "/basin.png", name: "Basin", link: "basin", icon: "./icons/basin.png" },
-    { id: 4, img: "/toilet.png", name: "Toilet", link:"toilet", icon: "./icons/toilet.png" },
-    { id: 5, img: "/random_product.png", name: "Bathroom Furniture", link:"bathroomFurniture", icon: "./icons/bathroom_furniture.png" },
-    { id: 6, img: "/random_product.png", name: "Accessories", link:"accessories", icon: "./icons/accessories.png" },
+    { id: 1, img: "new/faucet.png", name: "Faucets", link: "faucet", icon: "./icons/faucet.png" },
+    { id: 2, img: "/new/shower.png", name: "Showers", link:"shower", icon: "./icons/shower.png" },
+    { id: 3, img: "/new/basin.png", name: "Basin", link: "basin", icon: "./icons/basin.png" },
+    { id: 4, img: "/new/toilet.png", name: "Toilet", link:"toilet", icon: "./icons/toilet.png" },
+    { id: 5, img: "/new/furniture.png", name: "Bathroom Furniture", link:"bathroomFurniture", icon: "./icons/bathroom_furniture.png" },
+    { id: 6, img: "/new/accessories.png", name: "Accessories", link:"accessories", icon: "./icons/accessories.png" },
   ];
   const swiperRef = useRef(null);
 
@@ -175,7 +175,7 @@ const Home = () => {
             </div>
             <p>Indulge in the luxury of Aurum, our exquisite collection that seamlessly blends elegance with nature's palette of perfection.</p>
             <div className="img-container">
-              <img src="/single_product.png" alt="Single Product image" />
+              <img src="/new/aurum.png" alt="Single Product image" />
 
               <button type="button" className="desktop-card-button">
                 <Link to="/aurum" className="showMoreBtn">Show More <BsArrowRight className="right_arrow"/></Link>
@@ -197,7 +197,7 @@ const Home = () => {
             Bring home the true definition of timeless luxury with our Klassic collection, which maintains sophistication at its peak with elegant, minimal aesthetics.
             </p>
             <div className="img-container">
-              <img src="/klassic.png" alt="Single Product image" />
+              <img src="/new/klassic.png" alt="Single Product image" />
 
               <button type="button" className="desktop-card-button">
                 <Link to="/klassic" className="showMoreBtn">Show More <BsArrowRight className="right_arrow"/></Link>
