@@ -19,7 +19,7 @@ import { BsArrowLeft } from "react-icons/bs";
 import firstBannerImg from "../../public/new/about.png"
 
 import cat1 from "../../public/catelogue1.png"
-import cat2 from "../../public/catelogue1.png"
+import cat2 from "../../public/catelogue2.png"
 
 import { FaChevronRight } from "react-icons/fa";
 import { FaChevronLeft } from "react-icons/fa";
