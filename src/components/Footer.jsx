@@ -67,7 +67,7 @@ const Footer = () => {
                 <div className="accordion-body">
                   <ul>
                     <li><Link to="/aurum"><p>Aurum</p></Link></li>
-                    <li><Link to="/kerovit"><p>Kerovit</p></Link></li>
+                    <li><Link to="/klassic"><p>Klassic</p></Link></li>
                   </ul>
                 </div>
               </div>
@@ -135,7 +135,7 @@ const Footer = () => {
               <div className={`${openDesktopAccordion === 1 ? "" : "hide"} footer_accordian`}>
                 <ul>
                   <li><Link to="/aurum">Aurum</Link></li>
-                  <li><Link to="/kerovit">Kerovit</Link></li>
+                  <li><Link to="/klassic">Klassic</Link></li>
                 </ul>
               </div>
 
