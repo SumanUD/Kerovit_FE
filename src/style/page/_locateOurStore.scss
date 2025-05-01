@@ -1,0 +1,226 @@
+.store {
+    .banner {
+        background-image: url("/locate-our-store/banner.png");
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 35vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 3rem;
+        position: relative;
+
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 2%;
+            right: 1%;
+            font-size: 3rem;
+            color: white;
+            z-index: 99999;
+            background:black;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;  
+            z-index: 9999;      
+            border-radius: 8px;
+            overflow: hidden;
+            svg{
+              height: 60%;
+            }
+            @media (max-width:750px){
+                right: 2% !important;
+            }
+          }
+
+        h2,
+        h1 {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #c7c3c3;
+        }
+
+        .bannerText {
+            position: absolute;
+            top: 62%;
+            left: 24%;
+            font-family: 'Sinkin Sans 500 Medium', sans-serif;
+
+            .h2second {
+                color: #fff;
+                // font-family: 'Sinkin Sans 300 Medium', sans-serif;
+            }
+
+
+        }
+    }
+
+    .store-form-container {
+        max-width: 500px;
+        margin: 60px auto;
+        padding: 0 20px;
+
+        h2{
+            margin-bottom: 25px;
+        }
+
+        .store-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    font-size: 14px;
+                    margin-bottom: 4px;
+                    font-weight: 400;
+                }
+
+                input,
+                select,
+                textarea {
+                    border: none;
+                    border-bottom: 1px solid #999;                    
+                    padding: 5px 4px 2px;
+                    font-size: 18px;
+                    outline: none;
+                    font-family: inherit;
+                    font-weight: 300;
+
+                    &:focus {
+                        border-bottom: 1px solid #999;
+                    }
+                }
+
+                select,
+                textarea {
+                    border: none;
+                    border-bottom: 1px solid #999;
+                    border-radius: 0;
+                    padding: 10px 4px 2px;                    
+                }
+
+                textarea {
+                    resize: vertical;
+                    min-height: 100px;
+                    color: #000;
+                }
+            }
+
+            .submit-btn {
+                width: 120px;
+                background-color: #0057d8;
+                color: #fff;
+                border: none;
+                border-radius: 25px;
+                padding: 6px 0;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #0044aa;
+                }
+            }
+        }
+    }
+
+    
+    @media (min-width:1024px){
+        .banner{
+            height: 450px !important;
+            background-size: cover;
+
+            .bannerText{
+                top: 50%;
+                left: 10%;
+            }
+        }
+
+        .store-main-contents{
+            // display: grid;
+            // grid-template-columns: .6fr 1fr;
+            display: flex;
+            flex-direction: column-reverse;
+            column-gap: 30px;
+            max-width: 1300px;
+            width: 100%;
+            margin: 45px auto;            
+
+            .store-form-container{
+                height: fit-content;                
+                // position: sticky;
+                // top: 120px;
+
+                max-width: 700px;
+                width: 100%;
+                margin-top: 70px;     
+                
+                h2{
+                    font-size: 2.5rem;
+                    font-weight: 400 !important;
+                    width: fit-content;
+                    margin: 0 auto 25px;
+                    color: #27435e;
+                }
+            }
+
+
+            .location-list{
+                .store-card{
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    column-gap: 40px;  
+                    padding-top: 90px;       
+
+                    .store-images{
+                        width: 55%;
+                        padding-top: 45px;
+
+                        .storeHeader{
+                            margin-bottom: 25px;
+                            position: absolute;
+                            left: 50%;
+                            top: 45px;
+                            transform: translateX(-50%);
+                        }
+                    }
+
+                    .store-text-contents{
+                        text-align: start;
+
+                        .desc{
+                            font-size: 13px;     
+                            margin-bottom: 1.5rem;                                                   
+                        }
+
+                        .store-info{
+                            .store-name{
+                                font-size: 1.8rem;
+                                margin-bottom: .5rem;
+                            }
+                            .owner-name{
+                                font-size: 1.2rem;
+                                margin-bottom: .5rem;
+                            }
+                            .store-details{
+                                font-size: .9rem;
+                                font-weight: 900;
+                                margin-bottom: 1rem;
+                            }
+                        }
+
+                    }
+                }
+            }
+
+        }
+    }
+
+}
