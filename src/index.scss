@@ -1,8 +1,8 @@
 
 
 @use './style/utilities';
-@use './style/variables';
-// @use './style/typography';
+@use './style/variables' as v;
+@use './style/typography';
 @use './style/page/home';
 @use './style/page/categories';
 @use './style/page/collection';
@@ -14,6 +14,7 @@
 @use './style/page/blogs';
 @use './style/page/latestPost';
 @use './style/page/catelogue';
+@use './style/page/error';
 
 @use './style/components/header';
 @use './style/components/footer';
@@ -33,6 +34,28 @@ a{
     text-decoration: none !important;
 }
 
+.btn-primary-dark{
+    background: transparent;
+    font-size: .9rem;
+    padding: 12px 18px;
+    color: v.$primary;
+    border: 1px solid v.$primary;
+    width: fit-content;
+    margin: 0 auto;
+    &:focus{
+        outline: none;
+    }
+}
+.btn-primary{
+    background: transparent;
+    font-size: .9rem;
+    padding: 12px 18px;
+    color: white;
+    border: 1px solid white;
+    &:focus{
+        outline: none;
+    }
+}
 .whatsapp-icon {
     position: fixed;
     bottom: 2%;

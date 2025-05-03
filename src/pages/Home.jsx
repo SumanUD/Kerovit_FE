@@ -20,12 +20,12 @@ import { FaChevronLeft } from "react-icons/fa";
 export const Home = () => {
 
   const products = [
-    { id: 1, img: "/random_product.png", name: "Faucets", link: "/category/faucet", icon: "./icons/faucet.png" },
-    { id: 2, img: "/shower2.png", name: "Showers", link: "/category/shower", icon: "./icons/shower.png" },
-    { id: 3, img: "/basin.png", name: "Basin", link: "/category/basin", icon: "./icons/basin.png" },
-    { id: 4, img: "/toilet.png", name: "Toilet", link: "/category/toilet", icon: "./icons/toilet.png" },
-    { id: 5, img: "/random_product.png", name: "Bathroom Furniture", link: "/category/bathroomFurniture", icon: "./icons/bathroom_furniture.png" },
-    { id: 6, img: "/random_product.png", name: "Accessories", link: "/category/accessories", icon: "./icons/accessories.png" },    
+    { id: 1, img: "/new/faucet.png", name: "Faucets", link: "/category/faucet", icon: "./icons/faucet.png" },
+    { id: 2, img: "/new/shower.png", name: "Showers", link: "/category/shower", icon: "./icons/shower.png" },
+    { id: 3, img: "/new/basin.png", name: "Basin", link: "/category/basin", icon: "./icons/basin.png" },
+    { id: 4, img: "/new/toilet.png", name: "Toilet", link: "/category/toilet", icon: "./icons/toilet.png" },
+    { id: 5, img: "/new/furniture.png", name: "Bathroom Furniture", link: "/category/bathroomFurniture", icon: "./icons/bathroom_furniture.png" },
+    { id: 6, img: "/new/accessories.png", name: "Accessories", link: "/category/accessories", icon: "./icons/accessories.png" },    
     {}
   ];
   const swiperRef = useRef(null);

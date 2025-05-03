@@ -21,7 +21,7 @@ $text-color: #757575;
   }
 
   .homebanner {
-    background-image: url("/home page-02.png");    
+    background-image: url("/new/banner.png");    
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -126,7 +126,7 @@ $text-color: #757575;
 
   @media screen and (min-width: 1024px) {
     .homebanner {      
-      height: clamp(750px, 100vh, 1000px);
+      height: clamp(800px, 100vh, 1000px);
       padding: 4rem 6rem;
       background-size: cover;
       background-position: center;
@@ -427,7 +427,9 @@ $text-color: #757575;
             }
           }
           .categoryNameIcon {
-            width: 20px;
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
             margin: 7px;
           }
         }
