@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import {Categories, Home, Collection, ProductListing, ProductVariationListing, 
-  ProductSingle, LocateOurStore, About, Career, Blogs, LatestPost} from '../pages/index';
+  ProductSingle, LocateOurStore, About, Career, Blogs, LatestPost, Catelogue} from '../pages/index';
 
 export const AllRoutes = () => {
   return (
@@ -17,6 +17,7 @@ export const AllRoutes = () => {
       <Route path="/career" element={<Career/>}/>
       <Route path="/blog" element={<Blogs/>}/>
       <Route path="/blog/latestPost" element={<LatestPost/>}/>
+      <Route path="/catelogue" element={<Catelogue/>}/>
     </Routes>
   )
 }

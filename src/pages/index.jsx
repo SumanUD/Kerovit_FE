@@ -9,3 +9,4 @@ export {About} from './About';
 export {Career} from './Career';
 export {Blogs} from './Blogs';
 export {LatestPost} from './LatestPost';
+export {Catelogue} from './Catelogue';
