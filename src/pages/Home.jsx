@@ -49,7 +49,6 @@ export const Home = () => {
     { id: 5, img: "/blog3.png", title: "Traditional vs. Wall-Mounted Bathroom Faucets: A Comparative Guide", desc: "Lorem ipsum, dolor sit"  },
   ];
 
-
   const swiperRefBlog = useRef(null);
   const handlePrevBlogSlide = () => {
     if (swiperRefBlog.current) {
@@ -61,7 +60,6 @@ export const Home = () => {
       swiperRefBlog.current.slideNext();
     }
   };
-
 
   //swiper category
   const [activeIndex, setActiveIndex] = useState(0);
@@ -166,7 +164,6 @@ export const Home = () => {
             <Link to="/collection/aurum" className="showMoreBtn">Show More <BsArrowRight className="right_arrow"/></Link>
           </button>
         </div>
-
         <div className="home_klassic">
           <div className="title-container">
             {/* <h2 className="klassic_heading">KLASSIC</h2> */}
@@ -188,7 +185,6 @@ export const Home = () => {
             <Link to="/collection/klassic" className="showMoreBtn">Show More <BsArrowRight className="right_arrow"/></Link>
           </button>
         </div>
-
       </div>
 
       <div className="first_banner desktop_view">          
