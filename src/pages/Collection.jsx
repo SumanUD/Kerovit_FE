@@ -72,7 +72,7 @@ export const Collection = () => {
                   <SwiperSlide key={product.id}>
                     
                     <div className="inside">
-                      <Link to={`/collection/${series}/${product.name.toLowerCase()}`} className="inside_contents">
+                      <Link to={`/collection/${series}/${product.name.split(" ").join('_').toLowerCase()}`} className="inside_contents">
                         <img src={product.img} alt={product.name} />
                         <div className="inside_text_content">
                           <h2>{product.name}</h2>
@@ -111,7 +111,7 @@ export const Collection = () => {
                   <div className="inside">
                   <h2>{product.name}</h2>
                   <p>{product.description}</p>
-                  <Link to={`/collection/${series}/${product.name.toLowerCase()}`}>
+                  <Link to={`/collection/${series}/${product.name.split(" ").join('_').toLowerCase()}`}>
                       <img src={product.img} alt={product.name} />
                   </Link>
 

@@ -42,11 +42,11 @@ export const ProductSingle = () => {
 
                 <div className="product-details">
                     <div className="description">
-                    <h2>{variation.toUpperCase()}</h2>
+                    <h2>{variation ? variation.toUpperCase() : product.toUpperCase()}</h2>
                     <p className="model">MODEL NO.: {id.split('_').join(' - ')}</p>
                     <p className="series">SERIES: {series.toUpperCase()}</p>
 
-                    <h3>Description</h3>
+                    <h3>Product Description</h3>
                     <p className="description_p">SINGLE LEVER BASIN MIXER WITHOUT POP-UP</p>
 
                     <h3>Variants</h3>

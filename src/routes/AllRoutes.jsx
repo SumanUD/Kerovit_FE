@@ -10,8 +10,9 @@ export const AllRoutes = () => {
       <Route path="/product/:cate" element={<Categories/>}/>
       <Route path="/collection/:series" element={<Collection/>}/>
       <Route path="/collection/:series/:product" element={<ProductListing/>}/>      
-      <Route path="/collection/:series/:product/:variation" element={<ProductVariationListing/>}/>
-      <Route path="/collection/:series/:product/:variation/:id" element={<ProductSingle/>}/>
+      <Route path="/collection/:series/:product/:variation" element={<ProductVariationListing/>}/>      
+      <Route path="/collection/:series/:product/single/:id" element={<ProductSingle/>}/>
+      <Route path="/collection/:series/:product/:variation/:id" element={<ProductSingle/>}/>      
       <Route path="/locate-our-store" element={<LocateOurStore/>}/>
       <Route path="/about" element={<About/>}/>
       <Route path="/career" element={<Career/>}/>

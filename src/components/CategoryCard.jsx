@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -47,7 +48,9 @@ export const CategoryCard = ({ aurumImages, klassicImages, categoryInfo }) => {
                     <div className="tab-content mt-3 img-content">
                         {(activeTab === "aurum" ? aurumImages : klassicImages).map((image, index) => (
                             <div key={index} className="slider-item">
-                                <img src={image} alt={`Slide ${index + 1}`} className="content-image" loading="lazy" />
+                                <Link to={activeTab == 'aurum' ? `/collection/aurum/${categoryInfo.name.split(" ").join('_').toLowerCase()}`: `/collection/klassic/${categoryInfo.name.split(" ").join('_').toLowerCase()}` }>
+                                    <img src={image} alt={`Slide ${index + 1}`} className="content-image" loading="lazy" />
+                                </Link>
                             </div>
                         ))}
                     </div>
