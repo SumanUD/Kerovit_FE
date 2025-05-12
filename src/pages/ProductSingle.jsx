@@ -43,12 +43,10 @@ export const ProductSingle = () => {
             if(variation){
                 const filterVariation = filterProduct.filter((obj) => obj.ranges.toLowerCase() == variation.split("_").join(" "));
                 const singleProd = filterVariation.find((obj) => obj.product_code == id)
-                setSingleProduct(singleProd)
-                console.log(singleProd)
+                setSingleProduct(singleProd)                
             }else{
                 const singleProd = filterProduct.find((obj) => obj.product_code == id)
-                setSingleProduct(singleProd)
-                console.log(singleProd)
+                setSingleProduct(singleProd)                
             }                        
         }).catch(err => {
             console.log(err)
