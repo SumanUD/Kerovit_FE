@@ -4,6 +4,7 @@ import minusIcon from "../../public/icons/minus.png";
 import 'react-inner-image-zoom/lib/styles.min.css';
 import InnerImageZoom from 'react-inner-image-zoom';
 import { useParams } from 'react-router-dom'
+import axios from "axios";
 
 const variants = [
     { sku: "KSR001-WH", image: "/product/1.jpg", alt: "White Variant" },
@@ -29,6 +30,31 @@ export const ProductSingle = () => {
         }, 1500);
     }, [])
 
+    const [singleProduct, setSingleProduct] = useState({})
+
+    const url = import.meta.env.VITE_API_URL;
+    const api = `${url}/products/json`; 
+    useEffect(()=>{
+        axios.get(api).then(res => {
+            const allProducts = res.data.products;      
+            const setSeries = series === "klassic" ? "kerovit" : "aurum";
+            const filterCollection = allProducts.filter((obj)=> obj.collection == setSeries)
+            const filterProduct = filterCollection.filter((obj)=> obj.category_name.toLowerCase() == product.split("_").join(" "))      
+            if(variation){
+                const filterVariation = filterProduct.filter((obj) => obj.ranges.toLowerCase() == variation.split("_").join(" "));
+                const singleProd = filterVariation.find((obj) => obj.product_code == id)
+                setSingleProduct(singleProd)
+                console.log(singleProd)
+            }else{
+                const singleProd = filterProduct.find((obj) => obj.product_code == id)
+                setSingleProduct(singleProd)
+                console.log(singleProd)
+            }                        
+        }).catch(err => {
+            console.log(err)
+        })        
+    }, [])
+
   return (
     <>
         {
@@ -42,12 +68,12 @@ export const ProductSingle = () => {
 
                 <div className="product-details">
                     <div className="description">
-                    <h2>{variation ? variation.toUpperCase() : product.toUpperCase()}</h2>
+                    <h2>{variation ? variation.split("_").join(" ").toUpperCase() : product.split("_").join(" ").toUpperCase()}</h2>
                     <p className="model">MODEL NO.: {id.split('_').join(' - ')}</p>
                     <p className="series">SERIES: {series.toUpperCase()}</p>
 
                     <h3>Product Description</h3>
-                    <p className="description_p">SINGLE LEVER BASIN MIXER WITHOUT POP-UP</p>
+                    <p className="description_p">{singleProduct.product_description}</p>
 
                     <h3>Variants</h3>
                     <div className="variants">
