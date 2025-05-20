@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from 'react-router-dom';
 import { Fragment } from "react";
-import axios from "axios";
+import axios, { all } from "axios";
+import dictionary from "../../data/api-dictionary";
 
 const initialProducts = [
   { id: 1, img: "/product/single_var1.png", name: "MODEL NO: ABCD1234" },
@@ -25,25 +26,46 @@ export const ProductVariationListing = () => {
   const [visibleCount, setVisibleCount] = useState(6);
   const [variationProduct, setVariationProduct] = useState([]);
 
-  const url = import.meta.env.VITE_API_URL;
-  const api = `${url}/products/json`;   
+  const url = import.meta.env.VITE_API_URL;  
+  const rangeUrl = import.meta.env.VITE_API_RANGE;       
   useEffect(()=>{
-    axios.get(api, {
-      headers: {
-        'Content-Type': 'application/json',
-      }
-    })
-    .then((res)=>{
-      const allProducts = res.data.products;      
-      const setSeries = series === "klassic" ? "kerovit" : "aurum";
-      const filterCollection = allProducts.filter((obj)=> obj.collection == setSeries)
-      const filterProduct = filterCollection.filter((obj)=> obj.category_name.toLowerCase() == product.split("_").join(" "))      
-      const filterVariation = filterProduct.filter((obj) => obj.ranges.toLowerCase() == variation.split("_").join(" "));            
+    // axios.get(url, { headers: {'Content-Type': 'application/json',} })
+    // .then((res)=>{
+    //   const allProducts = res.data.products;      
+    //   const setSeries = series === "klassic" ? "2" : "1";
+    //   const filterCollection = allProducts.filter((obj)=> obj.collection == setSeries)
+    //   const filterProduct = filterCollection.filter((obj)=> obj.category == dictionary.Category[product.split("_").join(" ")])      
+    //   const filterVariation = filterProduct.filter((obj) => obj.product_title.toLowerCase() == variation.split("_").join(" "));            
 
-      setVariationProduct(filterVariation);
-    }).catch((err) => {
-      console.log(err)
-    })
+    //   console.log(filterVariation, filterProduct)
+
+    //   setVariationProduct(filterVariation);
+    // }).catch((err) => {
+    //   console.log(err)
+    // })
+
+
+    const fetchData = async () => {
+      try{
+        const res1 = await axios.get(url, { headers: { 'Content-Type': 'application/json' } });
+        const res2 = await axios.get(rangeUrl, { headers: { 'Content-Type': 'application/json' } });
+
+        const allProducts = res1.data.products;      
+        const setSeries = series === "klassic" ? "2" : "1";
+        const filterCollection = allProducts.filter((obj)=> obj.collection == setSeries)
+        const filterProduct = filterCollection.filter((obj)=> obj.category == dictionary.Category[product.split("_").join(" ")])                         
+
+        const rangeId = res2.data.data.filter(obj => obj.name.toLowerCase() == variation.split("_").join(" "))   
+        const filterVariation = filterProduct.filter((obj) => obj.range == rangeId[0].id);      
+
+        setVariationProduct(filterVariation);
+
+      }catch(err){
+        console.log(err)
+      }
+    }
+
+    fetchData()
   },[])    
 
   const loadMoreProducts = () => {
@@ -58,7 +80,7 @@ export const ProductVariationListing = () => {
       setLoadSimulate(false)
     }, 1500);
   }, [])
-        
+          
 
   return (
     <main className={`allProductMain ${series == 'aurum' ? 'background-dark' : 'background-light'}`}>      
@@ -82,11 +104,11 @@ export const ProductVariationListing = () => {
             ))}
           </div>
 
-          {products.length < initialProducts.length + moreProducts.length && (
+          {/* {products.length < initialProducts.length + moreProducts.length && (
             <button className="load-more" onClick={loadMoreProducts}>
               Load More
             </button>
-          )}
+          )} */}
         </Fragment>: 
         <div className="productListing skeleton-load">
           <div className="loading-heading"></div>

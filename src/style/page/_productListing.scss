@@ -12,7 +12,9 @@ $active-color: yellow;
     padding-top: 80px;
     
     &.background-light{
-        background: linear-gradient(to bottom, $primary-bg 1%, $secondary-bg 18%, $tertiary-bg 100%);
+        background: linear-gradient(to bottom, $primary-bg 0px, $secondary-bg 150px, $tertiary-bg 100%);
+        // background: linear-gradient(to bottom, #888686 0px, #888686 25px, white 25px, white 100%);
+
 
         .prod_details h2{
             color: $grey !important;

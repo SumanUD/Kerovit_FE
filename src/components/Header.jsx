@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 import subMenuIcon from "../../public/icons/down.png"; // Import your submenu icon
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -22,6 +22,9 @@ export const Header = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const [openMenuList, setOpenMenuList] = useState(false);
+
+  const {pathname} = useLocation();
+  
 
   // Toggle menu open/close
   const toggleMenu = () => {
@@ -66,6 +69,16 @@ export const Header = () => {
     setOpenSearch(false);
     setSearchInput("");
   }
+
+  useEffect(()=>{
+    setIsOpen(false)
+    setOpenMenuList(false)
+
+    setActiveIndex(null)
+    // const [activeIndex, setActiveIndex] = useState(null);
+    // const [scrolled, setScrolled] = useState(false);    
+  }, [pathname])
+
 
   return (
     <div className="onlyNav">

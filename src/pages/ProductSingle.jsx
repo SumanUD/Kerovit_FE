@@ -33,25 +33,31 @@ export const ProductSingle = () => {
     const [singleProduct, setSingleProduct] = useState({})
 
     const url = import.meta.env.VITE_API_URL;
-    const api = `${url}/products/json`; 
+    // const api = `${url}/products/json`; 
     useEffect(()=>{
-        axios.get(api).then(res => {
+        axios.get(url).then(res => {
             const allProducts = res.data.products;      
-            const setSeries = series === "klassic" ? "kerovit" : "aurum";
-            const filterCollection = allProducts.filter((obj)=> obj.collection == setSeries)
-            const filterProduct = filterCollection.filter((obj)=> obj.category_name.toLowerCase() == product.split("_").join(" "))      
-            if(variation){
-                const filterVariation = filterProduct.filter((obj) => obj.ranges.toLowerCase() == variation.split("_").join(" "));
-                const singleProd = filterVariation.find((obj) => obj.product_code == id)
-                setSingleProduct(singleProd)                
-            }else{
-                const singleProd = filterProduct.find((obj) => obj.product_code == id)
-                setSingleProduct(singleProd)                
-            }                        
+            // const setSeries = series === "klassic" ? "2" : "1";
+            // const filterCollection = allProducts.filter((obj)=> obj.collection == setSeries)            
+            // const filterProduct = filterCollection.filter((obj)=> obj.category == dictionary.Category[product])      
+            // console.log(filterProduct)
+
+            const singleItem = allProducts.find((obj)=> obj.product_code == id);
+            setSingleProduct(singleItem)
+            console.log(singleItem)
+
+            // if(variation){
+            //     const filterVariation = filterProduct.filter((obj) => obj.ranges.toLowerCase() == variation.split("_").join(" "));
+            //     const singleProd = filterVariation.find((obj) => obj.product_code == id)
+            //     setSingleProduct(singleProd)                
+            // }else{
+            //     const singleProd = filterProduct.find((obj) => obj.product_code == id)
+            //     setSingleProduct(singleProd)                
+            // }                        
         }).catch(err => {
             console.log(err)
         })        
-    }, [])
+    }, [ ])
 
   return (
     <>

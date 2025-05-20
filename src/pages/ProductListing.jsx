@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { Fragment, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom';
+import dictionary from '../../data/api-dictionary';
 
 const initialProducts = [
     { id: 1, img: "/product/Collection  & Product pages-28.png", name: "Aenon" },
@@ -23,7 +24,7 @@ const moreProducts = [
 export const ProductListing = () => {
 
     const url = import.meta.env.VITE_API_URL;
-    const api = `${url}/products/json`;  
+    const rangeUrl = import.meta.env.VITE_API_RANGE;      
     
     const {product, series, variation} = useParams();    
 
@@ -38,39 +39,41 @@ export const ProductListing = () => {
     };
   
     const [loadSimulate, setLoadSimulate] = useState(true);
-    const setSeries = series === "klassic" ? "kerovit" : "aurum";
+    const setSeries = series === "klassic" ? "2" : "1";
     useEffect(()=>{
-    setTimeout(() => {
-        setLoadSimulate(false)
-    }, 1500);
+        setTimeout(() => {
+            setLoadSimulate(false)
+        }, 1500);
     }, [])
-
 
     const [nullRangeProducts, setNullProducts] = useState([]);
     const [uniqueRange, setRange] = useState([]);    
-    useEffect(()=>{
-    axios.get(api, {
-      headers: {
-        'Content-Type': 'application/json',
-      }
-    })
-    .then((res)=>{    
-      const allProducts = res.data.products;            
-      const filterCollection = allProducts.filter((obj)=> obj.collection == setSeries)
-      const filterProduct = filterCollection.filter((obj)=> obj.category_name.trim().toLowerCase() == product.split("_").join(" "))            
+    useEffect(()=>{    
+        const fetchData = async () => {
+            try {
+                const res1 = await axios.get(url, { headers: { 'Content-Type': 'application/json' } });
+                const res2 = await axios.get(rangeUrl, { headers: { 'Content-Type': 'application/json' } });
 
-      if(filterProduct[0].ranges == null){
-        setNullProducts(filterProduct)
-      }else{
-        const range = [...new Set(filterProduct.map(p => p.ranges))];        
-        setRange(range);
-      }            
-          
-    }).catch((err) => {
-      console.log(err)
-    })
-  },[])
-  
+                const allProducts = res1.data.products;            
+                const filterCollection = allProducts.filter((obj)=> obj.collection == setSeries)
+                const filterProduct = filterCollection.filter((obj)=> obj.category == dictionary.Category[product.split("_").join(" ")])                            
+                const rangeFilterCollection = res2.data.data.filter(obj => obj.collection.id == setSeries)                                                                       
+
+                if(rangeFilterCollection == 0){
+                    setNullProducts(filterProduct)
+                }else{
+                    const rangeFilterProduct = rangeFilterCollection.filter(obj => obj.category.id == dictionary.Category[product.split("_").join(" ")])
+                    const range = [...new Set(rangeFilterProduct.map(p => p.name))];        
+                    setRange(range);
+                }          
+
+            }catch(err){
+                console.log(err)
+            }
+        }
+
+        fetchData();
+    },[])
     
   return (
     <main className={`allProductMain ${series == 'aurum' ? 'background-dark' : 'background-light'}`}>    
@@ -112,11 +115,11 @@ export const ProductListing = () => {
                     }
                 </div>
 
-                {visibleCount < initialProducts.length + moreProducts.length && (
+                {/* {visibleCount < initialProducts.length + moreProducts.length && (
                     <button className="load-more" onClick={loadMoreProducts}>
                         Load More
                     </button>
-                )}
+                )} */}
             </Fragment> : 
             <div className="productListing skeleton-load">
                 <div className="loading-heading"></div>
