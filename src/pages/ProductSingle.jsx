@@ -24,11 +24,11 @@ export const ProductSingle = () => {
     };
 
     const [loadSimulate, setLoadSimulate] = useState(true);
-    useEffect(()=>{
-        setTimeout(() => {
-            setLoadSimulate(false)
-        }, 1500);
-    }, [])
+    // useEffect(()=>{
+    //     setTimeout(() => {
+    //         setLoadSimulate(false)
+    //     }, 1500);
+    // }, [])
 
     const [singleProduct, setSingleProduct] = useState({})
 
@@ -44,7 +44,7 @@ export const ProductSingle = () => {
 
             const singleItem = allProducts.find((obj)=> obj.product_code == id);
             setSingleProduct(singleItem)
-            console.log(singleItem)
+            setLoadSimulate(false)
 
             // if(variation){
             //     const filterVariation = filterProduct.filter((obj) => obj.ranges.toLowerCase() == variation.split("_").join(" "));
@@ -56,7 +56,7 @@ export const ProductSingle = () => {
             // }                        
         }).catch(err => {
             console.log(err)
-        })        
+        })
     }, [ ])
 
   return (

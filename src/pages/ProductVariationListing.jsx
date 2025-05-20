@@ -28,6 +28,7 @@ export const ProductVariationListing = () => {
 
   const url = import.meta.env.VITE_API_URL;  
   const rangeUrl = import.meta.env.VITE_API_RANGE;       
+  const [loadSimulate, setLoadSimulate] = useState(true);
   useEffect(()=>{
     // axios.get(url, { headers: {'Content-Type': 'application/json',} })
     // .then((res)=>{
@@ -58,11 +59,13 @@ export const ProductVariationListing = () => {
         const rangeId = res2.data.data.filter(obj => obj.name.toLowerCase() == variation.split("_").join(" "))   
         const filterVariation = filterProduct.filter((obj) => obj.range == rangeId[0].id);      
 
-        setVariationProduct(filterVariation);
-
+        setVariationProduct(filterVariation);        
       }catch(err){
         console.log(err)
+      }finally{        
+        setLoadSimulate(false)        
       }
+
     }
 
     fetchData()
@@ -72,14 +75,8 @@ export const ProductVariationListing = () => {
     const newProducts = moreProducts.slice(0, 6);
     setProducts((prev) => [...prev, ...newProducts]);
     setVisibleCount((prev) => prev + newProducts.length);
-  };
+  };  
 
-  const [loadSimulate, setLoadSimulate] = useState(true);
-  useEffect(()=>{
-    setTimeout(() => {
-      setLoadSimulate(false)
-    }, 1500);
-  }, [])
           
 
   return (

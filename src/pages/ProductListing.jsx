@@ -40,11 +40,7 @@ export const ProductListing = () => {
   
     const [loadSimulate, setLoadSimulate] = useState(true);
     const setSeries = series === "klassic" ? "2" : "1";
-    useEffect(()=>{
-        setTimeout(() => {
-            setLoadSimulate(false)
-        }, 1500);
-    }, [])
+
 
     const [nullRangeProducts, setNullProducts] = useState([]);
     const [uniqueRange, setRange] = useState([]);    
@@ -69,6 +65,8 @@ export const ProductListing = () => {
 
             }catch(err){
                 console.log(err)
+            }finally{
+                setLoadSimulate(false)                
             }
         }
 
