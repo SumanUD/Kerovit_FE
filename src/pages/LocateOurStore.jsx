@@ -92,6 +92,7 @@ export const LocateOurStore = () => {
         if(input.length == 0){
             setSearch(input)
             setSerarchError(" ")
+            setNewList([])
         }else{
             setSearch(input)
         }
