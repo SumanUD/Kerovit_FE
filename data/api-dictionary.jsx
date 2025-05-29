@@ -11,7 +11,7 @@ const dictionary = {
             "toilet": 3,
             "basin": 4,
             "accessories": 5,
-            "furniture": 6
+            "bathroom_furniture": 6
         },
         "klassic": {
             "faucet": 7,
@@ -19,7 +19,7 @@ const dictionary = {
             "toilet": 9,
             "basin": 10,
             "accessories": 11,
-            "furniture": 12
+            "bathroom_furniture": 12
         }
     },
     Range:{

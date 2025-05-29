@@ -48,8 +48,9 @@ export const ProductListing = () => {
             try {
                 const res1 = await axios.get(url, { headers: { 'Content-Type': 'application/json' } });                
                 const allProducts = res1.data.products;            
-                const filterCollection = allProducts.filter((obj)=> obj.collection == setSeries)                
-                const filterProduct = filterCollection.filter((obj)=> obj.category == dictionary.Category[series][product])                                                                                        
+                const filterCollection = allProducts.filter((obj)=> obj.collection == setSeries)                                    
+                
+                const filterProduct = filterCollection.filter((obj)=> obj.category == dictionary.Category[series][product])                                                                       
                 
                 const newRange = [...new Map(filterProduct.map(item => [item.range, item])).values()];
 
@@ -67,7 +68,7 @@ export const ProductListing = () => {
         }
 
         fetchData();
-    },[])    
+    },[])        
 
   return (
     <main className={`allProductMain ${series == 'aurum' ? 'background-dark' : 'background-light'}`}>    

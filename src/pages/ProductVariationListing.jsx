@@ -51,9 +51,7 @@ export const ProductVariationListing = () => {
         
         const range = getKeyByValue(variation)
                    
-        const filterVariation = filterProduct.filter((obj) => obj.range == range);      
-
-        console.log(filterVariation)
+        const filterVariation = filterProduct.filter((obj) => obj.range == range);              
 
         setVariationProduct(filterVariation);        
       }catch(err){
