@@ -17,7 +17,7 @@ export const Collection = () => {
   const [collData, setCollData] = useState([])
   useEffect(()=>{    
     const data = CollectionData.filter(ojb => ojb.page == series)
-    setCollData(data[0].products)    
+    setCollData(data[0].products)      
   },[series])
   
   const swiperRef = useRef(null);

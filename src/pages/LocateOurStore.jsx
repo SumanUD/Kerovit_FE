@@ -241,23 +241,32 @@ export const LocateOurStore = () => {
                             </div>
                         </div> : 
                         <div className="location-list">                        
-                            <StoreCard
-                                storeHeader="/locate-our-store/store1Header.png"
-                                storeImage="/locate-our-store/store1.png"
-                                location={worldType}                            
-                            />
+                            {
+                                worldType.length > 0 && 
+                                <StoreCard
+                                    storeHeader="/locate-our-store/store1Header.png"
+                                    storeImage="/locate-our-store/store1.png"
+                                    location={worldType}                            
+                                />
+                            }
 
-                            <StoreCard
-                                storeHeader="/locate-our-store/store2Header.png"
-                                storeImage="/locate-our-store/store2.png"
-                                location={studioType}
-                            />
+                            {
+                                studioType.length > 0 && 
+                                <StoreCard
+                                    storeHeader="/locate-our-store/store2Header.png"
+                                    storeImage="/locate-our-store/store2.png"
+                                    location={studioType}
+                                />
+                            }
 
-                            <StoreCard
-                                storeHeader="/locate-our-store/store3Header.png"
-                                storeImage="/locate-our-store/store3.png"
-                                location={experienceType}
-                            />
+                            {
+                                experienceType.length > 0 &&
+                                <StoreCard
+                                    storeHeader="/locate-our-store/store3Header.png"
+                                    storeImage="/locate-our-store/store3.png"
+                                    location={experienceType}
+                                />
+                            }
                         </div>                    
                     }
                 </div>

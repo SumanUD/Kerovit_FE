@@ -45,15 +45,9 @@ export const ProductSingle = () => {
             const singleItem = allProducts.find((obj)=> obj.product_code == id);
             setSingleProduct(singleItem)
             setLoadSimulate(false)
-
-            // if(variation){
-            //     const filterVariation = filterProduct.filter((obj) => obj.ranges.toLowerCase() == variation.split("_").join(" "));
-            //     const singleProd = filterVariation.find((obj) => obj.product_code == id)
-            //     setSingleProduct(singleProd)                
-            // }else{
-            //     const singleProd = filterProduct.find((obj) => obj.product_code == id)
-            //     setSingleProduct(singleProd)                
-            // }                        
+            
+            console.log(singleItem)
+            
         }).catch(err => {
             console.log(err)
         })
@@ -79,7 +73,7 @@ export const ProductSingle = () => {
                     <h3>Product Description</h3>
                     <p className="description_p">{singleProduct.product_description}</p>
 
-                    <h3>Variants</h3>
+                    {/* <h3>Variants</h3>
                     <div className="variants">
                         {variants.map((variant, index) => (
                         <img
@@ -90,7 +84,7 @@ export const ProductSingle = () => {
                             onClick={() => setSelectedImage(variant.image)}
                         />
                         ))}
-                    </div>
+                    </div> */}
 
                     <button className="nearest-showroom-btn">NEAREST SHOWROOM</button>
                     </div>

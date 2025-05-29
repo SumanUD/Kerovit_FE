@@ -26,7 +26,7 @@ export const ProductListing = () => {
     const url = import.meta.env.VITE_API_URL;
     const rangeUrl = import.meta.env.VITE_API_RANGE;      
     
-    const {product, series, variation} = useParams();    
+    const {product, series} = useParams();    
 
     const [products, setProducts] = useState(initialProducts.slice(0, 4)); // Show first 4 initially
     const [visibleCount, setVisibleCount] = useState(4); // Start with 4 products  
@@ -41,26 +41,22 @@ export const ProductListing = () => {
     const [loadSimulate, setLoadSimulate] = useState(true);
     const setSeries = series === "klassic" ? "2" : "1";
 
-
     const [nullRangeProducts, setNullProducts] = useState([]);
     const [uniqueRange, setRange] = useState([]);    
     useEffect(()=>{    
         const fetchData = async () => {
             try {
-                const res1 = await axios.get(url, { headers: { 'Content-Type': 'application/json' } });
-                const res2 = await axios.get(rangeUrl, { headers: { 'Content-Type': 'application/json' } });
-
+                const res1 = await axios.get(url, { headers: { 'Content-Type': 'application/json' } });                
                 const allProducts = res1.data.products;            
-                const filterCollection = allProducts.filter((obj)=> obj.collection == setSeries)
-                const filterProduct = filterCollection.filter((obj)=> obj.category == dictionary.Category[product.split("_").join(" ")])                            
-                const rangeFilterCollection = res2.data.data.filter(obj => obj.collection.id == setSeries)                                                                       
+                const filterCollection = allProducts.filter((obj)=> obj.collection == setSeries)                
+                const filterProduct = filterCollection.filter((obj)=> obj.category == dictionary.Category[series][product])                                                                                        
+                
+                const newRange = [...new Map(filterProduct.map(item => [item.range, item])).values()];
 
-                if(rangeFilterCollection == 0){
+                if(newRange == 0){
                     setNullProducts(filterProduct)
-                }else{
-                    const rangeFilterProduct = rangeFilterCollection.filter(obj => obj.category.id == dictionary.Category[product.split("_").join(" ")])
-                    const range = [...new Set(rangeFilterProduct.map(p => p.name))];        
-                    setRange(range);
+                }else{                           
+                    setRange(newRange);
                 }          
 
             }catch(err){
@@ -71,8 +67,8 @@ export const ProductListing = () => {
         }
 
         fetchData();
-    },[])
-    
+    },[])    
+
   return (
     <main className={`allProductMain ${series == 'aurum' ? 'background-dark' : 'background-light'}`}>    
         {
@@ -103,10 +99,10 @@ export const ProductListing = () => {
                         </Fragment> : <Fragment>
                             {uniqueRange.map((item, index) => (
                                 <div key={index} className="product_card">
-                                    <Link to={`/collection/${series}/${product}/${item.split(' ').join('_').toLowerCase()}`}>
+                                    <Link to={`/collection/${series}/${product}/${dictionary.Range[item.range]}`}>
                                         <img src="/product/Collection  & Product pages-28.png" alt="image" />
                                     </Link>
-                                    <p>{item}</p>
+                                    <p>{dictionary.Range[item.range].split("_").join(" ")}</p>
                                 </div>
                             ))}
                         </Fragment>

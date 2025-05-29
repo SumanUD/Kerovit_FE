@@ -32,10 +32,10 @@ const StoreCard = ({
                     className="location_swiper"
                     spaceBetween={10}
                     loop={true}
-                    autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    }}
+                    // autoplay={{
+                    //     delay: 2500,
+                    //     disableOnInteraction: false,
+                    // }}
                     modules={[Autoplay]}                    
                 >
                     {

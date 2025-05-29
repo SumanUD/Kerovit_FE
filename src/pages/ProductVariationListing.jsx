@@ -19,6 +19,15 @@ const moreProducts = [
   { id: 12, img: "/product/single_var.png", name: "MODEL NO: ABCD1234 12" },
 ];
 
+function getKeyByValue(value) {
+  for (const key in dictionary.Range) {
+    if (dictionary.Range[key] === value) {
+        return parseInt(key); // Convert the key to a number since object keys are strings
+    }
+  }
+  return null; // Return null if the value is not found
+}
+
 export const ProductVariationListing = () => {
 
   const {series, product, variation} = useParams();
@@ -30,22 +39,6 @@ export const ProductVariationListing = () => {
   const rangeUrl = import.meta.env.VITE_API_RANGE;       
   const [loadSimulate, setLoadSimulate] = useState(true);
   useEffect(()=>{
-    // axios.get(url, { headers: {'Content-Type': 'application/json',} })
-    // .then((res)=>{
-    //   const allProducts = res.data.products;      
-    //   const setSeries = series === "klassic" ? "2" : "1";
-    //   const filterCollection = allProducts.filter((obj)=> obj.collection == setSeries)
-    //   const filterProduct = filterCollection.filter((obj)=> obj.category == dictionary.Category[product.split("_").join(" ")])      
-    //   const filterVariation = filterProduct.filter((obj) => obj.product_title.toLowerCase() == variation.split("_").join(" "));            
-
-    //   console.log(filterVariation, filterProduct)
-
-    //   setVariationProduct(filterVariation);
-    // }).catch((err) => {
-    //   console.log(err)
-    // })
-
-
     const fetchData = async () => {
       try{
         const res1 = await axios.get(url, { headers: { 'Content-Type': 'application/json' } });
@@ -54,10 +47,13 @@ export const ProductVariationListing = () => {
         const allProducts = res1.data.products;      
         const setSeries = series === "klassic" ? "2" : "1";
         const filterCollection = allProducts.filter((obj)=> obj.collection == setSeries)
-        const filterProduct = filterCollection.filter((obj)=> obj.category == dictionary.Category[product.split("_").join(" ")])                         
+        const filterProduct = filterCollection.filter((obj)=> obj.category == dictionary.Category[series][product])                         
+        
+        const range = getKeyByValue(variation)
+                   
+        const filterVariation = filterProduct.filter((obj) => obj.range == range);      
 
-        const rangeId = res2.data.data.filter(obj => obj.name.toLowerCase() == variation.split("_").join(" "))   
-        const filterVariation = filterProduct.filter((obj) => obj.range == rangeId[0].id);      
+        console.log(filterVariation)
 
         setVariationProduct(filterVariation);        
       }catch(err){
