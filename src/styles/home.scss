@@ -284,6 +284,7 @@ $text-color: #757575;
         object-fit: cover;
         // border-radius: 8px; // Rounded corners
         transition: all 0.3s ease-in-out; 
+                filter: grayscale(1);
       }
 
       p {
@@ -297,6 +298,8 @@ $text-color: #757575;
       &:hover{
         img{
           scale: 1.05;
+                filter: grayscale(0);
+
         }
       }
     }
