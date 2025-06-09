@@ -1,16 +1,10 @@
 import { useState } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import "../styles/about.scss";
 import { FaWhatsapp } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay,  Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { BsArrowRight } from "react-icons/bs";
-import {BsArrowLeft} from "react-icons/bs";
-import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
 import { FaChevronRight } from "react-icons/fa";
 import { FaChevronLeft } from "react-icons/fa";
@@ -25,7 +19,6 @@ const manufPlant = [
 ];
 const numberOfSlides = manufPlant.length > 4 ? 4 : manufPlant.length;
 
-
 const certificates = [
   { id: 1, img: "aboutus/certificate1.png" },
   { id: 2, img: "aboutus/certificate2.png" },
@@ -37,7 +30,7 @@ const certificates = [
   { id: 8, img: "aboutus/certificate4.png" },
 ]
 
-const About = () => {
+export const About = () => {
   const [swiperInstance, setSwiperInstance] = useState(null);
   const [swiperCertificateInstance, setSwiperCertificateInstance] = useState(null);
 
@@ -62,9 +55,7 @@ const About = () => {
 
 
   return (
-    <main className="aboutus_main">
-      <Navbar />
-
+    <main className="aboutus_main">      
       <div className="homebanner">
         <div className="bannerText">
           <div className="banner-title-center">
@@ -226,11 +217,7 @@ const About = () => {
             <button type="button" className="swipeButton" onClick={handlePrevCertificateSlide}><FaChevronLeft className="right_arrow" /></button>
           </div>
         </div>
-      </div>
-
-      <Footer />
+      </div>      
     </main>
   );
 };
-
-export default About;

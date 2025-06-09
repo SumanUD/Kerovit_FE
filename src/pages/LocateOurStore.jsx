@@ -1,50 +1,145 @@
-import Navbar from "../components/Navbar";
-// import Header from "../components/Header";
-import Footer from "../components/Footer"
-import { FaWhatsapp } from "react-icons/fa";
-import "../styles/LocateOurStore.scss";
-import StoreCard from "../components/storeCard";
 import { FaSearch } from "react-icons/fa";
+import StoreCard from "../components/StoreCard";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-const LocateOurStore = () => {
+import { MdLocationPin } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
+
+export const LocateOurStore = () => {
+
+    const [allType, setAllType] = useState();
+    const [studioType, setStudioType] = useState([])
+    const [worldType, setWorldType] = useState([]);
+    const [experienceType, setExperienceType] = useState([])
+
+    const [search, setSearch] = useState('') 
+    const [state, setState] = useState([])
+    const [city, setCity] = useState([])
+
+    const [selectedState, setSelectedState] = useState("");
+    const [selectedCity, setSelectedCity] = useState("");
+    const [newList, setNewList] = useState([])
+    const [message, setMessage] = useState('');
+    const [searchErrorm, setSerarchError] = useState("");
+
+    const storeUrl = import.meta.env.VITE_API_STORE;
+    useEffect(()=>{
+        const fetchData = async () => {
+            try{
+                const res = await axios.get(storeUrl)                
+                const theData = res.data.data;                
+                const studio = theData.filter((obj)=> obj.dealertype == 'Studio');
+                const world = theData.filter((obj)=> obj.dealertype == "KerovitWorld")
+                const experience = theData.filter((obj)=> obj.dealertype == "Experience Center")
+
+                const onlystate = [...new Set(theData.map(obj => obj.state))];                
+                setState(onlystate.sort())
+                
+                setAllType(theData)
+                setStudioType(studio);
+                setWorldType(world);
+                setExperienceType(experience);                
+
+            }catch(err){
+                console.log(err)
+            }
+        }
+
+        fetchData();
+    }, [])   
+        
+
+    function filterState(state){
+        return allType.filter(obj => obj.state == state)        
+    }
+
+    const handleFindCities = async (state) =>{
+        setSelectedState(state);
+        const newData = filterState(state);
+        const cityFilter = [...new Set(newData.map(obj => obj.city))];     
+        setCity(cityFilter.sort())                  
+
+        setNewList([])        
+    }
+
+    const handleSubmitSearch = () =>{             
+
+        const findCities = filterState(selectedState)
+        const filterCitie = findCities.filter(obj => obj.city == selectedCity)    
+        
+        if(selectedState){
+            setNewList(filterCitie);
+        }else{
+            const searchWord = allType.filter(obj => obj.dealername?.toLowerCase().includes(search.toLowerCase()))            
+            setNewList(searchWord)
+
+            if(searchWord.length == 0){
+                setSerarchError('*Not Found*')                
+            }
+        }
+
+        if(!selectedState){
+            setMessage(`Showing result for "${search}"`)
+        }else if(selectedState && search){
+            setMessage(`Showing result for "${search}" in ${selectedState}, ${selectedCity}`)
+        }else{
+            setMessage(`${selectedState}, ${selectedCity}`)
+        }        
+    }
+
+    const handleSearchInput = (input) => {
+        if(input.length == 0){
+            setSearch(input)
+            setSerarchError(" ")
+            setNewList([])
+        }else{
+            setSearch(input)
+        }
+    }
+
     return (
-        <>
-            <Navbar />
+        <>            
             <main className="store">
                 <div className="banner">
                     <div className="bannerText">
                         <h2>locate</h2>
                         <h1 className="h2second">our store</h1>
                     </div>
-                    <div className="whatsapp-icon">
-                        <FaWhatsapp  />
-                    </div>
 
                     <div className="store-locator-box">
-  <div className="search-bar">
-    <input type="text" placeholder="Stores near me" />
-    <button className="search-btn">
-      <FaSearch />
-    </button>
-  </div>
+                        <div className="search-bar">
+                            <input type="text" placeholder="Stores near me" onChange={(e)=>handleSearchInput(e.target.value)}  value={search || ""}/>
+                            <button className="search-btn">
+                            <div className="search-error">
+                                {searchErrorm}    
+                            </div>            
+                            <FaSearch />
+                            </button>                                                                                                
+                        </div>                                                
 
-  <hr className="divider" />
+                        <hr className="divider" />
 
-  <select className="dropdown">
-    <option>Select State</option>
-    <option>California</option>
-    <option>Texas</option>
-  </select>
+                        <select className="dropdown" onChange={(e)=> handleFindCities(e.target.value)} value={selectedState}>
+                            <option value={""}>-- Select State --</option>
+                            {
+                                state.map((item, index)=>(
+                                    <option value={item} key={index}>{item}</option>
+                                ))
+                            }
+                        </select>
 
-  <select className="dropdown">
-    <option>Select City</option>
-    <option>Los Angeles</option>
-    <option>Houston</option>
-  </select>
+                        <select className="dropdown" onChange={(e)=> setSelectedCity(e.target.value)} value={selectedCity}>
+                            <option>-- Select City --</option>
+                            {
+                                city.map((item, index)=>(
+                                    <option value={item} key={index}>{item}</option>
+                                ))
+                            }
+                        </select>
 
-  <button className="submit-btn">Submit</button>
-</div>
-               
+                        <button className="submit-btn" onClick={handleSubmitSearch}>Submit</button>
+                    </div>                    
                 </div>
 
                 <div className="store-main-contents">
@@ -121,47 +216,62 @@ const LocateOurStore = () => {
                         </form>
                     </div>
 
-                    <div className="location-list">                        
+                    {
+                        newList.length > 0  ? 
+                        <div className="all-location-list">
+                            <h3 className="heading">{message}</h3>
+                            <div className="grid-items">
+                                {
+                                newList.map((item, index)=>(
+                                    <div key={index} className="card">
+                                        <p className="name">{item.dealername}</p>
+                                        <p className="person">{item.contactperson}</p>
+                                        {/* <p>{item.dealertype}</p> */}
+                                        <p><MdLocationPin /> {item.address}</p>
+                                        <p><FaPhoneAlt /> {item.contactnumber}</p>                                        
+                                        {
+                                            item.google_link != "" &&
+                                            <a href={item?.google_link}>
+                                                <div className="direction-btn">Get Direction <img src="/public/locate-our-store/arrow-top-right.png" alt="icon" className="arrow-top-right"/></div>
+                                            </a>
+                                        }
+                                    </div>
+                                ))
+                            }
+                            </div>
+                        </div> : 
+                        <div className="location-list">                        
+                            {
+                                worldType.length > 0 && 
+                                <StoreCard
+                                    storeHeader="/locate-our-store/store1Header.png"
+                                    storeImage="/locate-our-store/store1.png"
+                                    location={worldType}                            
+                                />
+                            }
 
-                        <StoreCard
-                            storeHeader="/locate-our-store/store1Header.png"
-                            storeImage="/locate-our-store/store1.png"
-                            description="Find the finest collection of tiles and sanitary essentials."
-                            storeName="Yash Tiles & Sanitary House"
-                            ownerName="Mr. Atul"
-                            storeDetails="Located in the heart of Delhi, offering a wide range of home improvement products."
-                            storePhone="9810433444"
-                            directionUrl="https://www.google.com/maps/dir/?api=1&destination=28.6139,77.2090"
-                        />
+                            {
+                                studioType.length > 0 && 
+                                <StoreCard
+                                    storeHeader="/locate-our-store/store2Header.png"
+                                    storeImage="/locate-our-store/store2.png"
+                                    location={studioType}
+                                />
+                            }
 
-                        <StoreCard
-                            storeHeader="/locate-our-store/store2Header.png"
-                            storeImage="/locate-our-store/store2.png"
-                            description="Find the finest collection of tiles and sanitary essentials."
-                            storeName="Mangal Traders"
-                            ownerName="Mr. Satish"
-                            storeDetails="Located in the heart of Delhi, offering a wide range of home improvement products."
-                            storePhone="9810433444"
-                            directionUrl="https://www.google.com/maps/dir/?api=1&destination=28.6139,77.2090"
-                        />
-
-                        <StoreCard
-                            storeHeader="/locate-our-store/store3Header.png"
-                            storeImage="/locate-our-store/store3.png"
-                            description="Find the finest collection of tiles and sanitary essentials."
-                            storeName="Creative Paints & Hardware"
-                            ownerName="Mr. Wasim"
-                            storeDetails="Located in the heart of Delhi, offering a wide range of home improvement products."
-                            storePhone="9810433444"
-                            directionUrl="https://www.google.com/maps/dir/?api=1&destination=28.6139,77.2090"
-                        />
-                    </div>
+                            {
+                                experienceType.length > 0 &&
+                                <StoreCard
+                                    storeHeader="/locate-our-store/store3Header.png"
+                                    storeImage="/locate-our-store/store3.png"
+                                    location={experienceType}
+                                />
+                            }
+                        </div>                    
+                    }
                 </div>
 
-            </main>
-            <Footer />
+            </main>            
         </>
     );
-};
-
-export default LocateOurStore;
+}
