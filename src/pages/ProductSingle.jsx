@@ -46,7 +46,7 @@ export const ProductSingle = () => {
             setSingleProduct(singleItem)
             setLoadSimulate(false)
             
-            console.log(singleItem)
+            setSelectedImage("https://demosite.kerovit.com/storage/AllImages/"+singleItem.thumbnail_picture_url.split('/storage/')[1]+".png")            
             
         }).catch(err => {
             console.log(err)

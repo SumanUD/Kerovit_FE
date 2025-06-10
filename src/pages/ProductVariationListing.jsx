@@ -87,7 +87,7 @@ export const ProductVariationListing = () => {
             {variationProduct && variationProduct.map((item, index) => (
               <div className="product_card" key={index}>
                 <Link to={`/collection/${series}/${product}/${variation}/${item.product_code}`} >
-                  <img src="/product/single_var1.png" alt="image" />
+                  <img src={"https://demosite.kerovit.com/storage/AllImages/"+item.thumbnail_picture_url.split('/storage/')[1]+".png"} alt="image" />
                   <p>{item.product_code}</p>
                 </Link>
               </div>

@@ -18,10 +18,10 @@ function App() {
   return (
     <>
       <Header/>
-      <AllRoutes/>
-      <div className="whatsapp-icon">
-        <FaWhatsapp />
-      </div>
+        <AllRoutes/>
+        <div className="whatsapp-icon">
+          <FaWhatsapp />
+        </div>
       <Footer/>
     </>
   )
