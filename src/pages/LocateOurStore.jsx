@@ -1,5 +1,5 @@
 import { FaSearch } from "react-icons/fa";
-import StoreCard from "../components/StoreCard";
+import StoreCard from "../components/storeCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
 

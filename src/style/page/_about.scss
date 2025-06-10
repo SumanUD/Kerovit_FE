@@ -10,8 +10,16 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding: 3rem;
+        // padding: 3rem;
         position: relative;
+
+        .aboutus_video{
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
 
         .whatsapp-icon {
             position: fixed;
@@ -526,7 +534,7 @@
     @media (min-width :750px){
         .homebanner{
             position: relative;
-            height:clamp(500px, 100vh, 550px); 
+            height:clamp(500px, 100vh, 700px); 
             
             h2{
                 font-size: clamp(2rem, 3vw, 3rem);
