@@ -21,15 +21,15 @@ $text-color: #757575;
   }
 
   .homebanner {
-    background-image: url("/new/banner.png");    
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;    
-    // background-attachment: fixed;
-    height: 65dvh;
-    width: 100%;
-    padding: 3rem 2rem;
+    height: 75dvh;
+    width: 100%;    
     position: relative;
+
+    video{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
 
     .disable_button{
       display: none;
@@ -73,6 +73,7 @@ $text-color: #757575;
       left: 50%;
       transform: translate(-50%, 0);
       font-family: 'Sinkin Sans 500 Medium', sans-serif;
+      mix-blend-mode: difference;
 
       .center-heading{
         display: flex;
@@ -127,10 +128,7 @@ $text-color: #757575;
 
   @media screen and (min-width: 1024px) {
     .homebanner {      
-      height: clamp(800px, 100vh, 1000px);
-      padding: 4rem 6rem;
-      background-size: cover;
-      background-position: center;
+      height: clamp(800px, 100vh, 1000px);            
       display: flex;
       justify-content: center;
       align-items: center;
@@ -278,7 +276,7 @@ $text-color: #757575;
     .inside {
       text-align: center;
       width: 100%;
-    
+  
       img {
         // width: 160px;
         width: 100%;
@@ -400,10 +398,14 @@ $text-color: #757575;
       .categories-slide{
         display: flex;
         column-gap: 40px;
-        align-items: flex-end;        
+        // align-items: flex-end;        
 
         .category-option{
           min-width: 280px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: stretch;    
           .heading{
             margin-bottom: 10px;
             font-size: 20px;
@@ -456,11 +458,19 @@ $text-color: #757575;
         align-items: center;
       }
   
-      .inside {
+      .inside {        
         position: relative;
         overflow: hidden;
         height: clamp(500px, 60vh, 700px);
         width: 100%;
+        .background-layer{
+          position: absolute;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          background: #000000;
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0.7) 80%);
+        }
         .pop-on-hover{
           position: absolute;
           bottom: 5%;
@@ -943,7 +953,7 @@ $text-color: #757575;
     }
   }
 
-  .first_banner {
+  .first_banner {    
     margin-top: 120px;    
     background-size: 100% 100%;
     width: 100%;
@@ -951,12 +961,11 @@ $text-color: #757575;
     background-repeat: no-repeat;
     position: relative; // Ensures absolute positioning inside works
 
-    .inside_banner_content {
+    .inside_banner_content {      
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      width: 100vw;
+      justify-content: center;            
 
       h2 {
         text-transform: uppercase;
@@ -980,31 +989,13 @@ $text-color: #757575;
 
     .inside_banner_image{
       position: relative;
-      height: clamp(500px , 100vh, 580px);
+      height: clamp(500px , 100vh, 600px);
       padding:.5rem 2rem;
       img{
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: 50% 25%;
-      }
-
-      .locate {
-        position: absolute;
-        bottom: 15%;
-        left: 50%;
-        transform: translate(-50%, 0);
-        text-transform: uppercase;
-        background-color: transparent;
-        color: #fff;
-        border: 2px solid #fff;
-        width: 220px;
-        padding: 6px 12px;
-        cursor: pointer;
-        height: fit-content;
-        font-family: "Sinkin Sans 300 Light", sans-serif;
-        font-size: 14px;
-        font-weight: 600;
+        object-position: -100px 50%;        
       }
     }
   }
@@ -1014,24 +1005,46 @@ $text-color: #757575;
       margin: 140px 0 40px;
       height: fit-content;
       background-size: 100% 100%;
+      overflow: hidden;
   
-      .inside_banner_content {
-        width: 100vw;
+      .inside_banner_content {        
+        position: absolute;
+        top: 50%;
+        right: 30%;
+        z-index: 10;
+        width: 500px;
+        transform: translate(50%, -50%);  
   
         h2 {
           font-size: 28px;
           margin-bottom: 28px;
+          color: white;
         }
   
         p {
           font-size: 14px;
           line-height: 1.8;          
+          color: #a4a4a4;
         }
   
-        .locate {
-          width: 160px;
-          height: 38px;
-          font-size: 12px;
+        // .locate {
+        //   width: 160px;
+        //   height: 38px;
+        //   font-size: 12px;
+        // }
+        .locate {  
+          margin-top: 25px;      
+          text-transform: uppercase;
+          background-color: rgba(225,225,225, .2);
+          color: #fff;
+          border: .2px solid #fff;
+          width: 220px;
+          padding: 6px 12px;
+          cursor: pointer;
+          height: fit-content;
+          font-family: "Sinkin Sans 300 Light", sans-serif;
+          font-size: 14px;
+          font-weight: 600;
         }
       }
     }
@@ -1275,7 +1288,16 @@ $text-color: #757575;
     height: 55vh;
     background-repeat: no-repeat;
     position: relative; // Ensures absolute positioning inside works
-
+          
+    video{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      filter: brightness(.7);
+    }
     .inside_banner_content {
       position: absolute;
       top: 26%;
@@ -1301,7 +1323,8 @@ $text-color: #757575;
 
       .read_more {
         text-transform: uppercase;
-        background-color: #00000054;
+        // background-color: #00000054;
+        background-color: rgba(225,225,225,.2);
         color: #fff;
         border: 0.5px solid #fff;
         width: 104px;
@@ -1320,8 +1343,18 @@ $text-color: #757575;
       height: 600px;
       background-size: cover;
       background-position: center;
-  
+      position: relative;
+      video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        filter: brightness(.7);
+      }
       .inside_banner_content {
+        // mix-blend-mode: difference;
         top: 50%;
         left: 50%;        
         transform: translate(-50%, -50%);        
@@ -1364,8 +1397,8 @@ $text-color: #757575;
 
     .inside_banner_content {
       position: absolute;
-      top: 26%;
-      left: 45%;
+      top: 50%;
+      left: 50%;
       transform: translate(-50%, -50%);
       text-align: left;
       width: 92%;
@@ -1387,7 +1420,8 @@ $text-color: #757575;
 
       .read_more {
         text-transform: uppercase;
-        background-color: #00000054;
+        // background-color: #00000054;
+        background-color: rgba(225,225,225,.2);
         color: #fff;
         border: 0.5px solid #fff;
         width: 104px;

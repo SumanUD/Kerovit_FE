@@ -8,7 +8,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
 
-import firstBannerImg from "../../public/home_banner1.png"
+import firstBannerImg from "../../public/home page-05.png"
 
 import cat1 from "../../public/catelogue1.png"
 import cat2 from "../../public/catelogue2.png"
@@ -73,6 +73,7 @@ export const Home = () => {
   return (
     <main className="home">
       <div className="homebanner">
+        <video src="/videos/Home page Video.mp4" autoPlay loop muted></video>
         <div className="bannerText">
           <div className="center-heading">
             <h2>bathrooms</h2>           
@@ -119,6 +120,7 @@ export const Home = () => {
               <SwiperSlide key={product.id}>
                 <div className="inside text-center">
                   <Link to={product.link}><img src={product.img} alt={product.name} loading="lazy"/></Link>
+                  <div className="background-layer"></div>
                   <div className="pop-on-hover">
                     <p>{product.name}</p>
                     <Link to={product.link}>
@@ -191,10 +193,10 @@ export const Home = () => {
         <div className="inside_banner_content">
           <h2>world of kerovit</h2>
           <p>Featuring great strength, durability, and a higher-quality finish, Kerovit today stands as a definitive expression of modern lifestyles, exquisitely designed to match the desires of the new India.</p>            
+          <Link to="/locate-our-store"><button className="locate">locate a store</button></Link>
         </div>
         <div className="inside_banner_image">
-          <img src={firstBannerImg} alt="" className="inside_banner_img" loading="lazy"/>
-          <Link to="/locate-our-store"><button className="locate">locate a store</button></Link>
+          <img src={firstBannerImg} alt="" className="inside_banner_img" loading="lazy"/>          
         </div>
       </div>
       <div className="first_banner mobile_view">
@@ -234,9 +236,10 @@ export const Home = () => {
       </div>
 
       <div className="home_aboutus desktop_view">
+        <video src="/videos/avoutus.mp4" muted loop autoPlay></video>
         <div className="inside_banner_content">
-          {/* <h2>about us</h2> */}
-          <img src="aboutus_heading.png" alt="" className="aboutus_heading" loading="lazy"/>
+          {/* <h2>about us</h2> */}          
+          <img src="aboutus_heading.png" alt="" className="aboutus_heading" loading="lazy"/>                    
           <p>Kerovit, a distinguished brand from the house of Kajaria, was introduced to transform modern bathroom spaces by creating value that exceeds customers' expectations.</p>
           <Link to="/about">
             <button className="read_more">
@@ -247,6 +250,7 @@ export const Home = () => {
       </div>
 
       <div className="home_aboutus mobile_view">
+        <video src="/videos/avoutus.mp4" muted loop autoPlay></video>
         <div className="inside_banner_content">
           {/* <h2>about us</h2> */}
           <img src="aboutus_heading.png" alt="" className="aboutus_heading" loading="lazy"/>
