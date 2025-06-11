@@ -58,7 +58,7 @@ export const About = () => {
     <main className="aboutus_main">      
       <div className="homebanner">
         <video className="aboutus_video" src="/videos/Plant video_12 mp4.mp4" autoPlay loop muted/>
-        <div className="bannerText">
+        {/* <div className="bannerText">
           <div className="banner-title-center">
             <h2>bathrooms</h2>
             <span className="h2_second">
@@ -71,7 +71,7 @@ export const About = () => {
               Kerovit's distinguished range of products encircle your soul into a sensational experience. made with utmost precision, we bring wellness into your home with great style and panache.
             </p>
           </div>
-        </div>
+        </div> */}
         <div className="whatsapp-icon">
           <FaWhatsapp  />
         </div>        
@@ -124,7 +124,7 @@ export const About = () => {
         </div>
 
         <div className="directorMessage">
-          <img src="/aboutus/director.png" alt="" />
+          <img src="/aboutus/director3.jpg" alt="" />
           <div className="belowImageContent">
             <p className={readMoreTwo ? "": "two_close"}>At Kerovit, we strive to revolutionize India’s bath and sanitaryware industry by offering luxury, style, and quality that go beyond expectations.</p>
 
